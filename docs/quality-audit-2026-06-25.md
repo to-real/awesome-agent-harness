@@ -1,0 +1,123 @@
+# Quality Audit
+
+Date: 2026-06-25
+
+Scope: README.md and README_zh.md. This audit checks link health, EN/ZH content parity, entry format consistency, section structure, and obvious duplicate pressure. It does not apply content fixes.
+
+## Executive Summary
+
+- EN/ZH parity is good at the URL-set level: both files contain the same 135 unique non-local URLs.
+- The Chinese README is no longer link-sparse, but it still has more shorthand entries than the English README.
+- The main cleanup work should be: fix true broken URLs, standardize entry format, then align Must-reads lines.
+- Several failures from automated link checking are request-policy issues, not broken resources.
+
+## Link Audit
+
+### Counts
+
+- README.md: 169 non-local link occurrences, 135 unique non-local URLs.
+- README_zh.md: 168 non-local link occurrences, 135 unique non-local URLs.
+- Unique URL diff between EN and ZH: 0.
+
+### True Broken Or Stale URLs
+
+These returned 404 or soft-redirected to the wrong content and should be fixed.
+
+- `https://github.blog/engineering/multi-agent-workflows/`
+  - Status: 404.
+  - Likely replacement: `https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/`
+  - Also update title from "Multi-Agent Workflows Often Fail" to "How Squad runs coordinated AI agents inside your repository".
+
+- `https://www.anthropic.com/engineering/beyond-permission-prompts`
+  - Status: 404.
+  - Replacement found: `https://www.anthropic.com/engineering/claude-code-sandboxing`
+  - Page title: "Beyond permission prompts: making Claude Code more secure and autonomous".
+
+- `https://www.anthropic.com/engineering/scaling-managed-agents`
+  - Status: 404.
+  - Replacement found: `https://www.anthropic.com/engineering/managed-agents`
+  - Page title remains "Scaling Managed Agents: Decoupling the brain from the hands".
+
+- `https://www.anthropic.com/engineering/introducing-dynamic-workflows`
+  - Status: 404.
+  - Replacement found: `https://claude.com/blog/introducing-dynamic-workflows-in-claude-code`
+  - Related docs: `https://code.claude.com/docs/en/workflows`.
+
+- `https://www.anthropic.com/research/what-is-an-agent`
+  - Status: 404.
+  - No exact replacement found.
+  - Possible replacement: `https://www.anthropic.com/research/trustworthy-agents` if the purpose is agent definition; otherwise remove because `Building Effective Agents` already covers Anthropic's workflow/agent distinction.
+
+- `https://www.firecrawl.dev/blog/agent-skills-explained`
+  - Status: 200 but final URL collapsed to the Firecrawl blog index in automated check.
+  - Replacement found: `https://www.firecrawl.dev/blog/agent-skills`
+  - Treat this as a soft-broken link.
+
+### Request-Limited But Not Proven Broken
+
+These failed under some automated request methods but were confirmed through another route or are likely bot/rate-limit issues.
+
+- OpenAI main site and developer docs returned 403 to automated fetch/curl, but these URLs are known public pages and should not be marked broken solely from this check.
+- `https://www.turingpost.com/p/nathanlambert` returned 403 to curl but was readable through web tooling.
+- Google AI / Developers pages returned `000` to curl in one batch but returned 200 via `Invoke-WebRequest`.
+- YouTube URLs returned request failures from Node/curl; this is common for automated requests.
+- Some GitHub URLs timed out in one pass but many returned 200 in the second pass; treat remaining GitHub `000` as inconclusive unless reproduced with browser/web tooling.
+- O'Reilly returned 403; likely request policy, not enough evidence to call broken.
+
+## Format Audit
+
+Target format:
+
+```markdown
+- **[Title](URL)** — Author/Org — *type, date* — Annotation.
+```
+
+### Counts
+
+- README.md possible format issues: 27.
+- README_zh.md possible format issues: 46.
+
+### Main Patterns
+
+- Academic-paper entries often omit author/org, e.g. entries that start with `— *paper...*`.
+- Framework/tool entries often omit `*type/date*`.
+- README_zh has many compressed entries in sections 10-14, such as `— Anthropic, 2026.03 🆕`, which do not match the repository's own entry spec.
+- Some tool entries start directly with an annotation after the org name, e.g. `— OpenAI — Agents, tools...`, without type/date.
+
+### Highest-Priority Format Sections
+
+- README.md: section 12 `Frameworks & Tools`, section 14 `Academic Papers`, paper-heavy entries in sections 1/2/5/7.
+- README_zh.md: sections 10-14 need the most normalization, followed by framework/tool entries.
+
+## Must-Reads Audit
+
+### English README
+
+- Sections 1-9 and 11 have `Must-reads` lines.
+- Sections 10, 12, 13, and 14 do not have `Must-reads` lines.
+
+### Chinese README
+
+- Sections with no `必读` line: 6, 8, 10, 11, 12, 13, 14.
+- Some existing `必读` lines are not aligned with English:
+  - Section 2 omits Breunig.
+  - Section 5 omits LangChain plan-and-execute.
+
+## Duplicate Pressure
+
+The duplicate pattern is mostly expected because Must-Read items reappear in their topical sections. Still, these are candidates for cross-reference cleanup later:
+
+- `https://openai.com/index/harness-engineering/` appears 5 times.
+- `https://blog.langchain.com/improving-deep-agents-with-harness-engineering/` appears 3 times.
+- `https://openai.com/index/a-practical-guide-to-building-ai-agents/` appears 3 times.
+- `https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents` appears 3 times.
+- `https://www.anthropic.com/engineering/harness-design-long-running-apps` appears 3 times.
+
+Recommendation: keep duplicates in Must-Read plus one topical section, but add `(also §N)` cross-reference markers for repeated sources if the project wants stricter awesome-list polish.
+
+## Recommended Next Fix Batch
+
+1. Fix the six true/stale URLs listed above in both README files.
+2. Normalize entry format in `Frameworks & Tools` and `Academic Papers` first.
+3. Add or align Must-reads lines in Chinese sections 6, 8, and 11 first; then decide whether sections 10, 12, 13, 14 should also have Must-reads in both languages.
+4. Re-run link check after URL fixes.
