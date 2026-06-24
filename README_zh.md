@@ -160,6 +160,10 @@
 
 - **[Plan-and-Execute Agents](https://blog.langchain.com/plan-and-execute-agents/)** — LangChain — *博客* — 将规划与执行分离为不同 Harness 层的经典写法。
 
+- **[Agents as a Service](https://sierra.ai/blog/agents-as-a-service)** — Sierra — *博客, 2026.03* — 客服 Agent 的生产 Harness：让 Ghostwriter 直接使用工作区、在沙箱里验证变更，并形成构建→测试→发布的改进循环。🆕
+
+- **[Building Box AI: How an Enterprise Content Platform Went AI-Native with Deep Agents](https://www.langchain.com/blog/building-box-ai-how-an-enterprise-content-platform-went-ai-native-with-deep-agents)** — LangChain / Box — *案例, 2026.06* — 企业内容 Agent 的真实架构：父 Agent、动态子 Agent、中间件、引用、提示缓存和上下文总结。🆕
+
 - **[Compound AI Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/)** — Zaharia 等 (Berkeley) — *博客, 2024.02* — 从单一模型到模型+检索器+工具+反馈循环的系统转变。Harness Engineering 的概念先驱。
 
 - **[Multi-Agent Workflows Often Fail](https://github.blog/engineering/multi-agent-workflows/)** — GitHub — *博客, 2026.02* — 多 Agent 系统 = 分布式系统。每次交接需要类型化 Schema 和显式边界验证。🆕
@@ -201,6 +205,14 @@
 - **[Beyond Permission Prompts](https://www.anthropic.com/engineering/beyond-permission-prompts)** — Anthropic — *博客* — 构建结构化权限和授权系统，而非依赖自然语言权限文本。**(必读)**
 
 - **[A Practical Guide to Building AI Agents — 护栏](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *博客, 2026.04* — 分层护栏模式：输入验证、输出过滤、工具风险评级、人工干预触发器。🆕
+
+- **[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** — OWASP GenAI Security Project — *指南, 2025.12* — 面向会规划、会行动、会用工具并持有权限的 Agent 系统的威胁模型。🆕
+
+- **[How We Contain Claude Across Products](https://www.anthropic.com/engineering/how-we-contain-claude)** — Anthropic — *博客, 2026.05* — 从 claude.ai、Claude Code 到 Cowork，拆解沙箱、虚拟机、出站网络控制和权限提示疲劳。🆕
+
+- **[E2B Documentation](https://e2b.dev/docs)** — E2B — *文档* — 给 Agent 执行代码、处理数据、运行工具、持久化状态和导出遥测用的隔离 Linux 沙箱。
+
+- **[Modal Sandboxes](https://modal.com/docs/guide/sandboxes)** — Modal — *文档* — 用于运行不可信用户代码或 Agent 代码的安全容器，是生产级代码执行隔离的参考实现。
 
 ---
 
@@ -247,6 +259,7 @@
 
 ## 11 · 多 Agent 编排
 
+- **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *博客, 2025.06* — 研究型 Agent 的生产架构：主研究员、并行子 Agent、记忆、引用 Agent，以及开放式研究任务的评估方法。🆕
 - **[Scaling Managed Agents](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic, 2026 — 脑/手/会话分离 🆕
 - **[Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic, 2026.05 🆕
 - **[Multi-Agent Workflows Often Fail](https://github.blog/engineering/multi-agent-workflows/)** — GitHub, 2026.02 🆕
@@ -268,6 +281,9 @@
 - **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face 🆕
 
 ### 可观测性
+- **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *博客, 2025.06* — 把 Agent 可观测性拆成提示、工具、记忆、检索、成本和语义约定层面的追踪问题。🆕
+- **[Tracing](https://openai.github.io/openai-agents-python/tracing/)** — OpenAI Agents SDK — *文档* — 内置 trace/span 模型，覆盖 Agent 运行、LLM 生成、工具调用、handoff、护栏和自定义事件。
+- **[Agent Observability Needs Feedback to Power Learning](https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning)** — LangChain (Harrison Chase) — *博客, 2026.05* — 把 trace、显式反馈和生产学习循环连起来，让 Agent 从真实使用中改进。🆕
 - **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain
 - **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — OSS OTel 追踪
 - **[Langfuse](https://github.com/langfuse/langfuse)** — OSS，可自托管 🆕

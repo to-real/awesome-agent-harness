@@ -188,6 +188,10 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *blog, 2025* — Google's multi-agent topology, tool registration model, and eval pipeline.
 
+- **[Agents as a Service](https://sierra.ai/blog/agents-as-a-service)** — Sierra — *blog, Mar 2026* — Customer-service agent harness as headless infrastructure: workspace access, sandboxed validation, and a build→test→ship improvement loop for Ghostwriter. 🆕
+
+- **[Building Box AI: How an Enterprise Content Platform Went AI-Native with Deep Agents](https://www.langchain.com/blog/building-box-ai-how-an-enterprise-content-platform-went-ai-native-with-deep-agents)** — LangChain / Box — *case study, Jun 2026* — Enterprise content-agent architecture with a parent agent, dynamic child agents, middleware, citations, prompt caching, and context summarization. 🆕
+
 - **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic — *blog, 2026* — Architecture for managed agents where the planning ("brain") and execution ("hands") are separated and can scale independently. 🆕
 
 - **[The "Think" Tool: Enabling Claude to Stop and Think](https://www.anthropic.com/engineering/claude-think-tool)** — Anthropic — *blog* — Giving agents explicit "thinking space" as a harness-level capability.
@@ -250,11 +254,19 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[A Practical Guide to Building AI Agents — Guardrails](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Layered guardrail patterns: input validation, output filtering, tool-risk ratings, human-intervention triggers. 🆕
 
+- **[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** — OWASP GenAI Security Project — *guide, Dec 2025* — Agent-specific threat model for systems that plan, act, use tools, and hold permissions across complex workflows. 🆕
+
+- **[How We Contain Claude Across Products](https://www.anthropic.com/engineering/how-we-contain-claude)** — Anthropic — *blog, May 2026* — Blast-radius containment patterns across claude.ai, Claude Code, and Cowork: sandboxes, VMs, egress controls, and the limits of approval prompts. 🆕
+
+- **[E2B Documentation](https://e2b.dev/docs)** — E2B — *docs* — Isolated Linux sandboxes for agents to execute code, process data, run tools, persist state, and export telemetry.
+
+- **[Modal Sandboxes](https://modal.com/docs/guide/sandboxes)** — Modal — *docs* — Secure containers for untrusted user or agent code; useful reference for production-scale code execution isolation.
+
 - **[Sandboxing and Isolation](https://blog.langchain.com/the-anatomy-of-an-agent-harness/)** — LangChain — *blog, Mar 2026* — The sandbox as a harness primitive: isolation + verification. 🆕
 
 - **[BenchJack / Meerkat-style Reward Hacking](https://github.com/benchflow-ai/benchflow)** — BenchFlow — *tool* — How agents game evaluation environments; hardened verifier defaults that block common reward-hacking patterns. 🆕
 
-**Must-reads:** Anthropic (beyond permission prompts) · OpenAI (guardrails)
+**Must-reads:** Anthropic (beyond permission prompts) · OWASP (Agentic Top 10) · Anthropic (containment)
 
 ---
 
@@ -331,7 +343,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Multi-Agent Workflows Often Fail. Here's How to Engineer Ones That Don't.](https://github.blog/engineering/multi-agent-workflows/)** — GitHub — *blog, Feb 2026* — Multi-agent = distributed systems. Typed schemas, constrained action schemas, boundary validation. 🆕
 
-- **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *blog, Jun 2025* — Behind-the-scenes of Anthropic's internal multi-agent research tool.
+- **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *blog, Jun 2025* — Production research-agent architecture: lead researcher, parallel subagents, memory, citation agent, and eval practices for open-ended research. 🆕
 
 - **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *blog* — Multi-agent topology: manager agents, decentralized handoffs, tool registration across agents.
 
@@ -368,6 +380,9 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 ### Observability
 
+- **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *blog, Jun 2025* — Frames observability as traces across prompts, tools, memory, retrieval, cost, and emerging semantic conventions. 🆕
+- **[Tracing](https://openai.github.io/openai-agents-python/tracing/)** — OpenAI Agents SDK — *docs* — Built-in trace/span model covering agent runs, LLM generations, tool calls, handoffs, guardrails, and custom events.
+- **[Agent Observability Needs Feedback to Power Learning](https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning)** — LangChain (Harrison Chase) — *blog, May 2026* — Connects traces, explicit feedback, and production learning loops so agents improve from real usage. 🆕
 - **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain — Trace storage, evaluation, datasets, prompt management.
 - **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — OSS OTel tracing + response/retrieval evals.
 - **[Langfuse](https://github.com/langfuse/langfuse)** — OSS tracing, evals, datasets, prompt management; self-hostable. 🆕
