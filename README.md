@@ -108,13 +108,13 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[LOCA-bench: Benchmarking Language Agents Under Controllable and Extreme Context Growth](https://arxiv.org/pdf/2602.07962)** — *paper* — Evaluates context engineering strategies (context editing, context awareness, memory tools, programmatic tool calling) under controlled conditions. 🆕
 
-- **[Context Management for Deep Agents](https://blog.langchain.com/context-management-for-deep-agents/)** — LangChain (Curme & Daugherty) — *blog, Jan 2026* — Practical patterns for managing context in long-running agent sessions. 🆕
+- **[Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)** — LangChain (Curme & Daugherty) — *blog, Jan 2026* — Practical patterns for managing context in long-running agent sessions. 🆕
 
 - **[From Context Engineering to Context Infrastructure](https://tacnode.io/post/from-context-engineering-to-context-infrastructure)** — Tacnode — *blog, Mar 2026* — Argues techniques are well-understood but infrastructure (real-time data pipelines, consistent snapshots) is missing. 🆕
 
 - **[Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://openreview.net/forum?id=qQ5MZ5Mx7p)** — Zhang et al. (ICLR 2026) — *paper* — Models that evolve their own context management strategies. 🆕
 
-- **[The Design Space of Today's and Future AI Agent Systems](https://arxiv.org/abs/2506.12345)** — *paper, 2026* — Reverse-engineering of Claude Code's five-stage progressive compaction: budget reduction → snip → microcompact → context collapse → auto-compact. 🆕 ⚠️(verify arXiv ID)
+- **[Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems](https://arxiv.org/abs/2604.14228)** — Liu et al. — *paper, 2026* — Reverse-engineering of Claude Code's harness: permission modes, compaction, MCP/plugins/skills/hooks, subagents, and session storage. 🆕
 
 - **[COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context](https://arxiv.org/abs/2510.08790)** — *paper* — Evolving context strategies for long-horizon tasks.
 
@@ -168,9 +168,9 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Introducing Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic — *blog, May 2026* — Dynamic parallel subagent orchestration: Claude generates JavaScript orchestration scripts that fan out to parallel subagents with adversarial verification. The plan lives in executable code, not the context window. 🆕
 
-- **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://blog.langchain.com/better-harness-recipe/)** — LangChain (Vivek Trivedy) — *blog, Apr 2026* — "Evals are training data for agents." Six-step recipe: hand-curation, trace-mining, optimization/holdout splits, baselines, diagnose-experiment-validate loops, human review. 🆕
+- **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals)** — LangChain (Vivek Trivedy) — *blog, Apr 2026* — "Evals are training data for agents." Six-step recipe: hand-curation, trace-mining, optimization/holdout splits, baselines, diagnose-experiment-validate loops, human review. 🆕
 
-- **[How Middleware Lets You Customize Your Agent Harness](https://blog.langchain.com/how-middleware-lets-you-customize-your-agent-harness/)** — LangChain (Sydney Runkle) — *blog, Mar 2026* — Hooks around model and tool calls as the primary customization surface. 🆕
+- **[How Middleware Lets You Customize Your Agent Harness](https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness)** — LangChain (Sydney Runkle) — *blog, Mar 2026* — Hooks around model and tool calls as the primary customization surface. 🆕
 
 **Must-reads:** OpenAI (Codex loop) · Anthropic (long-running) · LangChain (improving deep agents)
 
@@ -226,7 +226,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 *How agents remember across turns and sessions. Working memory, persistent memory, and the filesystem as external brain.*
 
-- **[Your Harness, Your Memory](https://blog.langchain.com/your-harness-your-memory/)** — LangChain (Harrison Chase) — *blog, Apr 2026* — Memory as a harness-level concern: what gets stored, how it's retrieved, and when it gets pruned. 🆕
+- **[Your Harness, Your Memory](https://www.langchain.com/blog/your-harness-your-memory)** — LangChain (Harrison Chase) — *blog, Apr 2026* — Memory as a harness-level concern: what gets stored, how it's retrieved, and when it gets pruned. 🆕
 
 - **[How Claude Remembers Your Project](https://docs.anthropic.com/en/docs/claude-code/memory)** — Anthropic — *docs* — Claude Code's project memory system: CLAUDE.md files, project-level context, and how durable state is managed across sessions.
 
@@ -272,7 +272,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Quo Vadis, LLM Benchmarks? / Benches 2026](https://florianbrand.com/posts/benches-2026)** — Florian Brand (Prime Intellect) — *blog/talk* — The AlgoTune case: same model, different harness, **opposite ranking**. Every layer of the eval stack (prompt, sampling temp, grader, harness) swings the score. 🆕
 
-- **[Hashline: Agent Edit Format as Harness Lever](https://can.ac/blog/hashline)** — Can Boluk — *blog, Feb 2026* — Changing only the edit format (adding line hashes) across 16 models: Grok Code Fast 1 jumped from 6.7% to 68.3%. No model weights changed. Output tokens dropped ~20%. 🆕 ⚠️(verify URL)
+- **[Hashline: Agent Edit Format as Harness Lever](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk — *blog, Feb 2026* — Changing only the edit format (adding line hashes) across 16 models: Grok Code Fast 1 jumped from 6.7% to 68.3%. No model weights changed. Output tokens dropped ~20%. 🆕
 
 - **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor et al. — *paper, 2024* — Cost as a first-class metric; model-dev vs app-dev needs; missing holdouts breed overfitting. Critical for understanding harness-eval confounds.
 
@@ -292,7 +292,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)** — Anthropic — *blog, Nov 2025* — Initializer → coding agent handoff; feature lists, git commits, test gates.
 - **[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)** — Anthropic — *blog, Mar 2026* — Three-agent harness with sprint contracts and evaluator calibration. 🆕
-- **[An Update on Recent Claude Code Quality Reports](https://www.anthropic.com/engineering/claude-code-quality-update)** — Anthropic — *blog, Apr 2026* — Postmortem: quality degradation traced to three harness-level changes (reasoning-effort downgrade, caching bug, verbosity prompt). Minor harness adjustments compound into visible regressions. 🆕
+- **[An Update on Recent Claude Code Quality Reports](https://www.anthropic.com/engineering/april-23-postmortem)** — Anthropic — *blog, Apr 2026* — Postmortem: quality degradation traced to three harness-level changes (reasoning-effort downgrade, caching bug, verbosity prompt). Minor harness adjustments compound into visible regressions. 🆕
 - **[cwc-long-running-agents](https://github.com/anthropics/cwc-long-running-agents)** — Anthropic — *repo* — Take-home harness primitives from Code with Claude 2026. 🆕
 - **[Claude Code Subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)** — Anthropic — *docs* — How Claude Code delegates to subagents with rebuilt permission contexts.
 - **[deepclaude](https://github.com/deepclaude)** — Community — *tool* — Ports Claude Code's full agent loop to DeepSeek V4 Pro. Practical evidence that loop architecture, not model identity, determines agent behavior. 🆕
@@ -311,13 +311,13 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 ### GitHub Copilot
 
-- **[The Coding Harness Behind GitHub Copilot in VS Code](https://code.visualstudio.com/blogs/2026/copilot-harness)** — VS Code team — *blog* — Three core loop responsibilities: context assembly, code execution, and verification. 🆕 ⚠️(verify URL)
+- **[The Coding Harness Behind GitHub Copilot in VS Code](https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode)** — VS Code team — *blog, May 2026* — Three core loop responsibilities: context assembly, code execution, and verification. 🆕
 
 ### Cross-Agent Analysis
 
 - **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — Bui — *paper, 2026* — Scaffolding, harness, context engineering lessons learned from building terminal-based coding agents. 🆕
 - **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson — *blog, Dec 2025* — Side-by-side teardown of Claude Code's harness showing why identical models diverge.
-- **[I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.](https://can.ac/blog/hashline)** — Can Boluk (Hashline) — *blog, Feb 2026* — The most dramatic single-variable experiment: edit format alone moved scores by 10x. 🆕 ⚠️(verify URL)
+- **[I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk (Hashline) — *blog, Feb 2026* — The most dramatic single-variable experiment: edit format alone moved scores by 10x. 🆕
 
 ---
 
@@ -363,8 +363,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 ### Harness Tools & Utilities
 
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Framework for running agent evals + creating RL environments. Powers Terminal-Bench 2.0. 🆕
-- **[Citadel](https://github.com/citadel-ai/citadel)** — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕 ⚠️(verify URL)
-- **[Harness Evolver](https://github.com/harness-evolver/harness-evolver)** — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕 ⚠️(verify URL)
+- **[Citadel](https://github.com/SethGammon/Citadel)** — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
+- **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
 
 ### Observability
 
@@ -398,9 +398,9 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — Bui — *paper, 2026* — Scaffolding, harness, and context engineering lessons from terminal agents. 🆕
 
-- **[AutoHarness](https://arxiv.org/abs/2606.xxxxx)** — Lou et al. — *paper, 2026* — Automatically producing code harnesses that improve agent behavior. 🆕 ⚠️(verify arXiv ID)
+- **[AutoHarness](https://arxiv.org/abs/2603.03329)** — Lou et al. — *paper, 2026* — Automatically producing code harnesses that improve agent behavior. 🆕
 
-- **[General Modular Harness](https://arxiv.org/abs/2605.xxxxx)** — Zhang et al. — *paper, 2025* — Modular harness structure in multi-turn environments. 🆕 ⚠️(verify arXiv ID)
+- **[General Modular Harness](https://arxiv.org/abs/2507.11633)** — Zhang et al. — *paper, 2025* — Modular harness structure in multi-turn environments. 🆕
 
 - **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor et al. — *paper, 2024* — Cost-controlled evaluation; harness confounds on benchmarks.
 

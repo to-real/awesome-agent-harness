@@ -98,7 +98,7 @@
 
 - **[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)** — Manus — *博客, 2025* — 构建通用 Agent 过程中的上下文窗口管理实战经验。中国团队，面向全球。
 
-- **[Context Management for Deep Agents](https://blog.langchain.com/context-management-for-deep-agents/)** — LangChain — *博客, 2026.01* — 长时运行 Agent 会话中的上下文管理实践模式。🆕
+- **[Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)** — LangChain — *博客, 2026.01* — 长时运行 Agent 会话中的上下文管理实践模式。🆕
 
 - **[From Context Engineering to Context Infrastructure](https://tacnode.io/post/from-context-engineering-to-context-infrastructure)** — Tacnode — *博客, 2026.03* — 技术已经明确，但基础设施（实时数据管道、一致性快照）仍缺失。🆕
 
@@ -184,7 +184,7 @@
 
 *Agent 如何跨轮次和会话记住。工作记忆、持久记忆、文件系统作为外部大脑。*
 
-- **[Your Harness, Your Memory](https://blog.langchain.com/your-harness-your-memory/)** — LangChain (Harrison Chase) — *博客, 2026.04* — 记忆作为 Harness 级关注点。🆕
+- **[Your Harness, Your Memory](https://www.langchain.com/blog/your-harness-your-memory)** — LangChain (Harrison Chase) — *博客, 2026.04* — 记忆作为 Harness 级关注点。🆕
 
 - **[How Claude Remembers Your Project](https://docs.anthropic.com/en/docs/claude-code/memory)** — Anthropic — *文档* — Claude Code 的项目记忆系统。
 
@@ -216,7 +216,7 @@
 
 - **[Benches 2026](https://florianbrand.com/posts/benches-2026)** — Florian Brand (Prime Intellect) — *博客/演讲* — AlgoTune 案例：同一模型、不同 Harness、**相反排名**。🆕
 
-- **[Hashline](https://can.ac/blog/hashline)** — Can Boluk — *博客, 2026.02* — 仅改变编辑格式（添加行哈希），16 个模型中 Grok Code Fast 1 从 6.7% 跳到 68.3%。模型权重未变。🆕 ⚠️(验证 URL)
+- **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk — *博客, 2026.02* — 仅改变编辑格式（添加行哈希），16 个模型中 Grok Code Fast 1 从 6.7% 跳到 68.3%。模型权重未变。🆕
 
 - **[Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052)** — Lee 等 (Stanford) — *论文, 2026.03* — 将 Harness 合成作为优化目标。🆕
 
@@ -231,7 +231,7 @@
 ### Claude Code
 - **[Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)** — Anthropic, 2025.11
 - **[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)** — Anthropic, 2026.03 🆕
-- **[Claude Code Quality Postmortem](https://www.anthropic.com/engineering/claude-code-quality-update)** — Anthropic, 2026.04 — 质量退化追溯到三个 Harness 级变更 🆕
+- **[Claude Code Quality Postmortem](https://www.anthropic.com/engineering/april-23-postmortem)** — Anthropic, 2026.04 — 质量退化追溯到三个 Harness 级变更 🆕
 - **[cwc-long-running-agents](https://github.com/anthropics/cwc-long-running-agents)** — Anthropic — 示例 Harness 原语 🆕
 
 ### OpenAI Codex
@@ -241,7 +241,7 @@
 
 ### 跨 Agent 分析
 - **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson, 2025.12
-- **[Hashline](https://can.ac/blog/hashline)** — Can Boluk, 2026.02 — 仅改编辑格式，分数提升 10 倍 🆕 ⚠️(验证 URL)
+- **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk, 2026.02 — 仅改编辑格式，分数提升 10 倍 🆕
 
 ---
 

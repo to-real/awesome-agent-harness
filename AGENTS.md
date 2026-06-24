@@ -31,22 +31,20 @@ awesome-agent-harness/
 
 ### What Needs To Be Done
 
-#### Priority 1 — URL Verification (CRITICAL before first publish)
-Several entries are marked with `⚠️(verify URL)` or `⚠️(verify arXiv ID)`. These need to be checked:
-- `can.ac/blog/hashline` — Hashline edit format experiment
-- `code.visualstudio.com/blogs/2026/copilot-harness` — VS Code Copilot harness blog
-- `github.com/citadel-ai/citadel` — Citadel harness tool
-- `github.com/harness-evolver/harness-evolver` — Harness Evolver tool
-- `arxiv.org/abs/2506.12345` — Design Space paper (placeholder arXiv ID)
-- `arxiv.org/abs/2606.xxxxx` — AutoHarness paper
-- `arxiv.org/abs/2605.xxxxx` — General Modular Harness paper
-- `anthropic.com/engineering/claude-code-quality-update` — Claude Code quality postmortem
-- `blog.langchain.com/context-management-for-deep-agents/` — LangChain context management
-- `blog.langchain.com/better-harness-recipe/` — LangChain better harness recipe
-- `blog.langchain.com/how-middleware-lets-you-customize-your-agent-harness/` — LangChain middleware
-- `blog.langchain.com/your-harness-your-memory/` — LangChain memory
-
-**Approach**: For each URL, fetch it. If it returns 200, keep it. If it 404s, search for the correct URL. If the resource doesn't exist, remove the entry or mark it differently.
+#### Priority 1 — URL Verification (completed 2026-06-25)
+The previously marked `⚠️(verify URL)` / `⚠️(verify arXiv ID)` entries were checked and README links were updated:
+- `can.ac/blog/hashline` → `https://blog.can.ac/2026/02/12/the-harness-problem/`
+- `code.visualstudio.com/blogs/2026/copilot-harness` → `https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode`
+- `github.com/citadel-ai/citadel` → `https://github.com/SethGammon/Citadel`
+- `github.com/harness-evolver/harness-evolver` → `https://github.com/raphaelchristi/harness-evolver`
+- `arxiv.org/abs/2506.12345` → `https://arxiv.org/abs/2604.14228`
+- `arxiv.org/abs/2606.xxxxx` → `https://arxiv.org/abs/2603.03329`
+- `arxiv.org/abs/2605.xxxxx` → `https://arxiv.org/abs/2507.11633`
+- `anthropic.com/engineering/claude-code-quality-update` → `https://www.anthropic.com/engineering/april-23-postmortem`
+- `blog.langchain.com/context-management-for-deep-agents/` → `https://www.langchain.com/blog/context-management-for-deepagents`
+- `blog.langchain.com/better-harness-recipe/` → `https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals`
+- `blog.langchain.com/how-middleware-lets-you-customize-your-agent-harness/` → `https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness`
+- `blog.langchain.com/your-harness-your-memory/` → `https://www.langchain.com/blog/your-harness-your-memory`
 
 #### Priority 2 — Content Gaps to Fill
 These areas need more entries (search for high-quality primary sources):
