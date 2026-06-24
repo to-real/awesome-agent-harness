@@ -46,7 +46,7 @@
 
 3. **[Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)** — Anthropic — *博客, 2024.12* — 基础架构指南：何时用 workflow vs. agent，如何组合原语（提示链、路由、编排器-工作者、评估器-优化器）。从简单开始。
 
-4. **[Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — Harness 的核心工作是工程化上下文：编辑、压缩、记忆、编程式工具调用。"什么样的上下文配置最可能产生期望行为？"
+4. **[Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — 上下文工程的经典必读文本。它把 Harness 的核心工作说清楚：编辑、压缩、记忆、编程式工具调用，以及“什么样的上下文配置最可能产生期望行为？” **(必读)**
 
 5. **[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)** — Anthropic (Prithvi Rajasekaran) — *博客, 2026.03* — 三 Agent Harness（规划器→生成器→评估器）用于持续多会话开发。关键洞察：Harness 的每个组件都编码了一个关于"模型做不到什么"的假设，而这些假设会随模型进步而过期。🆕
 
@@ -82,6 +82,8 @@
 
 - **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — *论文, 2026.04* — 首篇将 Harness Engineering 作为研究对象的学术论文。提出 CAR 分解（Control, Agency, Runtime）和 HarnessCard 报告工件。🆕
 
+- **[Natural-Language Agent Harnesses](https://arxiv.org/html/2603.25723v1)** — *论文, 2026.03* — 将 AGENTS.md、Agent Skills 和技能包视作可迁移的自然语言 Harness 设计模式。🆕
+
 - **[The Harness Model — AI Engineering Maturity Matrix](https://handsonarchitects.com/blog/2026/the-harness-model-ai-engineering-maturity-matrix/)** — *博客, 2026.04* — 10 维度成熟度矩阵，从"偶尔使用 AI"到"Agent 优先交付"。团队自评工具。🆕
 
 - **[Agent Harness Engineering](https://www.oreilly.com/radar/agent-harness-engineering/)** — Addy Osmani (O'Reilly Radar) — *博客* — "一个平庸模型+优秀 Harness 击败优秀模型+糟糕 Harness。" 🆕
@@ -94,13 +96,21 @@
 
 *填充上下文窗口的艺术与科学：放什么进去、裁剪什么、如何结构化。*
 
-- **[Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — 主要信源。上下文 = "采样时包含的 token 集合"。涵盖系统提示、工具、示例、消息历史、即时策略。**(必读)**
+- **[Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — 上下文工程的经典必读文本。上下文 = "采样时包含的 token 集合"。涵盖系统提示、工具、示例、消息历史、即时策略、压缩、记忆和编程式工具调用。**(必读)**
 
-- **[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)** — Manus — *博客, 2025* — 构建通用 Agent 过程中的上下文窗口管理实战经验。中国团队，面向全球。
+- **[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)** — Manus — *博客, 2025* — Manus 的生产级上下文工程经验：工具爆炸、动作约束、文件系统记忆、KV-cache 压力和 Agent 状态稳定性。
+
+- **[How Long Contexts Fail and How to Fix Them](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)** — Drew Breunig — *博客, 2025.06* — 长上下文的典型失败模式和工程修复方法。
 
 - **[Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)** — LangChain — *博客, 2026.01* — 长时运行 Agent 会话中的上下文管理实践模式。🆕
 
 - **[From Context Engineering to Context Infrastructure](https://tacnode.io/post/from-context-engineering-to-context-infrastructure)** — Tacnode — *博客, 2026.03* — 技术已经明确，但基础设施（实时数据管道、一致性快照）仍缺失。🆕
+
+- **[Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://openreview.net/forum?id=qQ5MZ5Mx7p)** — Zhang 等 (ICLR 2026) — *论文* — 让模型演化自己的上下文管理策略。🆕
+
+- **[Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems](https://arxiv.org/abs/2604.14228)** — Liu 等 — *论文, 2026* — 反向拆解 Claude Code 的 Harness：权限模式、压缩、MCP/插件/技能/hooks、子 Agent 和会话存储。🆕
+
+- **[COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context](https://arxiv.org/abs/2510.08790)** — *论文* — 面向长时任务的演化式上下文策略。
 
 - **[LOCA-bench](https://arxiv.org/pdf/2602.07962)** — *论文* — 在受控条件下评估各种上下文工程策略（上下文编辑、上下文感知、记忆工具、编程式工具调用）。🆕
 
@@ -118,11 +128,21 @@
 
 - **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)** — Anthropic — *规范/文档* — 连接 AI 模型和外部工具/数据源的开放标准。现代 Harness 的管道层。
 
+- **[MCP: A New Standard for AI Tool Integration](https://www.anthropic.com/news/model-context-protocol)** — Anthropic — *博客, 2024.11* — MCP 的发布与设计动机。
+
+- **[Code Execution with MCP: Building More Efficient Agents](https://www.anthropic.com/engineering/code-execution-with-mcp)** — Anthropic — *博客, 2025.09* — 把执行逻辑放进 MCP server，让 Agent 先搜索、过滤、转换工具结果，再决定哪些内容进入上下文窗口。
+
 - **[A Practical Guide to Building AI Agents](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *博客, 2026.04* — 工具设计的多对多 Agent-工具关系和分层护栏模式。🆕
+
+- **[Gemini API Function Calling](https://ai.google.dev/gemini-api/docs/function-calling)** — Google — *文档* — Gemini 的官方工具调用接口，覆盖 schema、并行函数调用和组合式工具使用。
 
 - **[Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)** — Anthropic — *博客* — 技能作为基于工具基础的可组合、渐进披露的能力。
 
+- **[OpenAI Agents SDK — Tools](https://openai.github.io/openai-agents-python/tools/)** — OpenAI — *文档* — Agents SDK 中工具定义、函数签名和错误处理的方式。
+
 - **[Claude Code Hooks](https://docs.anthropic.com/en/docs/claude-code/hooks)** — Anthropic — *文档* — 生命周期钩子（PreToolUse, PostToolUse 等），让 Harness 工程师在工具执行的每个步骤注入自定义逻辑。
+
+- **[Open Reward Standard (ORS)](https://docs.openreward.ai/)** — General Reasoning — *规范* — 在 MCP 之上加入 episode、reward、curriculum 等 RL 原语。🆕 ⚠️(早期阶段)
 
 **必读：** Anthropic（工具设计） · MCP 规范 · OpenAI（实践指南）
 
@@ -142,9 +162,15 @@
 
 - **[cwc-long-running-agents](https://github.com/anthropics/cwc-long-running-agents)** — Anthropic — *代码库* — Code with Claude 2026 的示例 Harness 原语。🆕
 
+- **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI — *博客* — 将 Plan.md、Implement.md 等里程碑文档作为 Harness 级状态。🆕
+
 - **[Improving Deep Agents with Harness Engineering](https://blog.langchain.com/improving-deep-agents-with-harness-engineering/)** — LangChain — *博客, 2026.02* — 三个优化旋钮：系统提示、工具、中间件。构建-验证循环和死循环检测。🆕
 
 - **[Introducing Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic — *博客, 2026.05* — 动态并行子 Agent 编排：Claude 生成 JavaScript 编排脚本，扇出到并行子 Agent 并进行对抗性验证。🆕
+
+- **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals)** — LangChain (Vivek Trivedy) — *博客, 2026.04* — “Evals 是 Agent 的训练数据”：人工整理、trace 挖掘、优化/留出集、基线、诊断-实验-验证循环和人工复查。🆕
+
+- **[How Middleware Lets You Customize Your Agent Harness](https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness)** — LangChain (Sydney Runkle) — *博客, 2026.03* — 围绕模型调用和工具调用的 hooks，是 Harness 定制的主要表面。🆕
 
 **必读：** OpenAI（Codex 循环） · Anthropic（长时运行） · LangChain（改进 Deep Agents）
 
@@ -160,13 +186,21 @@
 
 - **[Plan-and-Execute Agents](https://blog.langchain.com/plan-and-execute-agents/)** — LangChain — *博客* — 将规划与执行分离为不同 Harness 层的经典写法。
 
+- **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *博客, 2025* — Google 的多 Agent 拓扑、工具注册模型和评估流水线。
+
 - **[Agents as a Service](https://sierra.ai/blog/agents-as-a-service)** — Sierra — *博客, 2026.03* — 客服 Agent 的生产 Harness：让 Ghostwriter 直接使用工作区、在沙箱里验证变更，并形成构建→测试→发布的改进循环。🆕
 
 - **[Building Box AI: How an Enterprise Content Platform Went AI-Native with Deep Agents](https://www.langchain.com/blog/building-box-ai-how-an-enterprise-content-platform-went-ai-native-with-deep-agents)** — LangChain / Box — *案例, 2026.06* — 企业内容 Agent 的真实架构：父 Agent、动态子 Agent、中间件、引用、提示缓存和上下文总结。🆕
 
 - **[Compound AI Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/)** — Zaharia 等 (Berkeley) — *博客, 2024.02* — 从单一模型到模型+检索器+工具+反馈循环的系统转变。Harness Engineering 的概念先驱。
 
+- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic — *博客, 2026* — 将规划的“脑”和执行的“手”分离，并让二者独立扩展。🆕
+
+- **[The "Think" Tool: Enabling Claude to Stop and Think](https://www.anthropic.com/engineering/claude-think-tool)** — Anthropic — *博客* — 把显式“思考空间”作为 Harness 级能力提供给 Agent。
+
 - **[Multi-Agent Workflows Often Fail](https://github.blog/engineering/multi-agent-workflows/)** — GitHub — *博客, 2026.02* — 多 Agent 系统 = 分布式系统。每次交接需要类型化 Schema 和显式边界验证。🆕
+
+- **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — *论文, 2025* — 面向真实代码库的可扩展 Agent 脚手架模式。
 
 **必读：** Anthropic（构建有效 Agent） · OpenAI（实践指南）
 
@@ -180,7 +214,15 @@
 
 - **[OpenAI Harness Engineering — 渐进披露](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — "给 Codex 一张地图，而不是一本千页操作手册。" 单一 AGENTS.md 的反模式。
 
+- **[Integrating Agent Skills to Usher in a New Chapter for Agents](https://manus.im/blog/manus-skills)** — Manus — *博客, 2025* — 把 Skills 定义为 MCP 连接器之上的工作流胶囊：MCP 负责数据连接，Skills 封装做事方法。
+
+- **[AGENTS.md](https://github.com/anthropics/agent-skills/blob/main/AGENTS.md)** — 多方约定 — *约定* — 项目级指令是基础 Harness 组件，会随着项目逐步积累规则。
+
 - **[SkillsBench](https://github.com/benchflow-ai/skillsbench)** — BenchFlow — *基准测试* — 评估技能的有效性以及 Agent 使用技能的能力。🆕
+
+- **[Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale](https://arxiv.org/abs/2603.02176)** — Li 等 — *论文, 2026* — 将技能视作生态系统：组织、编排和大规模测量。🆕
+
+- **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills-explained)** — Firecrawl — *博客* — 面向实践者解释 SKILL.md 为什么成为 Harness 原语。
 
 ---
 
@@ -191,6 +233,10 @@
 - **[Your Harness, Your Memory](https://www.langchain.com/blog/your-harness-your-memory)** — LangChain (Harrison Chase) — *博客, 2026.04* — 记忆作为 Harness 级关注点。🆕
 
 - **[How Claude Remembers Your Project](https://docs.anthropic.com/en/docs/claude-code/memory)** — Anthropic — *文档* — Claude Code 的项目记忆系统。
+
+- **[Effective Context Engineering for AI Agents — Memory Strategies](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — 通过记忆工具实现跨会话存储和检索。
+
+- **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — *论文, 2026* — 通过轨迹蒸馏实现多 Agent 之间的记忆协作。🆕
 
 - **[Filesystem as Agent Memory](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — "从 Agent 的角度看，任何不在上下文中的东西实际上都不存在。"
 
@@ -204,15 +250,27 @@
 
 - **[Beyond Permission Prompts](https://www.anthropic.com/engineering/beyond-permission-prompts)** — Anthropic — *博客* — 构建结构化权限和授权系统，而非依赖自然语言权限文本。**(必读)**
 
+- **[Claude Code Permission Model](https://docs.anthropic.com/en/docs/claude-code/security)** — Anthropic — *文档* — 默认只读，显式批准后才写文件；文件编辑通过自动快照可回滚。
+
 - **[A Practical Guide to Building AI Agents — 护栏](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *博客, 2026.04* — 分层护栏模式：输入验证、输出过滤、工具风险评级、人工干预触发器。🆕
 
 - **[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** — OWASP GenAI Security Project — *指南, 2025.12* — 面向会规划、会行动、会用工具并持有权限的 Agent 系统的威胁模型。🆕
 
 - **[How We Contain Claude Across Products](https://www.anthropic.com/engineering/how-we-contain-claude)** — Anthropic — *博客, 2026.05* — 从 claude.ai、Claude Code 到 Cowork，拆解沙箱、虚拟机、出站网络控制和权限提示疲劳。🆕
 
+- **[Implementing a Secure Sandbox for Local Agents](https://cursor.com/blog/agent-sandboxing)** — Cursor — *博客, 2025.05* — 本地编程 Agent 的沙箱设计：限制文件写入和网络访问，同时保留编辑器内的可用性。🆕
+
+- **[Introducing My Computer: When Manus Meets Your Desktop](https://manus.im/blog/manus-my-computer-desktop)** — Manus — *博客, 2025* — 桌面 Agent Harness 案例：本地 CLI、文件访问、应用控制，以及云端 Agent 和用户电脑之间的权限边界。
+
+- **[Gemini API Code Execution](https://ai.google.dev/gemini-api/docs/code-execution)** — Google — *文档* — Gemini API 中的模型侧代码执行工具，明确限定生成 Python 的执行边界。
+
 - **[E2B Documentation](https://e2b.dev/docs)** — E2B — *文档* — 给 Agent 执行代码、处理数据、运行工具、持久化状态和导出遥测用的隔离 Linux 沙箱。
 
 - **[Modal Sandboxes](https://modal.com/docs/guide/sandboxes)** — Modal — *文档* — 用于运行不可信用户代码或 Agent 代码的安全容器，是生产级代码执行隔离的参考实现。
+
+- **[Sandboxing and Isolation](https://blog.langchain.com/the-anatomy-of-an-agent-harness/)** — LangChain — *博客, 2026.03* — 沙箱是 Harness 原语：隔离 + 验证。🆕
+
+- **[BenchJack / Meerkat-style Reward Hacking](https://github.com/benchflow-ai/benchflow)** — BenchFlow — *工具* — 展示 Agent 如何钻评估环境空子，以及 hardened verifier 默认值如何阻断常见 reward hacking。🆕
 
 ---
 
@@ -224,13 +282,25 @@
 
 - **[Tuning Deep Agents to Work Well with Different Models](https://www.langchain.com/blog/tuning-deep-agents-different-models)** — LangChain — *博客, 2026.05* — 单一 Harness 无法对所有模型最优。如何按模型调整 Harness。🆕
 
+- **[How We Build Evals for Deep Agents](https://www.langchain.com/blog/how-we-build-evals-for-deep-agents)** — LangChain — *博客, 2026.03* — Deep Agents 的 eval 构建过程：生产 trace、失败分类、定向实验和 holdout 纪律。🆕
+
+- **[Evaluating Deep Agents: Our Learnings](https://www.langchain.com/blog/evaluating-deep-agents-our-learnings)** — LangChain — *博客, 2026.06* — 长时 Agent 评估经验：从 trajectory 出发、隔离回归、避免只优化最终答案分数。🆕
+
+- **[Agent Evaluation Readiness Checklist](https://www.langchain.com/blog/agent-evaluation-readiness-checklist)** — LangChain — *博客, 2026.06* — 判断 Agent 是否适合系统化评估的清单：稳定 trace、代表性任务、清晰通过/失败信号和复查循环。🆕
+
 - **[Holistic Agent Leaderboard (HAL)](https://hal.cs.princeton.edu/)** — Princeton — *基准测试* — 标准化、成本感知的 Harness，在 9 个基准/9 个模型上运行相同 Agent Harness（21,730 次 rollout）。🆕
 
 - **[Benches 2026](https://florianbrand.com/posts/benches-2026)** — Florian Brand (Prime Intellect) — *博客/演讲* — AlgoTune 案例：同一模型、不同 Harness、**相反排名**。🆕
 
 - **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk — *博客, 2026.02* — 仅改变编辑格式（添加行哈希），16 个模型中 Grok Code Fast 1 从 6.7% 跳到 68.3%。模型权重未变。🆕
 
+- **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor 等 — *论文, 2024* — 将成本作为一等指标；区分模型开发和应用开发需求；缺少 holdout 会导致过拟合。
+
 - **[Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052)** — Lee 等 (Stanford) — *论文, 2026.03* — 将 Harness 合成作为优化目标。🆕
+
+- **[A Synthetic Data Generation Harness: Hill-Climbing the Eval Set Itself](https://saulius.io/blog/synthetic-data-generation-harness-ai-agents)** — Saulius — *博客, 2026.04* — Harness 优化的阴暗面：当优化变成对 eval set 的过拟合。🆕
+
+- **[How We Compare Model Quality in Cursor](https://cursor.com/blog/cursorbench)** — Cursor — *博客, 2025.04* — CursorBench 展示编程 Agent 产品如何在真实编辑、检索和工具使用工作流下评估模型。🆕
 
 **必读：** LangChain（改进 Deep Agents） · HAL · Brand（Benches 2026）
 
@@ -245,13 +315,25 @@
 - **[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)** — Anthropic, 2026.03 🆕
 - **[Claude Code Quality Postmortem](https://www.anthropic.com/engineering/april-23-postmortem)** — Anthropic, 2026.04 — 质量退化追溯到三个 Harness 级变更 🆕
 - **[cwc-long-running-agents](https://github.com/anthropics/cwc-long-running-agents)** — Anthropic — 示例 Harness 原语 🆕
+- **[Claude Code Subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)** — Anthropic — *文档* — Claude Code 如何用重建后的权限上下文委派给子 Agent。
+- **[deepclaude](https://github.com/deepclaude)** — 社区 — *工具* — 将 Claude Code 的完整 agent loop 移植到 DeepSeek V4 Pro，说明 loop 架构比模型身份更能决定行为。🆕
 
 ### OpenAI Codex
 - **[Harness Engineering](https://openai.com/index/harness-engineering/)** — OpenAI, 2026.02 — 百万行实验 🆕
 - **[Unrolling the Codex Agent Loop](https://openai.com/index/unrolling-the-codex-agent-loop/)** — OpenAI, 2026.01 🆕
+- **[Unlocking the Codex Harness: How We Built the App Server](https://openai.com/index/unlocking-codex-harness/)** — OpenAI — *博客, 2026.02* — 分层架构强制执行的实现细节。🆕
+- **[Custom Instructions with AGENTS.md](https://developers.openai.com/docs/codex/agents-md)** — OpenAI — *文档* — Codex 中 AGENTS.md 的项目级/目录级指令和继承机制。
 - **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI 🆕
 
+### Cursor
+- **[Continually Improving Our Agent Harness](https://cursor.com/blog/continually-improving-agent-harness)** — Cursor — *博客, 2025.05* — Cursor 对 Harness 迭代的说明：产品 trace、定向 eval、工具设计和模型特定调整。
+- **[Cursor Rules Files](https://docs.cursor.com/context/rules-for-ai)** — Cursor — *文档* — `.cursor/rules` 如何按项目配置 Agent 行为，并配合循环检测和模型特定 prompt 适配。
+
+### GitHub Copilot
+- **[The Coding Harness Behind GitHub Copilot in VS Code](https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode)** — VS Code team — *博客, 2026.05* — 三个核心 loop 职责：上下文组装、代码执行和验证。🆕
+
 ### 跨 Agent 分析
+- **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — Bui — *论文, 2026* — 从终端式编程 Agent 建设中总结 scaffolding、Harness 和上下文工程经验。🆕
 - **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson, 2025.12
 - **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk, 2026.02 — 仅改编辑格式，分数提升 10 倍 🆕
 
@@ -263,7 +345,9 @@
 - **[Scaling Managed Agents](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic, 2026 — 脑/手/会话分离 🆕
 - **[Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic, 2026.05 🆕
 - **[Multi-Agent Workflows Often Fail](https://github.blog/engineering/multi-agent-workflows/)** — GitHub, 2026.02 🆕
+- **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *博客* — Manager agent、去中心化 handoff、跨 Agent 工具注册等多 Agent 拓扑。
 - **[Why Do Multi-Agent LLM Systems Fail? (MAST)](https://arxiv.org/abs/2503.13657)** — UC Berkeley — 14 种失败模式分类学 🆕
+- **[A2A Protocol (Agent-to-Agent)](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)** — Google — *规范, 2025.04* — Agent 间通信标准，补足 MCP 的 agent-to-tool 方向。
 
 ---
 
@@ -277,16 +361,26 @@
 - **[AutoGen](https://github.com/microsoft/autogen)** — Microsoft
 - **[Pydantic AI](https://github.com/pydantic/pydantic-ai)** — 类型安全 Agent 框架 🆕
 - **[Mastra](https://github.com/mastra-ai/mastra)** — TypeScript 原生 🆕
+- **[Agno (formerly Phidata)](https://github.com/agno-agi/agno)** — 轻量级多模态 Agent 框架。🆕
 - **[Google ADK](https://github.com/google/adk-python)** 🆕
 - **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face 🆕
+
+### Harness 工具与实用程序
+- **[Harbor](https://github.com/harbor-framework/harbor)** — 运行 agent eval、创建 RL 环境的框架，支撑 Terminal-Bench 2.0。🆕
+- **[Citadel](https://github.com/SethGammon/Citadel)** — 面向 Claude Code 和 Codex 的 Harness：隔离 worktree、多 Agent 协作和持久记忆。🆕
+- **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
 
 ### 可观测性
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *博客, 2025.06* — 把 Agent 可观测性拆成提示、工具、记忆、检索、成本和语义约定层面的追踪问题。🆕
 - **[Tracing](https://openai.github.io/openai-agents-python/tracing/)** — OpenAI Agents SDK — *文档* — 内置 trace/span 模型，覆盖 Agent 运行、LLM 生成、工具调用、handoff、护栏和自定义事件。
 - **[Agent Observability Needs Feedback to Power Learning](https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning)** — LangChain (Harrison Chase) — *博客, 2026.05* — 把 trace、显式反馈和生产学习循环连起来，让 Agent 从真实使用中改进。🆕
+- **[Debugging Deep Agents with LangSmith](https://www.langchain.com/blog/debugging-deep-agents-with-langsmith)** — LangChain — *博客, 2026.06* — Deep agent 的 trace 很长，需要专门视图来调试长轨迹、工具调用、子 Agent span 和回归对比。🆕
+- **[LangSmith Observability](https://docs.langchain.com/langsmith/observability)** — LangChain — *文档* — 捕获 Agent 运行、检查 span，并把日志连接到数据集/eval 的官方可观测性指南。
 - **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain
 - **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — OSS OTel 追踪
 - **[Langfuse](https://github.com/langfuse/langfuse)** — OSS，可自托管 🆕
+- **[Langfuse Observability Overview](https://langfuse.com/docs/observability/overview)** — Langfuse — *文档* — 面向生产 LLM 应用的 tracing 概念：trace、observation、score、session 和 dataset。
+- **[Langfuse Agent Graphs](https://langfuse.com/docs/observability/features/agent-graphs)** — Langfuse — *文档* — 将多步 Agent 执行可视化为图，便于检查工具调用、分支和嵌套 span。
 - **[W&B Weave](https://github.com/wandb/weave)** 🆕
 - **[Braintrust](https://www.braintrust.dev/)**
 
@@ -297,6 +391,8 @@
 - **[Multi-Turn RL for Multi-Hour Agents — Will Brown](https://www.latent.space/p/willccbb)** — Latent Space — *播客* 🆕
 - **[Harness Engineering (YouTube)](https://www.youtube.com/watch?v=kmTMc-fVSXw)** — Florian Brand — *演讲*
 - **[Why AI Evals Are the Hottest New Skill](https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill)** — Hamel Husain & Shreya Shankar 🆕
+- **[Context Engineering for AI Agents: Part 2](https://www.philschmid.de/context-engineering-part-2)** — Phil Schmid — *博客/演讲* — 实用上下文工程模式。🆕
+- **[Nathan Lambert — "What technical people call the harness matters more than the model"](https://www.turingpost.com/p/nathanlambert)** — Turing Post — *访谈*
 
 ---
 
@@ -306,6 +402,8 @@
 - **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — *2026.03* 🆕
 - **[Meta-Harness: End-to-End Optimization](https://arxiv.org/abs/2603.28052)** — Stanford — *2026.03* 🆕
 - **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — *2026* 🆕
+- **[AutoHarness](https://arxiv.org/abs/2603.03329)** — Lou 等 — *论文, 2026* — 自动生成能改善 Agent 行为的代码 Harness。🆕
+- **[General Modular Harness](https://arxiv.org/abs/2507.11633)** — Zhang 等 — *论文, 2025* — 多轮环境中的模块化 Harness 结构。🆕
 - **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor 等 — *2024*
 - **[Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)** — METR — *2025*
 

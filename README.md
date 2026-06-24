@@ -102,7 +102,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *blog, Sep 2025* — The primary source. Context = "the set of tokens included when sampling." Covers system prompts, tools, examples, message history, and just-in-time strategies. **(MUST)**
 
-- **[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)** — Manus — *blog, 2025* — Hard-won production lessons on context window management from building a general-purpose agent. Chinese team, global audience.
+- **[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)** — Manus — *blog, 2025* — Production lessons on tool explosion, action masking, filesystem-as-memory, KV-cache pressure, and stable agent state.
 
 - **[How Long Contexts Fail and How to Fix Them](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)** — Drew Breunig — *blog, Jun 2025* — Failure modes of long-context usage and practical fixes.
 
@@ -134,7 +134,11 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[MCP: A New Standard for AI Tool Integration](https://www.anthropic.com/news/model-context-protocol)** — Anthropic — *blog, Nov 2024* — Announcement and design rationale for MCP.
 
+- **[Code Execution with MCP: Building More Efficient Agents](https://www.anthropic.com/engineering/code-execution-with-mcp)** — Anthropic — *blog, Sep 2025* — Moves execution into an MCP server so agents can search, filter, and transform tool results before spending context-window tokens.
+
 - **[A Practical Guide to Building AI Agents](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Comprehensive guide covering tool design for many-to-many agent-tool relationships and layered guardrail patterns. 🆕
+
+- **[Gemini API Function Calling](https://ai.google.dev/gemini-api/docs/function-calling)** — Google — *docs* — Official schema and tool-calling interface for Gemini agents, including parallel function calls and compositional tool use.
 
 - **[Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)** — Anthropic — *blog* — Skills as composable, progressively-disclosed capabilities built on tool foundations.
 
@@ -214,6 +218,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[OpenAI Harness Engineering — Progressive Disclosure](https://openai.com/index/harness-engineering/)** — OpenAI — *blog, Feb 2026* — "Give Codex a map, not a 1,000-page instruction manual." The monolithic AGENTS.md anti-pattern and why progressive disclosure works.
 
+- **[Integrating Agent Skills to Usher in a New Chapter for Agents](https://manus.im/blog/manus-skills)** — Manus — *blog, 2025* — Positions skills as workflow capsules on top of MCP connectors: MCP supplies data access, skills package procedural know-how.
+
 - **[AGENTS.md](https://github.com/anthropics/agent-skills/blob/main/AGENTS.md)** — Multiple — *convention* — The foundational harness component: project-level instructions that grow incrementally. Ghostty's AGENTS.md is a public exemplar.
 
 - **[Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale](https://arxiv.org/abs/2603.02176)** — Li et al. — *paper, 2026* — Skills as an ecosystem: organization, orchestration, and measurement at scale. 🆕
@@ -258,6 +264,12 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[How We Contain Claude Across Products](https://www.anthropic.com/engineering/how-we-contain-claude)** — Anthropic — *blog, May 2026* — Blast-radius containment patterns across claude.ai, Claude Code, and Cowork: sandboxes, VMs, egress controls, and the limits of approval prompts. 🆕
 
+- **[Implementing a Secure Sandbox for Local Agents](https://cursor.com/blog/agent-sandboxing)** — Cursor — *blog, May 2025* — Local coding-agent sandbox design: restrict filesystem writes and network access while keeping the agent useful inside the editor. 🆕
+
+- **[Introducing My Computer: When Manus Meets Your Desktop](https://manus.im/blog/manus-my-computer-desktop)** — Manus — *blog, 2025* — Desktop-agent harness pattern: local CLI, file access, app control, and the permission boundary between cloud agent and user machine.
+
+- **[Gemini API Code Execution](https://ai.google.dev/gemini-api/docs/code-execution)** — Google — *docs* — Model-side code execution tool for generated Python, with clear boundaries around executable computation inside the Gemini API.
+
 - **[E2B Documentation](https://e2b.dev/docs)** — E2B — *docs* — Isolated Linux sandboxes for agents to execute code, process data, run tools, persist state, and export telemetry.
 
 - **[Modal Sandboxes](https://modal.com/docs/guide/sandboxes)** — Modal — *docs* — Secure containers for untrusted user or agent code; useful reference for production-scale code execution isolation.
@@ -278,7 +290,13 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Tuning Deep Agents to Work Well with Different Models](https://www.langchain.com/blog/tuning-deep-agents-different-models)** — LangChain — *blog, May 2026* — A single harness can't be optimal for every model. How to vary the harness per model for fair comparison. 🆕
 
-- **[How We Build Evals for Deep Agents](https://blog.langchain.com/how-we-build-evals-for-deep-agents/)** — LangChain — *blog, Mar 2026* — The eval-building process behind harness optimization: traces → failure patterns → targeted improvements. 🆕
+- **[How We Build Evals for Deep Agents](https://www.langchain.com/blog/how-we-build-evals-for-deep-agents)** — LangChain — *blog, Mar 2026* — The eval-building process behind harness optimization: production traces, failure taxonomies, targeted experiments, and holdout discipline. 🆕
+
+- **[Evaluating Deep Agents: Our Learnings](https://www.langchain.com/blog/evaluating-deep-agents-our-learnings)** — LangChain — *blog, Jun 2026* — Lessons from evaluating long-running agents: start from trajectories, isolate regressions, and avoid optimizing only final-answer scores. 🆕
+
+- **[Agent Evaluation Readiness Checklist](https://www.langchain.com/blog/agent-evaluation-readiness-checklist)** — LangChain — *blog, Jun 2026* — Practical checklist for when an agent is ready for systematic evals: stable traces, representative tasks, clear pass/fail signals, and review loops. 🆕
+
+- **[How We Compare Model Quality in Cursor](https://cursor.com/blog/cursorbench)** — Cursor — *blog, Apr 2025* — CursorBench shows how a coding-agent product evaluates models under realistic edit, retrieval, and tool-use workflows. 🆕
 
 - **[Holistic Agent Leaderboard (HAL)](https://hal.cs.princeton.edu/)** — Princeton — *benchmark* — Standardized, cost-aware harness that runs the SAME agent harness across 9 benchmarks / 9 models (21,730 rollouts). The infrastructure answer to "harness confounds rankings." 🆕
 
@@ -318,6 +336,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI — *blog* — Plan.md, Implement.md as harness-level planning artifacts. 🆕
 
 ### Cursor
+
+- **[Continually Improving Our Agent Harness](https://cursor.com/blog/continually-improving-agent-harness)** — Cursor — *blog, May 2025* — Cursor's account of harness iteration: product traces, targeted evals, tool design, and model-specific adjustments.
 
 - **[Cursor Rules Files](https://docs.cursor.com/context/rules-for-ai)** — Cursor — *docs* — How .cursor/rules files configure agent behavior per-project, with built-in loop detection and model-specific prompt adaptation.
 
@@ -383,9 +403,13 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *blog, Jun 2025* — Frames observability as traces across prompts, tools, memory, retrieval, cost, and emerging semantic conventions. 🆕
 - **[Tracing](https://openai.github.io/openai-agents-python/tracing/)** — OpenAI Agents SDK — *docs* — Built-in trace/span model covering agent runs, LLM generations, tool calls, handoffs, guardrails, and custom events.
 - **[Agent Observability Needs Feedback to Power Learning](https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning)** — LangChain (Harrison Chase) — *blog, May 2026* — Connects traces, explicit feedback, and production learning loops so agents improve from real usage. 🆕
+- **[Debugging Deep Agents with LangSmith](https://www.langchain.com/blog/debugging-deep-agents-with-langsmith)** — LangChain — *blog, Jun 2026* — Shows why deep-agent traces need specialized debugging views: long trajectories, tool calls, subagent spans, and regression comparison. 🆕
+- **[LangSmith Observability](https://docs.langchain.com/langsmith/observability)** — LangChain — *docs* — Official tracing and observability guide for capturing agent runs, inspecting spans, and connecting logs to datasets/evals.
 - **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain — Trace storage, evaluation, datasets, prompt management.
 - **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — OSS OTel tracing + response/retrieval evals.
 - **[Langfuse](https://github.com/langfuse/langfuse)** — OSS tracing, evals, datasets, prompt management; self-hostable. 🆕
+- **[Langfuse Observability Overview](https://langfuse.com/docs/observability/overview)** — Langfuse — *docs* — Product-agnostic tracing concepts for production LLM apps: traces, observations, scores, sessions, and datasets.
+- **[Langfuse Agent Graphs](https://langfuse.com/docs/observability/features/agent-graphs)** — Langfuse — *docs* — Visualizes multi-step agent execution as a graph, making tool calls, branches, and nested spans inspectable.
 - **[W&B Weave](https://github.com/wandb/weave)** — @weave.op trace trees + scorer-based eval harness. 🆕
 - **[Braintrust](https://www.braintrust.dev/)** — Eval + observability platform tying offline experiments to production logs.
 
@@ -396,7 +420,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[Multi-Turn RL for Multi-Hour Agents — Will Brown](https://www.latent.space/p/willccbb)** — Latent Space — *podcast* — The verifiers author on building multi-turn RL environments and reward design in practice. 🆕
 - **[Harness Engineering (YouTube)](https://www.youtube.com/watch?v=kmTMc-fVSXw)** — Florian Brand — *talk* — 61-slide talk on why benchmarks break in the agent era.
 - **[Why AI Evals Are the Hottest New Skill](https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill)** — Hamel Husain & Shreya Shankar — *talk/newsletter* — The "you can't vibe-check" story that mainstreamed evals to PMs. 🆕
-- **[Context Engineering for AI Agents: Part 2](https://www.philschmid.de/context-engineering-agents-part-2)** — Phil Schmid — *blog/talk* — Practical context engineering patterns. 🆕
+- **[Context Engineering for AI Agents: Part 2](https://www.philschmid.de/context-engineering-part-2)** — Phil Schmid — *blog/talk* — Practical context engineering patterns. 🆕
 - **[Nathan Lambert — "What technical people call the harness matters more than the model"](https://www.turingpost.com/p/nathanlambert)** — Turing Post — *interview*
 
 ---
