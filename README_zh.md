@@ -116,7 +116,7 @@
 
 - **[AgentSwing: Adaptive Parallel Context Management](https://arxiv.org/abs/2603.27490)** — *论文, 2026* — 面向长时 Web Agent 的并行上下文管理路由。🆕
 
-**必读：** Anthropic（上下文工程） · Manus
+**必读：** Anthropic（上下文工程） · Manus · Breunig
 
 ---
 
@@ -202,7 +202,7 @@
 
 - **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — *论文, 2025* — 面向真实代码库的可扩展 Agent 脚手架模式。
 
-**必读：** Anthropic（构建有效 Agent） · OpenAI（实践指南）
+**必读：** Anthropic（构建有效 Agent） · OpenAI（实践指南） · LangChain（规划-执行）
 
 ---
 
@@ -223,6 +223,8 @@
 - **[Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale](https://arxiv.org/abs/2603.02176)** — Li 等 — *论文, 2026* — 将技能视作生态系统：组织、编排和大规模测量。🆕
 
 - **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills)** — Firecrawl — *博客* — 面向实践者解释 SKILL.md 为什么成为 Harness 原语。
+
+**必读：** Anthropic（Agent Skills） · OpenAI（渐进披露）
 
 ---
 
@@ -271,6 +273,8 @@
 - **[Sandboxing and Isolation](https://blog.langchain.com/the-anatomy-of-an-agent-harness/)** — LangChain — *博客, 2026.03* — 沙箱是 Harness 原语：隔离 + 验证。🆕
 
 - **[BenchJack / Meerkat-style Reward Hacking](https://github.com/benchflow-ai/benchflow)** — BenchFlow — *工具* — 展示 Agent 如何钻评估环境空子，以及 hardened verifier 默认值如何阻断常见 reward hacking。🆕
+
+**必读：** Anthropic（权限提示之外） · OWASP（Agentic Top 10） · Anthropic（containment）
 
 ---
 
@@ -337,6 +341,8 @@
 - **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson, 2025.12
 - **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk, 2026.02 — 仅改编辑格式，分数提升 10 倍 🆕
 
+**必读：** Anthropic（长时运行） · OpenAI（Codex 循环） · Cursor（Harness 迭代）
+
 ---
 
 ## 11 · 多 Agent 编排
@@ -348,6 +354,8 @@
 - **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *博客* — Manager agent、去中心化 handoff、跨 Agent 工具注册等多 Agent 拓扑。
 - **[Why Do Multi-Agent LLM Systems Fail? (MAST)](https://arxiv.org/abs/2503.13657)** — UC Berkeley — 14 种失败模式分类学 🆕
 - **[A2A Protocol (Agent-to-Agent)](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)** — Google — *规范, 2025.04* — Agent 间通信标准，补足 MCP 的 agent-to-tool 方向。
+
+**必读：** Anthropic（Managed Agents） · GitHub（Squad） · MAST
 
 ---
 
@@ -384,6 +392,8 @@
 - **[W&B Weave](https://github.com/wandb/weave)** — Weights & Biases — *工具/代码库* — @weave.op trace tree 和基于 scorer 的 eval harness。🆕
 - **[Braintrust](https://www.braintrust.dev/)** — Braintrust — *工具* — 将离线实验和生产日志连接起来的 eval + observability 平台。
 
+**必读：** OpenAI Agents SDK · LangGraph · OpenTelemetry · LangSmith
+
 ---
 
 ## 13 · 演讲、播客与幻灯片
@@ -393,6 +403,8 @@
 - **[Why AI Evals Are the Hottest New Skill](https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill)** — Hamel Husain & Shreya Shankar 🆕
 - **[Context Engineering for AI Agents: Part 2](https://www.philschmid.de/context-engineering-part-2)** — Phil Schmid — *博客/演讲* — 实用上下文工程模式。🆕
 - **[Nathan Lambert — "What technical people call the harness matters more than the model"](https://www.turingpost.com/p/nathanlambert)** — Turing Post — *访谈*
+
+**必读：** Latent Space（多轮 RL） · Brand（Harness Engineering） · Hamel/Shreya（Evals）
 
 ---
 
@@ -406,6 +418,8 @@
 - **[General Modular Harness](https://arxiv.org/abs/2507.11633)** — Zhang 等 — *论文, 2025* — 多轮环境中的模块化 Harness 结构。🆕
 - **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor 等 — *论文, 2024* — 成本控制评估，并指出 benchmark 中的 Harness 混淆。
 - **[Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)** — METR — *论文/博客, 2025* — Scaffold 会改变可测量的任务时长；用相对人类时间衡量能力。
+
+**必读：** Harness Engineering for Language Agents · Natural-Language Agent Harnesses · AI Agents That Matter
 
 ---
 

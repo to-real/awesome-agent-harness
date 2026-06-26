@@ -351,6 +351,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson — *blog, Dec 2025* — Side-by-side teardown of Claude Code's harness showing why identical models diverge.
 - **[I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk (Hashline) — *blog, Feb 2026* — The most dramatic single-variable experiment: edit format alone moved scores by 10x. 🆕
 
+**Must-reads:** Anthropic (long-running) · OpenAI (Codex loop) · Cursor (harness iteration)
+
 ---
 
 ## 11 · Multi-Agent Orchestration
@@ -371,7 +373,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[A2A Protocol (Agent-to-Agent)](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)** — Google — *spec, Apr 2025* — Inter-agent communication standard, complementing MCP (agent-to-tool).
 
-**Must-reads:** Anthropic (scaling managed agents) · GitHub (multi-agent failures)
+**Must-reads:** Anthropic (managed agents) · GitHub (Squad) · MAST
 
 ---
 
@@ -413,6 +415,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[W&B Weave](https://github.com/wandb/weave)** — Weights & Biases — *tool/repo* — @weave.op trace trees + scorer-based eval harness. 🆕
 - **[Braintrust](https://www.braintrust.dev/)** — Braintrust — *tool* — Eval + observability platform tying offline experiments to production logs.
 
+**Must-reads:** OpenAI Agents SDK · LangGraph · OpenTelemetry · LangSmith
+
 ---
 
 ## 13 · Talks, Podcasts & Slides
@@ -422,6 +426,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[Why AI Evals Are the Hottest New Skill](https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill)** — Hamel Husain & Shreya Shankar — *talk/newsletter* — The "you can't vibe-check" story that mainstreamed evals to PMs. 🆕
 - **[Context Engineering for AI Agents: Part 2](https://www.philschmid.de/context-engineering-part-2)** — Phil Schmid — *blog/talk* — Practical context engineering patterns. 🆕
 - **[Nathan Lambert — "What technical people call the harness matters more than the model"](https://www.turingpost.com/p/nathanlambert)** — Turing Post — *interview*
+
+**Must-reads:** Latent Space (multi-turn RL) · Brand (Harness Engineering) · Hamel/Shreya (evals)
 
 ---
 
@@ -444,6 +450,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor et al. — *paper, 2024* — Cost-controlled evaluation; harness confounds on benchmarks.
 
 - **[Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)** — METR — *paper/blog, 2025* — Scaffolds change the measured horizon; success-vs-human-time as a primitive.
+
+**Must-reads:** Harness Engineering for Language Agents · Natural-Language Agent Harnesses · AI Agents That Matter
 
 ---
 

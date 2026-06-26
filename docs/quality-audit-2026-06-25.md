@@ -6,17 +6,17 @@ Scope: README.md and README_zh.md. This audit checks link health, EN/ZH content 
 
 ## Executive Summary
 
-- EN/ZH parity is good at the URL-set level: both files contain the same 135 unique non-local URLs.
+- EN/ZH parity is good at the URL-set level: both files contain the same 134 unique non-local URLs.
 - The Chinese README is no longer link-sparse, but it still has more shorthand entries than the English README.
-- The main cleanup work should be: fix true broken URLs, standardize entry format, then align Must-reads lines.
+- The main cleanup work should be: finish remaining Chinese shorthand entries, then rerun link/format checks after any further source movement.
 - Several failures from automated link checking are request-policy issues, not broken resources.
 
 ## Link Audit
 
 ### Counts
 
-- README.md: 169 non-local link occurrences, 135 unique non-local URLs.
-- README_zh.md: 168 non-local link occurrences, 135 unique non-local URLs.
+- README.md: 167 non-local link occurrences, 134 unique non-local URLs.
+- README_zh.md: 166 non-local link occurrences, 134 unique non-local URLs.
 - Unique URL diff between EN and ZH: 0.
 
 ### True Broken Or Stale URLs
@@ -94,15 +94,17 @@ Target format:
 
 ### English README
 
-- Sections 1-9 and 11 have `Must-reads` lines.
-- Sections 10, 12, 13, and 14 do not have `Must-reads` lines.
+- Sections 1-14 now have `Must-reads` lines.
+- Sections 10, 12, 13, and 14 were filled after this audit.
+- Section 11 was updated to reflect the fixed GitHub Squad link/title instead of the stale multi-agent-failures wording.
 
 ### Chinese README
 
-- Sections with no `必读` line: 6, 8, 10, 11, 12, 13, 14.
-- Some existing `必读` lines are not aligned with English:
-  - Section 2 omits Breunig.
-  - Section 5 omits LangChain plan-and-execute.
+- Sections 1-14 now have `必读` lines.
+- Missing `必读` lines were added for sections 6, 8, 10, 11, 12, 13, and 14.
+- Existing `必读` lines were aligned with English:
+  - Section 2 now includes Breunig.
+  - Section 5 now includes LangChain plan-and-execute.
 
 ## Duplicate Pressure
 
@@ -118,6 +120,6 @@ Recommendation: keep duplicates in Must-Read plus one topical section, but add `
 
 ## Recommended Next Fix Batch
 
-1. Add or align Must-reads lines in Chinese sections 6, 8, and 11 first; then decide whether sections 10, 12, 13, 14 should also have Must-reads in both languages.
-2. Normalize remaining compressed entries in README_zh sections 10, 11, and 13.
-3. Re-run link check after future format/link cleanup.
+1. Normalize remaining compressed entries in README_zh sections 10, 11, and 13.
+2. Re-run link check after future format/link cleanup.
+3. Consider cross-reference markers for duplicated Must-Read sources if the project wants stricter awesome-list polish.
