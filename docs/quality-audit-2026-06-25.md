@@ -157,6 +157,5 @@ Recommendation: keep these intentional duplicates. Re-run link checks after any 
 
 ## Recommended Next Fix Batch
 
-1. Consider a final README skim for wording consistency around cross-reference markers.
-2. Keep future source additions quality-first and preserve exact EN/ZH URL parity.
-3. Re-run link checks only after future source movement or URL edits.
+1. Keep future source additions quality-first and preserve exact EN/ZH URL parity.
+2. Re-run link checks only after future source movement or URL edits.
