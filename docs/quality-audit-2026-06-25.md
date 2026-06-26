@@ -2,22 +2,35 @@
 
 Date: 2026-06-25
 
+Last refreshed: 2026-06-26
+
 Scope: README.md and README_zh.md. This audit checks link health, EN/ZH content parity, entry format consistency, section structure, and obvious duplicate pressure. It does not apply content fixes.
 
 ## Executive Summary
 
-- EN/ZH parity is good at the URL-set level: both files contain the same 134 unique non-local URLs.
-- The Chinese README is no longer link-sparse, but it still has more shorthand entries than the English README.
-- The main cleanup work should be: finish remaining Chinese shorthand entries, then rerun link/format checks after any further source movement.
-- Several failures from automated link checking are request-policy issues, not broken resources.
+- EN/ZH parity is good at the URL-set level: both files contain the same 133 unique non-local URLs.
+- Targeted format cleanup is complete for the audited high-priority sections.
+- The 2026-06-26 link refresh found no remaining true broken URL candidates.
+- Remaining automated link-check failures are request-policy or network-limit issues, not confirmed broken resources.
 
 ## Link Audit
 
 ### Counts
 
-- README.md: 167 non-local link occurrences, 134 unique non-local URLs.
-- README_zh.md: 166 non-local link occurrences, 134 unique non-local URLs.
+- README.md: 166 non-local link occurrences, 133 unique non-local URLs.
+- README_zh.md: 165 non-local link occurrences, 133 unique non-local URLs.
 - Unique URL diff between EN and ZH: 0.
+
+### 2026-06-26 Refresh
+
+Method: extracted unique non-local URLs from README.md, checked with Node `fetch` using HEAD first and GET fallback.
+
+- Checked: 133 unique non-local URLs.
+- OK via HEAD: 119.
+- OK via GET fallback: 1.
+- Request-limited / network-limited: 13.
+- Broken candidates after rerun: 0.
+- Placeholder `](URL)` examples were removed from both README contribution sections so future link extraction does not count them as resource URLs.
 
 ### True Broken Or Stale URLs
 
@@ -53,6 +66,11 @@ These returned 404 or soft-redirected to the wrong content during the audit. The
   - Fixed: replaced with `https://www.firecrawl.dev/blog/agent-skills`
   - Treat this as a soft-broken link.
 
+- `https://github.com/anthropics/agent-skills/blob/main/AGENTS.md`
+  - Status: 404 in Node fetch and raw GitHub checks during the 2026-06-26 refresh.
+  - Fixed: replaced with `https://agents.md/`.
+  - Reason: this keeps the entry focused on the AGENTS.md convention rather than a stale repository path.
+
 ### Request-Limited But Not Proven Broken
 
 These failed under some automated request methods but were confirmed through another route or are likely bot/rate-limit issues.
@@ -63,6 +81,22 @@ These failed under some automated request methods but were confirmed through ano
 - YouTube URLs returned request failures from Node/curl; this is common for automated requests.
 - Some GitHub URLs timed out in one pass but many returned 200 in the second pass; treat remaining GitHub `000` as inconclusive unless reproduced with browser/web tooling.
 - O'Reilly returned 403; likely request policy, not enough evidence to call broken.
+
+Latest request-limited set from the 2026-06-26 refresh:
+
+- `https://ai.google.dev/gemini-api/docs/code-execution`
+- `https://ai.google.dev/gemini-api/docs/function-calling`
+- `https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/`
+- `https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/`
+- `https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/`
+- `https://developers.openai.com/docs/codex/agents-md`
+- `https://openai.com/index/a-practical-guide-to-building-ai-agents/`
+- `https://openai.com/index/harness-engineering/`
+- `https://openai.com/index/unlocking-codex-harness/`
+- `https://openai.com/index/unrolling-the-codex-agent-loop/`
+- `https://www.turingpost.com/p/nathanlambert`
+- `https://www.youtube.com/watch?v=EEw2PpL-_NM`
+- `https://www.youtube.com/watch?v=kmTMc-fVSXw`
 
 ## Format Audit
 
@@ -123,6 +157,6 @@ Recommendation: keep these intentional duplicates. Re-run link checks after any 
 
 ## Recommended Next Fix Batch
 
-1. Re-run link check after the duplicate/cross-reference cleanup.
-2. Consider a final README skim for wording consistency around cross-reference markers.
-3. Keep future source additions quality-first and preserve exact EN/ZH URL parity.
+1. Consider a final README skim for wording consistency around cross-reference markers.
+2. Keep future source additions quality-first and preserve exact EN/ZH URL parity.
+3. Re-run link checks only after future source movement or URL edits.

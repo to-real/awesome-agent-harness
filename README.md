@@ -220,7 +220,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Integrating Agent Skills to Usher in a New Chapter for Agents](https://manus.im/blog/manus-skills)** — Manus — *blog, 2025* — Positions skills as workflow capsules on top of MCP connectors: MCP supplies data access, skills package procedural know-how.
 
-- **[AGENTS.md](https://github.com/anthropics/agent-skills/blob/main/AGENTS.md)** — Multiple — *convention* — The foundational harness component: project-level instructions that grow incrementally. Ghostty's AGENTS.md is a public exemplar.
+- **[AGENTS.md](https://agents.md/)** — Multiple — *convention* — The foundational harness component: project-level instructions that grow incrementally. Ghostty's AGENTS.md is a public exemplar.
 
 - **[Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale](https://arxiv.org/abs/2603.02176)** — Li et al. — *paper, 2026* — Skills as an ecosystem: organization, orchestration, and measurement at scale. 🆕
 
@@ -461,7 +461,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. TL;DR:
 
 - Every entry must say *what it is* and *why it belongs*.
 - URLs must be verified and accessible.
-- Use the format: `**[Title](URL)** — Author/Org — *type, date* — Annotation.`
+- Use the standard entry format: linked title, author/org, type/date, and annotation.
 - Mark `🆕` for 2025–2026 content, `⚠️` for caveats.
 
 ---

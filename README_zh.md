@@ -216,7 +216,7 @@
 
 - **[Integrating Agent Skills to Usher in a New Chapter for Agents](https://manus.im/blog/manus-skills)** — Manus — *博客, 2025* — 把 Skills 定义为 MCP 连接器之上的工作流胶囊：MCP 负责数据连接，Skills 封装做事方法。
 
-- **[AGENTS.md](https://github.com/anthropics/agent-skills/blob/main/AGENTS.md)** — 多方约定 — *约定* — 项目级指令是基础 Harness 组件，会随着项目逐步积累规则。
+- **[AGENTS.md](https://agents.md/)** — 多方约定 — *约定* — 项目级指令是基础 Harness 组件，会随着项目逐步积累规则。
 
 - **[SkillsBench](https://github.com/benchflow-ai/skillsbench)** — BenchFlow — *基准测试* — 评估技能的有效性以及 Agent 使用技能的能力。🆕
 
@@ -429,7 +429,7 @@
 
 - 每个条目必须说明*是什么*和*为什么收录*。
 - URL 必须经过验证且可访问。
-- 使用格式：`**[标题](URL)** — 作者/组织 — *类型, 日期* — 注释。`
+- 使用标准条目格式：带链接标题、作者/组织、类型/日期和注释。
 - 标记 `🆕` 表示 2025–2026 年内容，`⚠️` 表示注意事项。
 
 ---
