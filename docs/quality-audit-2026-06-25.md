@@ -74,21 +74,24 @@ Target format:
 
 ### Counts
 
-- README.md possible format issues: 27.
-- README_zh.md possible format issues: 46.
+- Original audit baseline: README.md possible format issues: 27.
+- Original audit baseline: README_zh.md possible format issues: 46.
+- After cleanup batches, targeted scans found no missing-author paper entries, no `— Org, date` compressed entries, and no resource entries with fewer than two ` — ` separators.
 
 ### Main Patterns
 
-- Academic-paper entries often omit author/org, e.g. entries that start with `— *paper...*`.
-- Framework/tool entries often omit `*type/date*`.
-- README_zh has many compressed entries in sections 10-14, such as `— Anthropic, 2026.03 🆕`, which do not match the repository's own entry spec.
-- Some tool entries start directly with an annotation after the org name, e.g. `— OpenAI — Agents, tools...`, without type/date.
+- Academic-paper entries that omitted author/org, e.g. entries that started with `— *paper...*`, were normalized after this audit.
+- Framework/tool entries that omitted `*type/date*` in sections 12 and 14 were normalized after this audit.
+- README_zh compressed entries in sections 10, 11, and 13, such as `— Anthropic, 2026.03 🆕`, were normalized after this audit.
+- Tool entries that started directly with an annotation after the org name, e.g. `— OpenAI — Agents, tools...`, were normalized in the targeted cleanup sections.
 
 ### Highest-Priority Format Sections
 
 - README.md: section 12 `Frameworks & Tools` and section 14 `Academic Papers` were normalized after this audit.
 - README_zh.md: section 12 `框架与工具` and section 14 `学术论文` were normalized after this audit.
-- Remaining format work: compressed entries in README_zh sections 10, 11, and 13; paper-heavy entries in earlier sections 1/2/5/7.
+- README_zh.md: compressed entries in sections 10, 11, and 13 were normalized after this audit.
+- README.md and README_zh.md: paper-heavy entries in earlier sections 1, 2, 5, and 7 were normalized after this audit.
+- Remaining format work: none found in the targeted format scans. Future cleanup should focus on duplicate pressure, cross-references, and link rechecks after any content movement.
 
 ## Must-Reads Audit
 
@@ -120,6 +123,6 @@ Recommendation: keep duplicates in Must-Read plus one topical section, but add `
 
 ## Recommended Next Fix Batch
 
-1. Normalize remaining compressed entries in README_zh sections 10, 11, and 13.
-2. Re-run link check after future format/link cleanup.
-3. Consider cross-reference markers for duplicated Must-Read sources if the project wants stricter awesome-list polish.
+1. Consider cross-reference markers for duplicated Must-Read sources if the project wants stricter awesome-list polish.
+2. Re-run link check after future duplicate/cross-reference cleanup.
+3. Keep future source additions quality-first and preserve exact EN/ZH URL parity.

@@ -82,11 +82,11 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents)** — Anthropic — *research, 2026* — Defines agents as models that direct their own process and tool use, then frames why trustworthy harnesses need evaluation, monitoring, and controls. 🆕
 
-- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — *paper, Apr 2026* — The first academic paper treating harness engineering as a research object. Proposes the CAR decomposition (Control, Agency, Runtime) and HarnessCard as a reporting artifact. Audits 63 harness-relevant works. 🆕
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — Anonymous authors — *preprint, Apr 2026* — The first academic paper treating harness engineering as a research object. Proposes the CAR decomposition (Control, Agency, Runtime) and HarnessCard as a reporting artifact. Audits 63 harness-relevant works. 🆕
 
-- **[Natural-Language Agent Harnesses](https://arxiv.org/html/2603.25723v1)** — *paper, Mar 2026* — Treats the harness design-pattern layer as a natural-language representation object. Connects AGENTS.md, AgentSkills, and skill bundles as portable operational knowledge. 🆕
+- **[Natural-Language Agent Harnesses](https://arxiv.org/html/2603.25723v1)** — Pan et al. — *paper, Mar 2026* — Treats the harness design-pattern layer as a natural-language representation object. Connects AGENTS.md, AgentSkills, and skill bundles as portable operational knowledge. 🆕
 
-- **[The Harness Model — AI Engineering Maturity Matrix, Q1 2026](https://handsonarchitects.com/blog/2026/the-harness-model-ai-engineering-maturity-matrix/)** — *blog, Apr 2026* — Diagnostic tool: 10-dimension maturity grid mapping from "occasional AI" to "agent-first delivery." Practical self-assessment for teams. 🆕
+- **[The Harness Model — AI Engineering Maturity Matrix, Q1 2026](https://handsonarchitects.com/blog/2026/the-harness-model-ai-engineering-maturity-matrix/)** — Laskowski & Michalak (HandsOn Architects) — *blog, Apr 2026* — Diagnostic tool: 10-dimension maturity grid mapping from "occasional AI" to "agent-first delivery." Practical self-assessment for teams. 🆕
 
 - **[Same Model, Different Results: Why Coding Agents Aren't Interchangeable](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson — *blog, Dec 2025* — Concrete teardown showing identical models yield different results: Claude Code's harness (system reminders, sub-agents, planning, IDE feedback) vs. other agents. 🆕
 
@@ -106,7 +106,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[How Long Contexts Fail and How to Fix Them](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)** — Drew Breunig — *blog, Jun 2025* — Failure modes of long-context usage and practical fixes.
 
-- **[LOCA-bench: Benchmarking Language Agents Under Controllable and Extreme Context Growth](https://arxiv.org/pdf/2602.07962)** — *paper* — Evaluates context engineering strategies (context editing, context awareness, memory tools, programmatic tool calling) under controlled conditions. 🆕
+- **[LOCA-bench: Benchmarking Language Agents Under Controllable and Extreme Context Growth](https://arxiv.org/pdf/2602.07962)** — Zeng et al. — *paper, 2026* — Evaluates context engineering strategies (context editing, context awareness, memory tools, programmatic tool calling) under controlled conditions. 🆕
 
 - **[Context Management for Deep Agents](https://www.langchain.com/blog/context-management-for-deepagents)** — LangChain (Curme & Daugherty) — *blog, Jan 2026* — Practical patterns for managing context in long-running agent sessions. 🆕
 
@@ -116,9 +116,9 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems](https://arxiv.org/abs/2604.14228)** — Liu et al. — *paper, 2026* — Reverse-engineering of Claude Code's harness: permission modes, compaction, MCP/plugins/skills/hooks, subagents, and session storage. 🆕
 
-- **[COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context](https://arxiv.org/abs/2510.08790)** — *paper* — Evolving context strategies for long-horizon tasks.
+- **[COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context](https://arxiv.org/abs/2510.08790)** — Wan et al. — *paper* — Evolving context strategies for long-horizon tasks.
 
-- **[AgentSwing: Adaptive Parallel Context Management Routing for Long-Horizon Web Agents](https://arxiv.org/abs/2603.27490)** — *paper, 2026* — Parallel context management for web agents tackling long-horizon tasks. 🆕
+- **[AgentSwing: Adaptive Parallel Context Management Routing for Long-Horizon Web Agents](https://arxiv.org/abs/2603.27490)** — Feng et al. — *paper, 2026* — Parallel context management for web agents tackling long-horizon tasks. 🆕
 
 **Must-reads:** Anthropic (context engineering) · Manus · Breunig
 
@@ -204,7 +204,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *blog, Mar 2026* — Repository-native multi-agent orchestration with a coordinator, specialist agents, versioned shared memory, and independent review loops. 🆕
 
-- **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — *paper, 2025* — Scalable scaffolding patterns for production codebases.
+- **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — Wong et al. — *paper, 2025* — Scalable scaffolding patterns for production codebases.
 
 **Must-reads:** Anthropic (building effective agents) · OpenAI (practical guide) · LangChain (plan-and-execute)
 
@@ -242,7 +242,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Effective Context Engineering for AI Agents — Memory Strategies](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *blog, Sep 2025* — Memory tools that enable persistent storage and retrieval across conversations.
 
-- **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — *paper, 2026* — Memory collaboration across multiple agents via trajectory distillation. 🆕
+- **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — Chang et al. — *paper, 2026* — Memory collaboration across multiple agents via trajectory distillation. 🆕
 
 - **[Filesystem as Agent Memory](https://openai.com/index/harness-engineering/)** — OpenAI — *blog, Feb 2026* — "From the agent's point of view, anything it cannot access in-context effectively does not exist." The repo as externalized memory.
 
@@ -437,7 +437,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — Anonymous authors — *preprint, Apr 2026* — CAR decomposition; HarnessCard reporting artifact; audits 63 works. 🆕
 
-- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Zheng et al. — *paper, Mar 2026* — Harness design patterns as natural-language representations executed under a shared runtime. 🆕
+- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Pan et al. — *paper, Mar 2026* — Harness design patterns as natural-language representations executed under a shared runtime. 🆕
 
 - **[Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052)** — Lee et al. (Stanford) — *paper, Mar 2026* — Automated harness synthesis as an optimization target. 🆕
 

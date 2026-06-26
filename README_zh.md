@@ -80,11 +80,11 @@
 
 - **[Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents)** — Anthropic — *研究, 2026* — 将 Agent 定义为能指挥自身流程和工具使用的模型，并说明可信 Harness 为什么需要评估、监控和控制。🆕
 
-- **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — *论文, 2026.04* — 首篇将 Harness Engineering 作为研究对象的学术论文。提出 CAR 分解（Control, Agency, Runtime）和 HarnessCard 报告工件。🆕
+- **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — 匿名作者 — *预印本, 2026.04* — 首篇将 Harness Engineering 作为研究对象的学术论文。提出 CAR 分解（Control, Agency, Runtime）和 HarnessCard 报告工件。🆕
 
-- **[Natural-Language Agent Harnesses](https://arxiv.org/html/2603.25723v1)** — *论文, 2026.03* — 将 AGENTS.md、Agent Skills 和技能包视作可迁移的自然语言 Harness 设计模式。🆕
+- **[Natural-Language Agent Harnesses](https://arxiv.org/html/2603.25723v1)** — Pan 等 — *论文, 2026.03* — 将 AGENTS.md、Agent Skills 和技能包视作可迁移的自然语言 Harness 设计模式。🆕
 
-- **[The Harness Model — AI Engineering Maturity Matrix](https://handsonarchitects.com/blog/2026/the-harness-model-ai-engineering-maturity-matrix/)** — *博客, 2026.04* — 10 维度成熟度矩阵，从"偶尔使用 AI"到"Agent 优先交付"。团队自评工具。🆕
+- **[The Harness Model — AI Engineering Maturity Matrix](https://handsonarchitects.com/blog/2026/the-harness-model-ai-engineering-maturity-matrix/)** — Laskowski & Michalak (HandsOn Architects) — *博客, 2026.04* — 10 维度成熟度矩阵，从"偶尔使用 AI"到"Agent 优先交付"。团队自评工具。🆕
 
 - **[Agent Harness Engineering](https://www.oreilly.com/radar/agent-harness-engineering/)** — Addy Osmani (O'Reilly Radar) — *博客* — "一个平庸模型+优秀 Harness 击败优秀模型+糟糕 Harness。" 🆕
 
@@ -110,11 +110,11 @@
 
 - **[Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems](https://arxiv.org/abs/2604.14228)** — Liu 等 — *论文, 2026* — 反向拆解 Claude Code 的 Harness：权限模式、压缩、MCP/插件/技能/hooks、子 Agent 和会话存储。🆕
 
-- **[COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context](https://arxiv.org/abs/2510.08790)** — *论文* — 面向长时任务的演化式上下文策略。
+- **[COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context](https://arxiv.org/abs/2510.08790)** — Wan 等 — *论文* — 面向长时任务的演化式上下文策略。
 
-- **[LOCA-bench](https://arxiv.org/pdf/2602.07962)** — *论文* — 在受控条件下评估各种上下文工程策略（上下文编辑、上下文感知、记忆工具、编程式工具调用）。🆕
+- **[LOCA-bench](https://arxiv.org/pdf/2602.07962)** — Zeng 等 — *论文, 2026* — 在受控条件下评估各种上下文工程策略（上下文编辑、上下文感知、记忆工具、编程式工具调用）。🆕
 
-- **[AgentSwing: Adaptive Parallel Context Management](https://arxiv.org/abs/2603.27490)** — *论文, 2026* — 面向长时 Web Agent 的并行上下文管理路由。🆕
+- **[AgentSwing: Adaptive Parallel Context Management](https://arxiv.org/abs/2603.27490)** — Feng 等 — *论文, 2026* — 面向长时 Web Agent 的并行上下文管理路由。🆕
 
 **必读：** Anthropic（上下文工程） · Manus · Breunig
 
@@ -200,7 +200,7 @@
 
 - **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *博客, 2026.03* — 仓库内多 Agent 编排案例：协调者、专职 Agent、版本化共享记忆和独立 review loop。🆕
 
-- **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — *论文, 2025* — 面向真实代码库的可扩展 Agent 脚手架模式。
+- **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — Wong 等 — *论文, 2025* — 面向真实代码库的可扩展 Agent 脚手架模式。
 
 **必读：** Anthropic（构建有效 Agent） · OpenAI（实践指南） · LangChain（规划-执行）
 
@@ -238,7 +238,7 @@
 
 - **[Effective Context Engineering for AI Agents — Memory Strategies](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — 通过记忆工具实现跨会话存储和检索。
 
-- **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — *论文, 2026* — 通过轨迹蒸馏实现多 Agent 之间的记忆协作。🆕
+- **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — Chang 等 — *论文, 2026* — 通过轨迹蒸馏实现多 Agent 之间的记忆协作。🆕
 
 - **[Filesystem as Agent Memory](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — "从 Agent 的角度看，任何不在上下文中的东西实际上都不存在。"
 
@@ -411,7 +411,7 @@
 ## 14 · 学术论文
 
 - **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — 匿名作者 — *预印本, 2026.04* — CAR 分解、HarnessCard 报告工件，并审计 63 篇相关工作。🆕
-- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Zheng 等 — *论文, 2026.03* — 将 Harness 设计模式视作在共享运行时中执行的自然语言表示。🆕
+- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Pan 等 — *论文, 2026.03* — 将 Harness 设计模式视作在共享运行时中执行的自然语言表示。🆕
 - **[Meta-Harness: End-to-End Optimization](https://arxiv.org/abs/2603.28052)** — Lee 等 (Stanford) — *论文, 2026.03* — 将 Harness 合成作为可优化目标。🆕
 - **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — Bui — *论文, 2026* — 从终端 Agent 总结 scaffolding、Harness 和上下文工程经验。🆕
 - **[AutoHarness](https://arxiv.org/abs/2603.03329)** — Lou 等 — *论文, 2026* — 自动生成能改善 Agent 行为的代码 Harness。🆕
