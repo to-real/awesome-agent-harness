@@ -86,8 +86,9 @@ Target format:
 
 ### Highest-Priority Format Sections
 
-- README.md: section 12 `Frameworks & Tools`, section 14 `Academic Papers`, paper-heavy entries in sections 1/2/5/7.
-- README_zh.md: sections 10-14 need the most normalization, followed by framework/tool entries.
+- README.md: section 12 `Frameworks & Tools` and section 14 `Academic Papers` were normalized after this audit.
+- README_zh.md: section 12 `框架与工具` and section 14 `学术论文` were normalized after this audit.
+- Remaining format work: compressed entries in README_zh sections 10, 11, and 13; paper-heavy entries in earlier sections 1/2/5/7.
 
 ## Must-Reads Audit
 
@@ -117,6 +118,6 @@ Recommendation: keep duplicates in Must-Read plus one topical section, but add `
 
 ## Recommended Next Fix Batch
 
-1. Normalize entry format in `Frameworks & Tools` and `Academic Papers` first.
-2. Add or align Must-reads lines in Chinese sections 6, 8, and 11 first; then decide whether sections 10, 12, 13, 14 should also have Must-reads in both languages.
+1. Add or align Must-reads lines in Chinese sections 6, 8, and 11 first; then decide whether sections 10, 12, 13, 14 should also have Must-reads in both languages.
+2. Normalize remaining compressed entries in README_zh sections 10, 11, and 13.
 3. Re-run link check after future format/link cleanup.

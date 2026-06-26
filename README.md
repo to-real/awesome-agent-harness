@@ -381,22 +381,22 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 ### Agent SDKs & Frameworks
 
-- **[Claude Agent SDK](https://docs.anthropic.com/en/docs/agents/agent-sdk)** — Anthropic — Built-in permission model, hooks system, multi-session support.
-- **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** — OpenAI — Agents, tools, handoffs, guardrails, tracing.
-- **[LangGraph](https://github.com/langchain-ai/langgraph)** — LangChain — State machines for agent workflows; persistence, streaming, human-in-the-loop.
-- **[CrewAI](https://github.com/crewAIInc/crewAI)** — Multi-agent orchestration with role-based agents and Flows (event-driven pipelines). 🆕
-- **[AutoGen](https://github.com/microsoft/autogen)** — Microsoft — Multi-agent conversation framework.
-- **[Pydantic AI](https://github.com/pydantic/pydantic-ai)** — Type-safe agent framework with OTel tracing. 🆕
-- **[Mastra](https://github.com/mastra-ai/mastra)** — TypeScript-native agent framework with scorers, live evals, CI integration. 🆕
-- **[Agno (formerly Phidata)](https://github.com/agno-agi/agno)** — Lightweight multi-modal agent framework. 🆕
-- **[Google ADK](https://github.com/google/adk-python)** — Google's Agent Development Kit. 🆕
-- **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face — Minimal agent library with code-execution agents. 🆕
+- **[Claude Agent SDK](https://docs.anthropic.com/en/docs/agents/agent-sdk)** — Anthropic — *docs/SDK* — Built-in permission model, hooks system, multi-session support.
+- **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** — OpenAI — *tool/repo* — Agents, tools, handoffs, guardrails, tracing.
+- **[LangGraph](https://github.com/langchain-ai/langgraph)** — LangChain — *tool/repo* — State machines for agent workflows; persistence, streaming, human-in-the-loop.
+- **[CrewAI](https://github.com/crewAIInc/crewAI)** — CrewAI — *tool/repo* — Multi-agent orchestration with role-based agents and Flows (event-driven pipelines). 🆕
+- **[AutoGen](https://github.com/microsoft/autogen)** — Microsoft — *tool/repo* — Multi-agent conversation framework.
+- **[Pydantic AI](https://github.com/pydantic/pydantic-ai)** — Pydantic — *tool/repo* — Type-safe agent framework with OTel tracing. 🆕
+- **[Mastra](https://github.com/mastra-ai/mastra)** — Mastra — *tool/repo* — TypeScript-native agent framework with scorers, live evals, CI integration. 🆕
+- **[Agno (formerly Phidata)](https://github.com/agno-agi/agno)** — Agno — *tool/repo* — Lightweight multi-modal agent framework. 🆕
+- **[Google ADK](https://github.com/google/adk-python)** — Google — *tool/repo* — Google's Agent Development Kit. 🆕
+- **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face — *tool/repo* — Minimal agent library with code-execution agents. 🆕
 
 ### Harness Tools & Utilities
 
-- **[Harbor](https://github.com/harbor-framework/harbor)** — Framework for running agent evals + creating RL environments. Powers Terminal-Bench 2.0. 🆕
-- **[Citadel](https://github.com/SethGammon/Citadel)** — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
-- **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
+- **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *tool/repo* — Framework for running agent evals + creating RL environments. Powers Terminal-Bench 2.0. 🆕
+- **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *tool/repo* — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
+- **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *tool/repo* — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
 
 ### Observability
 
@@ -405,13 +405,13 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[Agent Observability Needs Feedback to Power Learning](https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning)** — LangChain (Harrison Chase) — *blog, May 2026* — Connects traces, explicit feedback, and production learning loops so agents improve from real usage. 🆕
 - **[Debugging Deep Agents with LangSmith](https://www.langchain.com/blog/debugging-deep-agents-with-langsmith)** — LangChain — *blog, Jun 2026* — Shows why deep-agent traces need specialized debugging views: long trajectories, tool calls, subagent spans, and regression comparison. 🆕
 - **[LangSmith Observability](https://docs.langchain.com/langsmith/observability)** — LangChain — *docs* — Official tracing and observability guide for capturing agent runs, inspecting spans, and connecting logs to datasets/evals.
-- **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain — Trace storage, evaluation, datasets, prompt management.
-- **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — OSS OTel tracing + response/retrieval evals.
-- **[Langfuse](https://github.com/langfuse/langfuse)** — OSS tracing, evals, datasets, prompt management; self-hostable. 🆕
+- **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain — *docs/tool* — Trace storage, evaluation, datasets, prompt management.
+- **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — Arize — *tool/repo* — OSS OTel tracing + response/retrieval evals.
+- **[Langfuse](https://github.com/langfuse/langfuse)** — Langfuse — *tool/repo* — OSS tracing, evals, datasets, prompt management; self-hostable. 🆕
 - **[Langfuse Observability Overview](https://langfuse.com/docs/observability/overview)** — Langfuse — *docs* — Product-agnostic tracing concepts for production LLM apps: traces, observations, scores, sessions, and datasets.
 - **[Langfuse Agent Graphs](https://langfuse.com/docs/observability/features/agent-graphs)** — Langfuse — *docs* — Visualizes multi-step agent execution as a graph, making tool calls, branches, and nested spans inspectable.
-- **[W&B Weave](https://github.com/wandb/weave)** — @weave.op trace trees + scorer-based eval harness. 🆕
-- **[Braintrust](https://www.braintrust.dev/)** — Eval + observability platform tying offline experiments to production logs.
+- **[W&B Weave](https://github.com/wandb/weave)** — Weights & Biases — *tool/repo* — @weave.op trace trees + scorer-based eval harness. 🆕
+- **[Braintrust](https://www.braintrust.dev/)** — Braintrust — *tool* — Eval + observability platform tying offline experiments to production logs.
 
 ---
 
@@ -429,9 +429,9 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 *Research papers treating the harness layer as an explicit object of study.*
 
-- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — *preprint, Apr 2026* — CAR decomposition; HarnessCard reporting artifact; audits 63 works. 🆕
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — Anonymous authors — *preprint, Apr 2026* — CAR decomposition; HarnessCard reporting artifact; audits 63 works. 🆕
 
-- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — *paper, Mar 2026* — Harness design patterns as natural-language representations executed under a shared runtime. 🆕
+- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Zheng et al. — *paper, Mar 2026* — Harness design patterns as natural-language representations executed under a shared runtime. 🆕
 
 - **[Meta-Harness: End-to-End Optimization of Model Harnesses](https://arxiv.org/abs/2603.28052)** — Lee et al. (Stanford) — *paper, Mar 2026* — Automated harness synthesis as an optimization target. 🆕
 

@@ -354,21 +354,21 @@
 ## 12 · 框架与工具
 
 ### Agent SDK 与框架
-- **[Claude Agent SDK](https://docs.anthropic.com/en/docs/agents/agent-sdk)** — Anthropic — 内置权限模型、钩子系统
-- **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** — OpenAI
-- **[LangGraph](https://github.com/langchain-ai/langgraph)** — LangChain — Agent 工作流的状态机
-- **[CrewAI](https://github.com/crewAIInc/crewAI)** — 基于角色的多 Agent 编排 🆕
-- **[AutoGen](https://github.com/microsoft/autogen)** — Microsoft
-- **[Pydantic AI](https://github.com/pydantic/pydantic-ai)** — 类型安全 Agent 框架 🆕
-- **[Mastra](https://github.com/mastra-ai/mastra)** — TypeScript 原生 🆕
-- **[Agno (formerly Phidata)](https://github.com/agno-agi/agno)** — 轻量级多模态 Agent 框架。🆕
-- **[Google ADK](https://github.com/google/adk-python)** 🆕
-- **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face 🆕
+- **[Claude Agent SDK](https://docs.anthropic.com/en/docs/agents/agent-sdk)** — Anthropic — *文档/SDK* — 内置权限模型、钩子系统和多会话支持。
+- **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** — OpenAI — *工具/代码库* — Agent、工具、handoff、护栏和 tracing。
+- **[LangGraph](https://github.com/langchain-ai/langgraph)** — LangChain — *工具/代码库* — Agent 工作流状态机，支持持久化、流式输出和 human-in-the-loop。
+- **[CrewAI](https://github.com/crewAIInc/crewAI)** — CrewAI — *工具/代码库* — 基于角色的多 Agent 编排和 Flows 事件流水线。🆕
+- **[AutoGen](https://github.com/microsoft/autogen)** — Microsoft — *工具/代码库* — 多 Agent 对话框架。
+- **[Pydantic AI](https://github.com/pydantic/pydantic-ai)** — Pydantic — *工具/代码库* — 带 OTel tracing 的类型安全 Agent 框架。🆕
+- **[Mastra](https://github.com/mastra-ai/mastra)** — Mastra — *工具/代码库* — TypeScript 原生 Agent 框架，带 scorer、live eval 和 CI 集成。🆕
+- **[Agno (formerly Phidata)](https://github.com/agno-agi/agno)** — Agno — *工具/代码库* — 轻量级多模态 Agent 框架。🆕
+- **[Google ADK](https://github.com/google/adk-python)** — Google — *工具/代码库* — Google 的 Agent Development Kit。🆕
+- **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face — *工具/代码库* — 极简 Agent 库，支持代码执行型 Agent。🆕
 
 ### Harness 工具与实用程序
-- **[Harbor](https://github.com/harbor-framework/harbor)** — 运行 agent eval、创建 RL 环境的框架，支撑 Terminal-Bench 2.0。🆕
-- **[Citadel](https://github.com/SethGammon/Citadel)** — 面向 Claude Code 和 Codex 的 Harness：隔离 worktree、多 Agent 协作和持久记忆。🆕
-- **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
+- **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *工具/代码库* — 运行 agent eval、创建 RL 环境的框架，支撑 Terminal-Bench 2.0。🆕
+- **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *工具/代码库* — 面向 Claude Code 和 Codex 的 Harness：隔离 worktree、多 Agent 协作和持久记忆。🆕
+- **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *工具/代码库* — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
 
 ### 可观测性
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *博客, 2025.06* — 把 Agent 可观测性拆成提示、工具、记忆、检索、成本和语义约定层面的追踪问题。🆕
@@ -376,13 +376,13 @@
 - **[Agent Observability Needs Feedback to Power Learning](https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning)** — LangChain (Harrison Chase) — *博客, 2026.05* — 把 trace、显式反馈和生产学习循环连起来，让 Agent 从真实使用中改进。🆕
 - **[Debugging Deep Agents with LangSmith](https://www.langchain.com/blog/debugging-deep-agents-with-langsmith)** — LangChain — *博客, 2026.06* — Deep agent 的 trace 很长，需要专门视图来调试长轨迹、工具调用、子 Agent span 和回归对比。🆕
 - **[LangSmith Observability](https://docs.langchain.com/langsmith/observability)** — LangChain — *文档* — 捕获 Agent 运行、检查 span，并把日志连接到数据集/eval 的官方可观测性指南。
-- **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain
-- **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — OSS OTel 追踪
-- **[Langfuse](https://github.com/langfuse/langfuse)** — OSS，可自托管 🆕
+- **[LangSmith](https://docs.langchain.com/langsmith/)** — LangChain — *文档/工具* — Trace 存储、评估、数据集和 prompt 管理。
+- **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — Arize — *工具/代码库* — OSS OTel tracing，以及 response/retrieval eval。
+- **[Langfuse](https://github.com/langfuse/langfuse)** — Langfuse — *工具/代码库* — OSS tracing、eval、数据集和 prompt 管理，可自托管。🆕
 - **[Langfuse Observability Overview](https://langfuse.com/docs/observability/overview)** — Langfuse — *文档* — 面向生产 LLM 应用的 tracing 概念：trace、observation、score、session 和 dataset。
 - **[Langfuse Agent Graphs](https://langfuse.com/docs/observability/features/agent-graphs)** — Langfuse — *文档* — 将多步 Agent 执行可视化为图，便于检查工具调用、分支和嵌套 span。
-- **[W&B Weave](https://github.com/wandb/weave)** 🆕
-- **[Braintrust](https://www.braintrust.dev/)**
+- **[W&B Weave](https://github.com/wandb/weave)** — Weights & Biases — *工具/代码库* — @weave.op trace tree 和基于 scorer 的 eval harness。🆕
+- **[Braintrust](https://www.braintrust.dev/)** — Braintrust — *工具* — 将离线实验和生产日志连接起来的 eval + observability 平台。
 
 ---
 
@@ -398,14 +398,14 @@
 
 ## 14 · 学术论文
 
-- **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — *2026.04* 🆕
-- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — *2026.03* 🆕
-- **[Meta-Harness: End-to-End Optimization](https://arxiv.org/abs/2603.28052)** — Stanford — *2026.03* 🆕
-- **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — *2026* 🆕
+- **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — 匿名作者 — *预印本, 2026.04* — CAR 分解、HarnessCard 报告工件，并审计 63 篇相关工作。🆕
+- **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Zheng 等 — *论文, 2026.03* — 将 Harness 设计模式视作在共享运行时中执行的自然语言表示。🆕
+- **[Meta-Harness: End-to-End Optimization](https://arxiv.org/abs/2603.28052)** — Lee 等 (Stanford) — *论文, 2026.03* — 将 Harness 合成作为可优化目标。🆕
+- **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — Bui — *论文, 2026* — 从终端 Agent 总结 scaffolding、Harness 和上下文工程经验。🆕
 - **[AutoHarness](https://arxiv.org/abs/2603.03329)** — Lou 等 — *论文, 2026* — 自动生成能改善 Agent 行为的代码 Harness。🆕
 - **[General Modular Harness](https://arxiv.org/abs/2507.11633)** — Zhang 等 — *论文, 2025* — 多轮环境中的模块化 Harness 结构。🆕
-- **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor 等 — *2024*
-- **[Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)** — METR — *2025*
+- **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** — Kapoor 等 — *论文, 2024* — 成本控制评估，并指出 benchmark 中的 Harness 混淆。
+- **[Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)** — METR — *论文/博客, 2025* — Scaffold 会改变可测量的任务时长；用相对人类时间衡量能力。
 
 ---
 
