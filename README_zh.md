@@ -315,19 +315,19 @@
 *具体编程 Agent 的实际构建方式：Harness 里有什么、没有什么、能学到什么。*
 
 ### Claude Code
-- **[Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)** — Anthropic, 2025.11
-- **[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)** — Anthropic, 2026.03 🆕
-- **[Claude Code Quality Postmortem](https://www.anthropic.com/engineering/april-23-postmortem)** — Anthropic, 2026.04 — 质量退化追溯到三个 Harness 级变更 🆕
-- **[cwc-long-running-agents](https://github.com/anthropics/cwc-long-running-agents)** — Anthropic — 示例 Harness 原语 🆕
+- **[Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)** — Anthropic — *博客, 2025.11* — 初始化 Agent 到编码 Agent 的交接；功能清单、git commit 和测试门禁。
+- **[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)** — Anthropic — *博客, 2026.03* — 三 Agent Harness、sprint contract 和 evaluator calibration 的完整案例。🆕
+- **[Claude Code Quality Postmortem](https://www.anthropic.com/engineering/april-23-postmortem)** — Anthropic — *博客, 2026.04* — 质量退化追溯到三个 Harness 级变更：reasoning effort 下调、缓存 bug 和 verbosity prompt。🆕
+- **[cwc-long-running-agents](https://github.com/anthropics/cwc-long-running-agents)** — Anthropic — *代码库* — Code with Claude 2026 公开的长时 Agent Harness 原语。🆕
 - **[Claude Code Subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)** — Anthropic — *文档* — Claude Code 如何用重建后的权限上下文委派给子 Agent。
 - **[deepclaude](https://github.com/deepclaude)** — 社区 — *工具* — 将 Claude Code 的完整 agent loop 移植到 DeepSeek V4 Pro，说明 loop 架构比模型身份更能决定行为。🆕
 
 ### OpenAI Codex
-- **[Harness Engineering](https://openai.com/index/harness-engineering/)** — OpenAI, 2026.02 — 百万行实验 🆕
-- **[Unrolling the Codex Agent Loop](https://openai.com/index/unrolling-the-codex-agent-loop/)** — OpenAI, 2026.01 🆕
+- **[Harness Engineering](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — 百万行实验：渐进披露、仓库作为系统记录、垃圾回收 Agent。🆕
+- **[Unrolling the Codex Agent Loop](https://openai.com/index/unrolling-the-codex-agent-loop/)** — OpenAI — *博客, 2026.01* — 逐步拆解 Read → Plan → Execute → Validate → Commit 循环。🆕
 - **[Unlocking the Codex Harness: How We Built the App Server](https://openai.com/index/unlocking-codex-harness/)** — OpenAI — *博客, 2026.02* — 分层架构强制执行的实现细节。🆕
 - **[Custom Instructions with AGENTS.md](https://developers.openai.com/docs/codex/agents-md)** — OpenAI — *文档* — Codex 中 AGENTS.md 的项目级/目录级指令和继承机制。
-- **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI 🆕
+- **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI — *博客* — 把 Plan.md、Implement.md 等里程碑文档作为 Harness 级规划工件。🆕
 
 ### Cursor
 - **[Continually Improving Our Agent Harness](https://cursor.com/blog/continually-improving-agent-harness)** — Cursor — *博客, 2025.05* — Cursor 对 Harness 迭代的说明：产品 trace、定向 eval、工具设计和模型特定调整。
@@ -338,8 +338,8 @@
 
 ### 跨 Agent 分析
 - **[Building Effective AI Coding Agents for the Terminal](https://arxiv.org/abs/2603.05344)** — Bui — *论文, 2026* — 从终端式编程 Agent 建设中总结 scaffolding、Harness 和上下文工程经验。🆕
-- **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson, 2025.12
-- **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk, 2026.02 — 仅改编辑格式，分数提升 10 倍 🆕
+- **[Same Model, Different Results](https://blog.thepete.net/blog/2025/12/10/same-model-different-results-why-coding-agents-arent-interchangeable/)** — Pete Hodgson — *博客, 2025.12* — 并排拆解 Claude Code 的 Harness，说明相同模型为什么会在不同产品里表现不同。
+- **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk — *博客, 2026.02* — 仅改变编辑格式（加入行哈希）就让分数提升 10 倍，模型权重未变。🆕
 
 **必读：** Anthropic（长时运行） · OpenAI（Codex 循环） · Cursor（Harness 迭代）
 
@@ -348,11 +348,11 @@
 ## 11 · 多 Agent 编排
 
 - **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *博客, 2025.06* — 研究型 Agent 的生产架构：主研究员、并行子 Agent、记忆、引用 Agent，以及开放式研究任务的评估方法。🆕
-- **[Scaling Managed Agents](https://www.anthropic.com/engineering/managed-agents)** — Anthropic, 2026 — 脑/手/会话分离 🆕
-- **[Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic, 2026.05 🆕
-- **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub, 2026.03 🆕
+- **[Scaling Managed Agents](https://www.anthropic.com/engineering/managed-agents)** — Anthropic — *博客, 2026* — 用脑/手/会话分离来扩展多 Agent 系统。🆕
+- **[Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic — *博客, 2026.05* — 用 JavaScript 编排脚本扇出并行子 Agent，并加入对抗性验证。🆕
+- **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *博客, 2026.03* — 仓库原生编排：共享记忆文件、专职 Agent 和独立 review loop。🆕
 - **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *博客* — Manager agent、去中心化 handoff、跨 Agent 工具注册等多 Agent 拓扑。
-- **[Why Do Multi-Agent LLM Systems Fail? (MAST)](https://arxiv.org/abs/2503.13657)** — UC Berkeley — 14 种失败模式分类学 🆕
+- **[Why Do Multi-Agent LLM Systems Fail? (MAST)](https://arxiv.org/abs/2503.13657)** — Cemri、Pan 等 (UC Berkeley) — *论文* — 基于 200+ 标注轨迹总结 7 个 MAS 框架中的 14 种失败模式。🆕
 - **[A2A Protocol (Agent-to-Agent)](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)** — Google — *规范, 2025.04* — Agent 间通信标准，补足 MCP 的 agent-to-tool 方向。
 
 **必读：** Anthropic（Managed Agents） · GitHub（Squad） · MAST
@@ -398,9 +398,9 @@
 
 ## 13 · 演讲、播客与幻灯片
 
-- **[Multi-Turn RL for Multi-Hour Agents — Will Brown](https://www.latent.space/p/willccbb)** — Latent Space — *播客* 🆕
-- **[Harness Engineering (YouTube)](https://www.youtube.com/watch?v=kmTMc-fVSXw)** — Florian Brand — *演讲*
-- **[Why AI Evals Are the Hottest New Skill](https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill)** — Hamel Husain & Shreya Shankar 🆕
+- **[Multi-Turn RL for Multi-Hour Agents — Will Brown](https://www.latent.space/p/willccbb)** — Latent Space — *播客* — Verifiers 作者讨论多轮 RL 环境和奖励设计实践。🆕
+- **[Harness Engineering (YouTube)](https://www.youtube.com/watch?v=kmTMc-fVSXw)** — Florian Brand — *演讲* — 61 页演讲，解释为什么 Agent 时代的 benchmark 容易失真。
+- **[Why AI Evals Are the Hottest New Skill](https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill)** — Hamel Husain & Shreya Shankar — *演讲/newsletter* — 面向 PM 普及 eval 思维的代表性文本：不能只靠 vibe-check。🆕
 - **[Context Engineering for AI Agents: Part 2](https://www.philschmid.de/context-engineering-part-2)** — Phil Schmid — *博客/演讲* — 实用上下文工程模式。🆕
 - **[Nathan Lambert — "What technical people call the harness matters more than the model"](https://www.turingpost.com/p/nathanlambert)** — Turing Post — *访谈*
 
