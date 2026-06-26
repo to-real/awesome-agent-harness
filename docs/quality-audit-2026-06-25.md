@@ -111,18 +111,18 @@ Target format:
 
 ## Duplicate Pressure
 
-The duplicate pattern is mostly expected because Must-Read items reappear in their topical sections. Still, these are candidates for cross-reference cleanup later:
+The duplicate pattern is mostly expected because Must-Read items reappear in their topical sections. The highest-duplication sources have now been marked in their repeated body entries with lightweight cross-references:
 
-- `https://openai.com/index/harness-engineering/` appears 5 times.
-- `https://blog.langchain.com/improving-deep-agents-with-harness-engineering/` appears 3 times.
-- `https://openai.com/index/a-practical-guide-to-building-ai-agents/` appears 3 times.
-- `https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents` appears 3 times.
-- `https://www.anthropic.com/engineering/harness-design-long-running-apps` appears 3 times.
+- `https://openai.com/index/harness-engineering/` appears 5 times; repeated body entries now point back to the Must-Read Starter Set.
+- `https://blog.langchain.com/improving-deep-agents-with-harness-engineering/` appears 3 times; repeated body entries now point back to the Must-Read Starter Set.
+- `https://openai.com/index/a-practical-guide-to-building-ai-agents/` appears 3 times; repeated body entries now point to related section `Must-reads`.
+- `https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents` appears 3 times; repeated body entries now point back to the Must-Read Starter Set.
+- `https://www.anthropic.com/engineering/harness-design-long-running-apps` appears 3 times; repeated body entries now point back to the Must-Read Starter Set.
 
-Recommendation: keep duplicates in Must-Read plus one topical section, but add `(also §N)` cross-reference markers for repeated sources if the project wants stricter awesome-list polish.
+Recommendation: keep these intentional duplicates. Re-run link checks after any future source movement rather than pruning them for deduplication.
 
 ## Recommended Next Fix Batch
 
-1. Consider cross-reference markers for duplicated Must-Read sources if the project wants stricter awesome-list polish.
-2. Re-run link check after future duplicate/cross-reference cleanup.
+1. Re-run link check after the duplicate/cross-reference cleanup.
+2. Consider a final README skim for wording consistency around cross-reference markers.
 3. Keep future source additions quality-first and preserve exact EN/ZH URL parity.
