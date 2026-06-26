@@ -21,36 +21,36 @@ Scope: README.md and README_zh.md. This audit checks link health, EN/ZH content 
 
 ### True Broken Or Stale URLs
 
-These returned 404 or soft-redirected to the wrong content and should be fixed.
+These returned 404 or soft-redirected to the wrong content during the audit. They have since been fixed in both README files.
 
 - `https://github.blog/engineering/multi-agent-workflows/`
   - Status: 404.
-  - Likely replacement: `https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/`
+  - Fixed: replaced with `https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/`
   - Also update title from "Multi-Agent Workflows Often Fail" to "How Squad runs coordinated AI agents inside your repository".
 
 - `https://www.anthropic.com/engineering/beyond-permission-prompts`
   - Status: 404.
-  - Replacement found: `https://www.anthropic.com/engineering/claude-code-sandboxing`
+  - Fixed: replaced with `https://www.anthropic.com/engineering/claude-code-sandboxing`
   - Page title: "Beyond permission prompts: making Claude Code more secure and autonomous".
 
 - `https://www.anthropic.com/engineering/scaling-managed-agents`
   - Status: 404.
-  - Replacement found: `https://www.anthropic.com/engineering/managed-agents`
+  - Fixed: replaced with `https://www.anthropic.com/engineering/managed-agents`
   - Page title remains "Scaling Managed Agents: Decoupling the brain from the hands".
 
 - `https://www.anthropic.com/engineering/introducing-dynamic-workflows`
   - Status: 404.
-  - Replacement found: `https://claude.com/blog/introducing-dynamic-workflows-in-claude-code`
+  - Fixed: replaced with `https://claude.com/blog/introducing-dynamic-workflows-in-claude-code`
   - Related docs: `https://code.claude.com/docs/en/workflows`.
 
 - `https://www.anthropic.com/research/what-is-an-agent`
   - Status: 404.
   - No exact replacement found.
-  - Possible replacement: `https://www.anthropic.com/research/trustworthy-agents` if the purpose is agent definition; otherwise remove because `Building Effective Agents` already covers Anthropic's workflow/agent distinction.
+  - Fixed: replaced with `https://www.anthropic.com/research/trustworthy-agents` because it still defines agents and connects the definition to trust, evaluation, monitoring, and controls.
 
 - `https://www.firecrawl.dev/blog/agent-skills-explained`
   - Status: 200 but final URL collapsed to the Firecrawl blog index in automated check.
-  - Replacement found: `https://www.firecrawl.dev/blog/agent-skills`
+  - Fixed: replaced with `https://www.firecrawl.dev/blog/agent-skills`
   - Treat this as a soft-broken link.
 
 ### Request-Limited But Not Proven Broken
@@ -117,7 +117,6 @@ Recommendation: keep duplicates in Must-Read plus one topical section, but add `
 
 ## Recommended Next Fix Batch
 
-1. Fix the six true/stale URLs listed above in both README files.
-2. Normalize entry format in `Frameworks & Tools` and `Academic Papers` first.
-3. Add or align Must-reads lines in Chinese sections 6, 8, and 11 first; then decide whether sections 10, 12, 13, 14 should also have Must-reads in both languages.
-4. Re-run link check after URL fixes.
+1. Normalize entry format in `Frameworks & Tools` and `Academic Papers` first.
+2. Add or align Must-reads lines in Chinese sections 6, 8, and 11 first; then decide whether sections 10, 12, 13, 14 should also have Must-reads in both languages.
+3. Re-run link check after future format/link cleanup.

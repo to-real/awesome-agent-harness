@@ -78,7 +78,7 @@
 
 - **[Agents Are Models Using Tools in a Loop](https://simonwillison.net/2025/May/22/tools-in-a-loop/)** — Simon Willison — *博客, 2025.05* — 如果 Agent 的定义是"模型+工具+循环"，那么模型之外的一切——工具和循环——就是 Harness。
 
-- **[What Is an AI Agent?](https://www.anthropic.com/research/what-is-an-agent)** — Anthropic — *博客* — Agent 的定义，将 Harness 设计决策锚定在对 Agent 本质的清晰理解上。
+- **[Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents)** — Anthropic — *研究, 2026* — 将 Agent 定义为能指挥自身流程和工具使用的模型，并说明可信 Harness 为什么需要评估、监控和控制。🆕
 
 - **[Harness Engineering for Language Agents: CAR Decomposition](https://www.preprints.org/manuscript/202603.1756)** — *论文, 2026.04* — 首篇将 Harness Engineering 作为研究对象的学术论文。提出 CAR 分解（Control, Agency, Runtime）和 HarnessCard 报告工件。🆕
 
@@ -166,7 +166,7 @@
 
 - **[Improving Deep Agents with Harness Engineering](https://blog.langchain.com/improving-deep-agents-with-harness-engineering/)** — LangChain — *博客, 2026.02* — 三个优化旋钮：系统提示、工具、中间件。构建-验证循环和死循环检测。🆕
 
-- **[Introducing Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic — *博客, 2026.05* — 动态并行子 Agent 编排：Claude 生成 JavaScript 编排脚本，扇出到并行子 Agent 并进行对抗性验证。🆕
+- **[Introducing Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic — *博客, 2026.05* — 动态并行子 Agent 编排：Claude 生成 JavaScript 编排脚本，扇出到并行子 Agent 并进行对抗性验证。🆕
 
 - **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals)** — LangChain (Vivek Trivedy) — *博客, 2026.04* — “Evals 是 Agent 的训练数据”：人工整理、trace 挖掘、优化/留出集、基线、诊断-实验-验证循环和人工复查。🆕
 
@@ -194,11 +194,11 @@
 
 - **[Compound AI Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/)** — Zaharia 等 (Berkeley) — *博客, 2024.02* — 从单一模型到模型+检索器+工具+反馈循环的系统转变。Harness Engineering 的概念先驱。
 
-- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic — *博客, 2026* — 将规划的“脑”和执行的“手”分离，并让二者独立扩展。🆕
+- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/managed-agents)** — Anthropic — *博客, 2026* — 将规划的“脑”和执行的“手”分离，并让二者独立扩展。🆕
 
 - **[The "Think" Tool: Enabling Claude to Stop and Think](https://www.anthropic.com/engineering/claude-think-tool)** — Anthropic — *博客* — 把显式“思考空间”作为 Harness 级能力提供给 Agent。
 
-- **[Multi-Agent Workflows Often Fail](https://github.blog/engineering/multi-agent-workflows/)** — GitHub — *博客, 2026.02* — 多 Agent 系统 = 分布式系统。每次交接需要类型化 Schema 和显式边界验证。🆕
+- **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *博客, 2026.03* — 仓库内多 Agent 编排案例：协调者、专职 Agent、版本化共享记忆和独立 review loop。🆕
 
 - **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — *论文, 2025* — 面向真实代码库的可扩展 Agent 脚手架模式。
 
@@ -222,7 +222,7 @@
 
 - **[Organizing, Orchestrating, and Benchmarking Agent Skills at Ecosystem Scale](https://arxiv.org/abs/2603.02176)** — Li 等 — *论文, 2026* — 将技能视作生态系统：组织、编排和大规模测量。🆕
 
-- **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills-explained)** — Firecrawl — *博客* — 面向实践者解释 SKILL.md 为什么成为 Harness 原语。
+- **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills)** — Firecrawl — *博客* — 面向实践者解释 SKILL.md 为什么成为 Harness 原语。
 
 ---
 
@@ -248,7 +248,7 @@
 
 *护栏、权限模型和隔离：如何让 Agent 行动而不让它鲁莽行事。*
 
-- **[Beyond Permission Prompts](https://www.anthropic.com/engineering/beyond-permission-prompts)** — Anthropic — *博客* — 构建结构化权限和授权系统，而非依赖自然语言权限文本。**(必读)**
+- **[Beyond Permission Prompts: Making Claude Code More Secure and Autonomous](https://www.anthropic.com/engineering/claude-code-sandboxing)** — Anthropic — *博客, 2025.10* — 通过文件系统和网络隔离降低权限提示疲劳，而不是只依赖自然语言批准。**(必读)** 🆕
 
 - **[Claude Code Permission Model](https://docs.anthropic.com/en/docs/claude-code/security)** — Anthropic — *文档* — 默认只读，显式批准后才写文件；文件编辑通过自动快照可回滚。
 
@@ -342,9 +342,9 @@
 ## 11 · 多 Agent 编排
 
 - **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *博客, 2025.06* — 研究型 Agent 的生产架构：主研究员、并行子 Agent、记忆、引用 Agent，以及开放式研究任务的评估方法。🆕
-- **[Scaling Managed Agents](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic, 2026 — 脑/手/会话分离 🆕
-- **[Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic, 2026.05 🆕
-- **[Multi-Agent Workflows Often Fail](https://github.blog/engineering/multi-agent-workflows/)** — GitHub, 2026.02 🆕
+- **[Scaling Managed Agents](https://www.anthropic.com/engineering/managed-agents)** — Anthropic, 2026 — 脑/手/会话分离 🆕
+- **[Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic, 2026.05 🆕
+- **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub, 2026.03 🆕
 - **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *博客* — Manager agent、去中心化 handoff、跨 Agent 工具注册等多 Agent 拓扑。
 - **[Why Do Multi-Agent LLM Systems Fail? (MAST)](https://arxiv.org/abs/2503.13657)** — UC Berkeley — 14 种失败模式分类学 🆕
 - **[A2A Protocol (Agent-to-Agent)](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)** — Google — *规范, 2025.04* — Agent 间通信标准，补足 MCP 的 agent-to-tool 方向。

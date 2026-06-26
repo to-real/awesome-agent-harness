@@ -80,7 +80,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Agents Are Models Using Tools in a Loop](https://simonwillison.net/2025/May/22/tools-in-a-loop/)** — Simon Willison — *blog, May 2025* — The canonical, widely-adopted agent definition. If this is what an agent IS, then everything outside the model — the tools and the loop — IS the harness.
 
-- **[What Is an AI Agent?](https://www.anthropic.com/research/what-is-an-agent)** — Anthropic — *blog* — Anthropic's definitional piece, anchoring harness design decisions to a clear model of what an agent actually is.
+- **[Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents)** — Anthropic — *research, 2026* — Defines agents as models that direct their own process and tool use, then frames why trustworthy harnesses need evaluation, monitoring, and controls. 🆕
 
 - **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — *paper, Apr 2026* — The first academic paper treating harness engineering as a research object. Proposes the CAR decomposition (Control, Agency, Runtime) and HarnessCard as a reporting artifact. Audits 63 harness-relevant works. 🆕
 
@@ -170,7 +170,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Improving Deep Agents with Harness Engineering](https://blog.langchain.com/improving-deep-agents-with-harness-engineering/)** — LangChain — *blog, Feb 2026* — Three optimization knobs: System Prompt, Tools, Middleware. Build-verify loops and doom-loop detection. 🆕
 
-- **[Introducing Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic — *blog, May 2026* — Dynamic parallel subagent orchestration: Claude generates JavaScript orchestration scripts that fan out to parallel subagents with adversarial verification. The plan lives in executable code, not the context window. 🆕
+- **[Introducing Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic — *blog, May 2026* — Dynamic parallel subagent orchestration: Claude generates JavaScript orchestration scripts that fan out to parallel subagents with adversarial verification. The plan lives in executable code, not the context window. 🆕
 
 - **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals)** — LangChain (Vivek Trivedy) — *blog, Apr 2026* — "Evals are training data for agents." Six-step recipe: hand-curation, trace-mining, optimization/holdout splits, baselines, diagnose-experiment-validate loops, human review. 🆕
 
@@ -196,13 +196,13 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Building Box AI: How an Enterprise Content Platform Went AI-Native with Deep Agents](https://www.langchain.com/blog/building-box-ai-how-an-enterprise-content-platform-went-ai-native-with-deep-agents)** — LangChain / Box — *case study, Jun 2026* — Enterprise content-agent architecture with a parent agent, dynamic child agents, middleware, citations, prompt caching, and context summarization. 🆕
 
-- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic — *blog, 2026* — Architecture for managed agents where the planning ("brain") and execution ("hands") are separated and can scale independently. 🆕
+- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/managed-agents)** — Anthropic — *blog, 2026* — Architecture for managed agents where the planning ("brain") and execution ("hands") are separated and can scale independently. 🆕
 
 - **[The "Think" Tool: Enabling Claude to Stop and Think](https://www.anthropic.com/engineering/claude-think-tool)** — Anthropic — *blog* — Giving agents explicit "thinking space" as a harness-level capability.
 
 - **[Compound AI Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/)** — Zaharia et al. (Berkeley) — *blog, Feb 2024* — The shift from single models to systems of models, retrievers, tools, and feedback loops. The conceptual ancestor of harness engineering.
 
-- **[Multi-Agent Workflows Often Fail. Here's How to Engineer Ones That Don't.](https://github.blog/engineering/multi-agent-workflows/)** — GitHub — *blog, Feb 2026* — Multi-agent systems behave like distributed systems: every handoff needs typed schemas, constrained action schemas, and explicit boundary validation. 🆕
+- **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *blog, Mar 2026* — Repository-native multi-agent orchestration with a coordinator, specialist agents, versioned shared memory, and independent review loops. 🆕
 
 - **[Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases](https://arxiv.org/abs/2512.10398)** — *paper, 2025* — Scalable scaffolding patterns for production codebases.
 
@@ -226,7 +226,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[SkillsBench](https://github.com/benchflow-ai/skillsbench)** — BenchFlow — *benchmark* — Evaluates how well skills work and how effectively agents use them. The measurement companion to skill design. 🆕
 
-- **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills-explained)** — Firecrawl — *blog* — Practitioner-oriented explainer of SKILL.md as a harness primitive.
+- **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills)** — Firecrawl — *blog* — Practitioner-oriented explainer of SKILL.md as a harness primitive.
 
 **Must-reads:** Anthropic (agent skills) · OpenAI (progressive disclosure)
 
@@ -254,7 +254,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 *Guardrails, permission models, and isolation: how to let agents act without letting them act recklessly.*
 
-- **[Beyond Permission Prompts](https://www.anthropic.com/engineering/beyond-permission-prompts)** — Anthropic — *blog* — Building structured permission and authorization systems instead of relying on natural-language permission text. **(MUST)**
+- **[Beyond Permission Prompts: Making Claude Code More Secure and Autonomous](https://www.anthropic.com/engineering/claude-code-sandboxing)** — Anthropic — *blog, Oct 2025* — Sandboxing reduces approval fatigue by adding filesystem and network isolation around agent actions instead of relying only on prompts. **(MUST)** 🆕
 
 - **[Claude Code Permission Model](https://docs.anthropic.com/en/docs/claude-code/security)** — Anthropic — *docs* — Default read-only stance until explicit approval. Every file edit reversible through automatic snapshots.
 
@@ -357,11 +357,11 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 *When one agent isn't enough: coordination, handoffs, delegation, and the distributed-systems patterns that apply.*
 
-- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/scaling-managed-agents)** — Anthropic — *blog, 2026* — Brain/Hands/Session separation for scalable multi-agent systems. 🆕
+- **[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/managed-agents)** — Anthropic — *blog, 2026* — Brain/Hands/Session separation for scalable multi-agent systems. 🆕
 
-- **[Introducing Dynamic Workflows in Claude Code](https://www.anthropic.com/engineering/introducing-dynamic-workflows)** — Anthropic — *blog, May 2026* — JavaScript orchestration scripts fanning out to parallel subagents with adversarial verification. 🆕
+- **[Introducing Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic — *blog, May 2026* — JavaScript orchestration scripts fanning out to parallel subagents with adversarial verification. 🆕
 
-- **[Multi-Agent Workflows Often Fail. Here's How to Engineer Ones That Don't.](https://github.blog/engineering/multi-agent-workflows/)** — GitHub — *blog, Feb 2026* — Multi-agent = distributed systems. Typed schemas, constrained action schemas, boundary validation. 🆕
+- **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *blog, Mar 2026* — Repository-native orchestration with shared memory files, specialist agents, and independent review loops. 🆕
 
 - **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *blog, Jun 2025* — Production research-agent architecture: lead researcher, parallel subagents, memory, citation agent, and eval practices for open-ended research. 🆕
 
