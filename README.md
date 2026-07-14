@@ -399,6 +399,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *tool/repo* — Framework for running agent evals + creating RL environments. Powers Terminal-Bench 2.0. 🆕
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *tool/repo* — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *tool/repo* — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
+- **[Open Agent Relay](https://github.com/ShakespeareLabs/open-agent-relay)** — ShakespeareLabs — *tool/repo, Jul 2026* — Local-first capability relay that lets agents call a bounded Claude Code, Codex, or automation harness over a trusted LAN while its prompts, credentials, dependencies, and working directory remain on the publisher's machine. 🆕
 
 ### Observability
 
