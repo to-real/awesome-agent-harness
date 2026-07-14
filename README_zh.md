@@ -377,6 +377,7 @@
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *工具/代码库* — 运行 agent eval、创建 RL 环境的框架，支撑 Terminal-Bench 2.0。🆕
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *工具/代码库* — 面向 Claude Code 和 Codex 的 Harness：隔离 worktree、多 Agent 协作和持久记忆。🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *工具/代码库* — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
+- **[Open Agent Relay](https://github.com/ShakespeareLabs/open-agent-relay)** — ShakespeareLabs — *工具/代码库, 2026.07* — 本地优先的能力中继，让其他 Agent 在受信局域网内调用受约束的 Claude Code、Codex 或自动化 Harness，同时提示词、凭据、依赖和工作目录仍留在发布者设备上。🆕
 
 ### 可观测性
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *博客, 2025.06* — 把 Agent 可观测性拆成提示、工具、记忆、检索、成本和语义约定层面的追踪问题。🆕
