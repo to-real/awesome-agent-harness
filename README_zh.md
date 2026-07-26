@@ -294,6 +294,8 @@
 
 - **[Holistic Agent Leaderboard (HAL)](https://hal.cs.princeton.edu/)** — Princeton — *基准测试* — 标准化、成本感知的 Harness，在 9 个基准/9 个模型上运行相同 Agent Harness（21,730 次 rollout）。🆕
 
+- **[ClawBench](https://claw-bench.com)** — Zhang 等 — *基准测试, 2026.04* — 让 OpenClaw 及其他 Agent Harness 在同一套隔离、可观测的真实网站环境中运行 283 个任务；请求拦截与五层轨迹便于分析 Harness 层行为差异。（[代码](https://github.com/reacher-z/ClawBench)，[论文](https://arxiv.org/abs/2604.08523)）🆕
+
 - **[Benches 2026](https://florianbrand.com/posts/benches-2026)** — Florian Brand (Prime Intellect) — *博客/演讲* — AlgoTune 案例：同一模型、不同 Harness、**相反排名**。🆕
 
 - **[Hashline](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk — *博客, 2026.02* — 仅改变编辑格式（添加行哈希），16 个模型中 Grok Code Fast 1 从 6.7% 跳到 68.3%。模型权重未变。🆕

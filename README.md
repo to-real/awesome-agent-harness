@@ -300,6 +300,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Holistic Agent Leaderboard (HAL)](https://hal.cs.princeton.edu/)** — Princeton — *benchmark* — Standardized, cost-aware harness that runs the SAME agent harness across 9 benchmarks / 9 models (21,730 rollouts). The infrastructure answer to "harness confounds rankings." 🆕
 
+- **[ClawBench](https://claw-bench.com)** — Zhang et al. — *benchmark, Apr 2026* — Runs OpenClaw and other agent harnesses against 283 tasks on live websites in one isolated, instrumented browser environment, exposing harness-level behavior through intercepted requests and five-layer traces. ([Code](https://github.com/reacher-z/ClawBench), [Paper](https://arxiv.org/abs/2604.08523)) 🆕
+
 - **[Quo Vadis, LLM Benchmarks? / Benches 2026](https://florianbrand.com/posts/benches-2026)** — Florian Brand (Prime Intellect) — *blog/talk* — The AlgoTune case: same model, different harness, **opposite ranking**. Every layer of the eval stack (prompt, sampling temp, grader, harness) swings the score. 🆕
 
 - **[Hashline: Agent Edit Format as Harness Lever](https://blog.can.ac/2026/02/12/the-harness-problem/)** — Can Boluk — *blog, Feb 2026* — Changing only the edit format (adding line hashes) across 16 models: Grok Code Fast 1 jumped from 6.7% to 68.3%. No model weights changed. Output tokens dropped ~20%. 🆕
