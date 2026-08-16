@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <strong>175 条带注释资源</strong> · 14 个板块 · 中英双语 · 链接复检于 <strong>2026-08-16</strong> · <a href="docs/quality-audit-2026-06-25.md">质量审计记录</a>
+  <strong>200 条带注释资源</strong> · 14 个板块 · 中英双语 · 链接复检于 <strong>2026-08-16</strong> · <a href="docs/quality-audit-2026-06-25.md">质量审计记录</a>
 </p>
 
 ---
@@ -31,7 +31,7 @@
 
 2026 年 2 月，Mitchell Hashimoto 为从业者们一直在做的事情给出了名字：**Harness Engineering（驾具工程）**——设计包裹 AI Agent 的完整环境，决定其成败的工程学科。几周内，OpenAI 和 Anthropic 发布工程报告加以扩展。这个术语之所以成立，是因为它命名了一个真实的缺口：Prompt Engineering 优化单轮交互；Context Engineering 管理模型看到的内容；Harness Engineering 治理跨越每个会话的整个执行环境。
 
-本列表聚焦 **Harness**，而非模型。这个领域的大多数列表只是链接堆砌——同样的二十个书签，没有判断，也没有维护。本列表按"作品级"标准策展：
+本列表聚焦 **Harness**，而非模型。目标读者是 **AI PM 和 Agent 产品工程师**——注释先讲决策和模式（该不该用、代价是什么、什么时候会坏），再讲细节。这个领域的大多数列表只是链接堆砌——同样的二十个书签，没有判断，也没有维护。本列表按"作品级"标准策展：
 
 - **每个条目都在为自己辩护**：是什么*以及为什么值得收录*，有量化结论的地方直接给数字（基准分差、失败模式、团队规模）。
 - **每条链接都经过验证**：每次刷新全量复检；方法与每一次修复都记录在[审计日志](docs/quality-audit-2026-06-25.md)里，刷新间隙由定时 [CI 任务](.github/workflows/link-check.yml)值守。
@@ -149,6 +149,8 @@
 
 - **[AgentSwing: Adaptive Parallel Context Management](https://arxiv.org/abs/2603.27490)** — Feng 等 — *论文, 2026* — 面向长时 Web Agent 的并行上下文管理路由。🆕
 
+- **[Autonomous Context Compression](https://www.langchain.com/blog/autonomous-context-compression)** — LangChain — *博客, 2026* — 压缩不再靠固定 token 阈值或 `/compact` 命令：模型自己挑时机（任务边界、加载大块上下文之前）触发摘要。已进入 Deep Agents SDK/CLI。🆕
+
 **必读：** Anthropic（上下文工程） · Manus · Breunig
 
 ---
@@ -160,6 +162,10 @@
 - **[Writing Effective Tools for Agents](https://www.anthropic.com/engineering/writing-tools-for-agents)** — Anthropic — *博客* — "Agent 的能力取决于工具。" 工具命名、Schema、错误表面。**(必读)**
 
 - **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)** — Anthropic — *规范/文档* — 连接 AI 模型和外部工具/数据源的开放标准。现代 Harness 的管道层。
+
+- **[MCP 发布候选版 — 2026 年 7 月](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/)** — MCP — *规范, 2026.07* — 协议的去向：默认无状态（取消 initialize 握手）、Extensions 升为一等公民（服务端渲染 UI、Tasks）、工具 schema 升至完整 JSON Schema 2020-12、加固 OAuth/OIDC，并引入"废弃到移除至少 12 个月"的生命周期政策。产品要押注 MCP 之前先读这个。🆕
+
+- **[MCP Tool Annotations](https://blog.modelcontextprotocol.io/posts/2026-03-16-tool-annotations/)** — MCP — *规范, 2026.03* — 标准化的工具元数据（`readOnlyHint`、破坏性标记等 OpenAPI 风格注解）——你的权限 UI 和审批弹窗应该挂在钩子上。规格改动很小，产品影响很大。🆕
 
 - **[MCP: A New Standard for AI Tool Integration](https://www.anthropic.com/news/model-context-protocol)** — Anthropic — *博客, 2024.11* — MCP 的发布与设计动机。
 
@@ -207,6 +213,10 @@
 
 - **[How to Build a Custom Agent Harness](https://www.langchain.com/blog/how-to-build-a-custom-agent-harness)** — LangChain (Sydney Runkle) — *博客, 2026.06* — Harness = 极简核心循环 + 可组合中间件（记忆、重试、策略、人工监督、成本控制）。核心论点：最好的 Agent 来自匹配任务的 Harness，而不是万能 Harness。🆕
 
+- **[Loop Engineering: Getting Started with Loops](https://claude.com/blog/getting-started-with-loops)** — Claude Code 团队 — *博客, 2026.06* — 把"再跑一次 Agent"变成一门工程：四种循环类型（轮次循环、目标循环 `/goal`、定时循环 `/loop` + `/schedule`、主动循环），以及各自的代码质量和 token 预算管理。🆕
+
+- **[Production Agents Self-Heal](https://www.langchain.com/blog/production-agents-self-heal)** — LangChain — *博客, 2026* — 部署后的回归检测成为 Harness 的职责：错误按签名分桶，与 7 天基线做 Poisson 检验，triage agent 核查因果链，再由编码 Agent 提交修复 PR——全程无人值守。🆕
+
 **必读：** OpenAI（Codex 循环） · Anthropic（长时运行） · LangChain（改进 Deep Agents）
 
 ---
@@ -247,6 +257,12 @@
 
 - **[Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)** — Anthropic — *博客* — "技能"概念的主要信源。**(必读)**
 
+- **[Codex Skills](https://learn.chatgpt.com/docs/build-skills)** — OpenAI — *文档, 2026* — Skills 进入另一个前沿阵营：同一个 SKILL.md 开放标准，渐进披露上限约为上下文窗口的 2%，支持显式（`@`/`$`）和隐式（描述匹配）调用，以插件形式分发。Skills 不再是某家厂商的功能，而是跨厂商标准。🆕
+
+- **[Skills in the OpenAI Agents SDK](https://developers.openai.com/blog/skills-agents-sdk)** — OpenAI — *博客, 2026* — Agents SDK 中的 Skills 支持：把 SKILL.md 加载做进你自己的 Harness，而不是宿主应用里。🆕
+
+- **[Evaluating Skills](https://www.langchain.com/blog/evaluating-skills/)** — LangChain — *博客, 2026* — 怎么衡量一个技能真的有用：技能层的评估方法。🆕
+
 - **[OpenAI Harness Engineering — 渐进披露](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — "给 Codex 一张地图，而不是一本千页操作手册。" 单一 AGENTS.md 的反模式。也见「必读入门集」。
 
 - **[Integrating Agent Skills to Usher in a New Chapter for Agents](https://manus.im/blog/manus-skills)** — Manus — *博客, 2025* — 把 Skills 定义为 MCP 连接器之上的工作流胶囊：MCP 负责数据连接，Skills 封装做事方法。
@@ -276,6 +292,8 @@
 - **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — Chang 等 — *论文, 2026* — 通过轨迹蒸馏实现多 Agent 之间的记忆协作。🆕
 
 - **[Filesystem as Agent Memory](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — "从 Agent 的角度看，任何不在上下文中的东西实际上都不存在。" 也见「必读入门集」。
+
+- **[How We Built Agent Builder's Memory System](https://www.langchain.com/blog/how-we-built-agent-builders-memory-system)** — LangChain — *博客, 2026* — 记忆 = Agent 在运行热路径上自己编辑的一组文件（AGENTS.md、skills、tools.json、自由知识文件）——底层并没有真文件系统（Postgres 虚拟 FS），结构化文件做 schema 校验，默认人工审批以防提示注入。"Agent 怎么管理自己的配置"的生产级答案。🆕
 
 **必读：** LangChain（记忆） · Anthropic（记忆工具）
 
@@ -309,6 +327,14 @@
 
 - **[BenchJack / Meerkat-style Reward Hacking](https://github.com/benchflow-ai/benchflow)** — BenchFlow — *工具* — 展示 Agent 如何钻评估环境空子，以及 hardened verifier 默认值如何阻断常见 reward hacking。🆕
 
+- **[Two Different Types of Agent Authorization](https://www.langchain.com/blog/two-different-types-of-agent-authorization)** — LangChain (Harrison Chase) — *博客, 2026.03* — "代理式授权"（Agent 用最终用户的凭据，只能访问该用户能访问的） vs. "固定凭据"（Agent 以自己的身份行动，与谁在交互无关）。这个区分决定了你的 Agent 能碰什么、以谁的身份碰、人工卡点必须设在哪——产品信任架构的核心。🆕
+
+- **[AI Agent Authentication Authorization（IETF 草案）](https://datatracker.ietf.org/doc/draft-klrc-aiagent-auth/)** — IETF — *规范草案* — Agent 认证与授权的标准化轨道。还早，但 Agent 身份的互操作将从这里开始，而不是某家厂商的私有设计。🆕 ⚠️(草案，变动中)
+
+- **[Inspect AI](https://github.com/UKGovernmentBEIS/inspect_ai)** — UK AI Security Institute — *工具/代码库* — 政府级评估框架：Agent 任务、沙箱、scorer 和工具链，英国 AISI 自己的模型评估就用它。评估这件事可以做到多工程化，看它就知道。🆕
+
+- **[Practical Security Guidance for Sandboxing Agentic Workflows](https://developer.nvidia.com/blog/practical-security-guidance-for-sandboxing-agentic-workflows-and-managing-execution-risk/)** — NVIDIA — *博客, 2026* — 沙箱化 Agent 执行的厂商级实操指南，以及沙箱本身覆盖不了的剩余风险怎么管。🆕
+
 **必读：** Anthropic（权限提示之外） · OWASP（Agentic Top 10） · Anthropic（containment）
 
 ---
@@ -339,9 +365,13 @@
 
 - **[A Synthetic Data Generation Harness: Hill-Climbing the Eval Set Itself](https://saulius.io/blog/synthetic-data-generation-harness-ai-agents)** — Saulius — *博客, 2026.04* — Harness 优化的阴暗面：当优化变成对 eval set 的过拟合。🆕
 
+- **[Tuning the Harness, Not the Model: A Nemotron 3 Ultra Playbook](https://www.langchain.com/blog/tuning-the-harness-not-the-model-a-nemotron-3-ultra-playbook)** — LangChain — *博客, 2026* — 只调 Harness、不动模型权重：单一用途 prompt 块、压缩指引、中间件带内纠偏。开源模型在 Deep Agents 套件上从 0.80 提到 0.86——逼近 Opus 4.8 的 0.87，单次成本约低 10 倍。完整方法论：eval 即训练数据、trace 驱动诊断、便宜筛选先行、只保留可复现的赢。🆕
+
+- **[Human Judgment in the Agent Improvement Loop](https://www.langchain.com/blog/human-judgment-in-the-agent-improvement-loop)** — LangChain (Rahul Verma) — *博客, 2026.04* — 别扩大人工审查的规模，把专家的隐性判断蒸馏成自动化评估器。飞轮：生产 trace → 在线评估 + 标注队列 → 黄金数据集 → 下一版。PM 主导 Agent 改进的运营模型。🆕
+
 - **[How We Compare Model Quality in Cursor](https://cursor.com/blog/cursorbench)** — Cursor — *博客, 2025.04* — CursorBench 展示编程 Agent 产品如何在真实编辑、检索和工具使用工作流下评估模型。🆕
 
-**必读：** LangChain（改进 Deep Agents） · HAL · Brand（Benches 2026）
+**必读：** LangChain（改进 Deep Agents） · Nemotron playbook · HAL · Brand（Benches 2026）
 
 ---
 
@@ -363,6 +393,8 @@
 - **[Unlocking the Codex Harness: How We Built the App Server](https://openai.com/index/unlocking-the-codex-harness/)** — OpenAI — *博客, 2026.02* — 分层架构强制执行的实现细节。🆕
 - **[Custom Instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)** — OpenAI — *文档* — Codex 中 AGENTS.md 的项目级/目录级指令和继承机制。（OpenAI 的 Codex 文档已迁移至 learn.chatgpt.com。）
 - **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI — *博客* — 把 Plan.md、Implement.md 等里程碑文档作为 Harness 级规划工件。🆕
+- **[Codex SDK](https://learn.chatgpt.com/docs/codex-sdk)** — OpenAI — *文档, 2026* — 把 Codex Harness 变成库：TypeScript 和 Python SDK 通过 JSON-RPC 驱动本地 Codex app-server——线程级的 start/continue/resume API 加沙箱预设，而不是裸的 agent loop。🆕
+- **[Codex Hooks](https://developers.openai.com/codex/hooks)** — OpenAI — *文档, 2026* — Codex 的生命周期钩子——Claude Code 用户熟悉的那个 Harness 注入点，如今另一家也有了。🆕
 
 ### Cursor
 - **[Continually Improving Our Agent Harness](https://cursor.com/blog/continually-improving-agent-harness)** — Cursor — *博客, 2025.05* — Cursor 对 Harness 迭代的说明：产品 trace、定向 eval、工具设计和模型特定调整。
@@ -389,6 +421,8 @@
 - **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *博客, 2026.03* — 仓库原生编排：共享记忆文件、专职 Agent 和独立 review loop。🆕
 - **[Agent Development Kit (ADK)](https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/)** — Google — *博客* — Manager agent、去中心化 handoff、跨 Agent 工具注册等多 Agent 拓扑。
 - **[Why Do Multi-Agent LLM Systems Fail? (MAST)](https://arxiv.org/abs/2503.13657)** — Cemri、Pan 等 (UC Berkeley) — *论文* — 基于 200+ 标注轨迹总结 7 个 MAS 框架中的 14 种失败模式。🆕
+- **[Don't Build Multi-Agents](https://cognition.com/blog/dont-build-multi-agents)** — Walden Yan (Cognition) — *博客, 2025.06* — 标志性反方观点：子 Agent 之间传递的上下文会失真，隐含决策互相冲突——"动作携带隐含决策，冲突的决策带来糟糕的结果"。替代方案：单线程线性 Agent + 专门负责压缩历史的压缩模型。读罢本节其它"扇出"内容后，先读它再决定。🆕
+- **[Choosing the Right Multi-Agent Architecture](https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture/)** — LangChain — *博客, 2026* — 什么时候用 manager 拓扑、什么时候去中心化、什么时候干脆别上多 Agent——决策框架。🆕
 - **[A2A Protocol (Agent-to-Agent)](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)** — Google — *规范, 2025.04* — Agent 间通信标准，补足 MCP 的 agent-to-tool 方向。
 
 **必读：** Anthropic（Managed Agents） · GitHub（Squad） · MAST
@@ -409,12 +443,23 @@
 - **[Google ADK](https://github.com/google/adk-python)** — Google — *工具/代码库* — Google 的 Agent Development Kit。🆕
 - **[Smolagents](https://github.com/huggingface/smolagents)** — Hugging Face — *工具/代码库* — 极简 Agent 库，支持代码执行型 Agent。🆕
 
-### Harness 工具与实用程序
+### 参考 Harness 与开源编程 Agent
+
+*不只读文章，也读代码。这些是可以真正打开来看的 Harness。*
+
+- **[OpenHands](https://github.com/OpenHands/OpenHands)** — OpenHands — *工具/代码库* — 最大的开源编程 Agent 平台：沙箱运行时、shell + 浏览器工具、事件驱动的 agent loop。"一个完整开源 Agent 产品长什么样"的参考答案。🆕
+- **[aider](https://github.com/Aider-AI/aider)** — Paul Gauthier — *工具/代码库* — 终端里的 AI 结对编程。它的 repo-map 和编辑格式工作是整个领域的地基——§9 的 Hashline 实验证明了仅编辑格式的价值。🆕
+- **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** — Princeton NLP — *工具/代码库* — 学术界的原点："agent-computer interface" 设计开创了编程 Agent Harness 研究线，配套 SWE-bench。🆕
+- **[OpenHarness](https://github.com/HKUDS/OpenHarness)** — HKUDS — *工具/代码库* — 内置个人 Agent 的开源 Harness，出自 LightRAG 团队。🆕
+- **[Open SWE](https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents)** — LangChain — *博客/代码库, 2026* — 内部编程 Agent 的 MIT 框架——把 Stripe/Ramp/Coinbase 的内部模式开源：Slack/Linear/GitHub 集成、隔离云沙箱、精选工具集、确定性中间件钩子、兜底开 PR 的安全网。组织内部 Agent 的蓝本。🆕
 - **[deepagents](https://github.com/langchain-ai/deepagents)** — LangChain — *工具/代码库* — "电池全含"的 MIT 开源 Agent Harness：规划、虚拟文件系统、子 Agent 委派、上下文管理。deep-agents 系列文章背后的那个工件。🆕
 - **[Deep Agents v0.6 — Harness Profiles](https://www.langchain.com/blog/deep-agents-0-6)** — LangChain (Sydney Runkle) — *博客, 2026.05* — 把 Harness 配置变成可命名、可版本化、按模型区分的单元（基础 prompt、工具描述、中间件），并为各模型内置官方 profile。Harness 调优正在成为一等产品面。🆕
+
+### Harness 工具与实用程序
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *工具/代码库* — 运行 agent eval、创建 RL 环境的框架，支撑 Terminal-Bench 2.0。🆕
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *工具/代码库* — 面向 Claude Code 和 Codex 的 Harness：隔离 worktree、多 Agent 协作和持久记忆。🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *工具/代码库* — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
+- **[Better Harness](https://github.com/QoderAI/better-harness)** — Qoder — *工具/代码库* — 把项目和会话证据变成循环级洞察、优先级改进项和可验证的下一步——就装在你已有的编程 Agent 里。瞄准"改进循环本身"的 Harness 可观测性。🆕
 
 ### 可观测性
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *博客, 2025.06* — 把 Agent 可观测性拆成提示、工具、记忆、检索、成本和语义约定层面的追踪问题。🆕
@@ -477,13 +522,19 @@
 
 ## 相关列表
 
-*本列表的差异化定位：**双语（EN/中文）+ 面向实践者**——每个条目都讲清楚"为什么值得读"，而不只是收录链接。*
+*本列表的差异化定位：**双语（EN/中文）+ 面向 AI PM 与 Agent 产品工程师**——每个条目都讲清楚"为什么值得读"，而不只是收录链接。*
 
-- **[awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering)** — ai-boost — *列表* — 目前星数最多的 Harness 列表（3.5k+，持续更新）。工具和框架覆盖广；仅英文。
+- **[awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering)** — ai-boost — *列表* — 目前星数最多的 Harness 列表（3.5k+，日更）。工具和框架覆盖广；仅英文。
 
 - **[awesome-agent-harness](https://github.com/RUCAIBox/awesome-agent-harness)** — RUC AI Box — *列表* — "Agent Systems with Harness Engineering"论文的配套阅读清单，按分类学组织。论文优先；仅英文。
 
-- **本列表** —— 双语的那一个：中英文注释都为做评估决策的实践者而写（先读什么、改变了什么、要注意什么），并附各节必读与 [docs/](docs/) 中的质量审计记录。
+- **[awesome-evals](https://github.com/benchflow-ai/awesome-evals)** — BenchFlow — *列表* — 本列表的"评估侧孪生兄弟"，也是本列表效仿的风格来源：每个条目都有论证、有深读笔记、有策展方法论。
+
+- **[Awesome-Context-Engineering](https://github.com/Meirtz/Awesome-Context-Engineering)** — Meirtz — *列表* — 上下文工程的配套综述列表：数百篇论文与实现指南，从 prompt engineering 一路到生产系统。
+
+- **[best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses)** — Ryan Alberts — *列表* — 100+ Agent Harness 的排名目录，每周重算，并提供 MCP server 让 Agent 也能查询。
+
+- **本列表** —— 双语的那一个：中英文注释都为做评估决策的 AI PM 和工程师而写（先读什么、改变了什么、要注意什么），并附各节必读与 [docs/](docs/) 中的质量审计记录。
 
 ---
 
