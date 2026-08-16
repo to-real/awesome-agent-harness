@@ -1,5 +1,10 @@
 # Awesome Agent Harness [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+[![GitHub stars](https://img.shields.io/github/stars/to-real/awesome-agent-harness?style=flat-square&color=blue)](https://github.com/to-real/awesome-agent-harness/stargazers)
+[![Last refreshed](https://img.shields.io/badge/refreshed-2026--08-blue?style=flat-square)](docs/quality-audit-2026-06-25.md)
+[![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square)](LICENSE)
+[![Bilingual EN/中文](https://img.shields.io/badge/EN-%E4%B8%AD%E6%96%87-yellow?style=flat-square)](README_zh.md)
+
 > A curated, bilingual (EN/中文) library of the best resources for building reliable AI agent harnesses — architecture patterns, context engineering, tool design, skills, memory, orchestration, and evaluation.
 
 **[中文版 →](README_zh.md)**
@@ -11,6 +16,8 @@ The model is not the hard part anymore. Building the system around it is.
 In February 2026, Mitchell Hashimoto gave a name to what practitioners had been building informally for years: **harness engineering** — the discipline of designing the full environment that wraps an AI agent and determines whether it succeeds or fails. Within weeks, OpenAI and Anthropic published engineering reports expanding on the idea. The term stuck because it names a real gap: prompt engineering optimizes a single turn; context engineering manages what the model sees; harness engineering governs the entire execution environment across every session.
 
 This list focuses on the **harness**, not the model. Every entry is annotated with *what it is and why it belongs*. Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
+
+**Last refreshed 2026-08-16** — all links re-verified; new since June: the self-improving-harness research wave, harness profiles, Claude Code agent teams, and the first harness-engineering surveys. See [audit notes](docs/quality-audit-2026-06-25.md).
 
 ---
 
@@ -31,6 +38,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 - [12 · Frameworks & Tools](#12--frameworks--tools)
 - [13 · Talks, Podcasts & Slides](#13--talks-podcasts--slides)
 - [14 · Academic Papers](#14--academic-papers)
+- [Related Lists](#related-lists)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -104,6 +112,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)** — Manus — *blog, 2025* — Production lessons on tool explosion, action masking, filesystem-as-memory, KV-cache pressure, and stable agent state.
 
+- **[Context Engineering in Manus](https://rlancemartin.github.io/2025/10/15/manus/)** — Lance Martin (LangChain) — *blog, Oct 2025* — The sharpest teardown of Manus's context strategy: full/compact tool results for KV-cache stability, sub-agents as context isolation, and <20 atomic tools that offload state to the sandbox. Ends on the Bitter Lesson of harnesses: if swapping in a stronger model doesn't help, your harness is the bottleneck.
+
 - **[How Long Contexts Fail and How to Fix Them](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)** — Drew Breunig — *blog, Jun 2025* — Failure modes of long-context usage and practical fixes.
 
 - **[LOCA-bench: Benchmarking Language Agents Under Controllable and Extreme Context Growth](https://arxiv.org/pdf/2602.07962)** — Zeng et al. — *paper, 2026* — Evaluates context engineering strategies (context editing, context awareness, memory tools, programmatic tool calling) under controlled conditions. 🆕
@@ -136,7 +146,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Code Execution with MCP: Building More Efficient Agents](https://www.anthropic.com/engineering/code-execution-with-mcp)** — Anthropic — *blog, Sep 2025* — Moves execution into an MCP server so agents can search, filter, and transform tool results before spending context-window tokens.
 
-- **[A Practical Guide to Building AI Agents](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Comprehensive guide covering tool design for many-to-many agent-tool relationships and layered guardrail patterns. Also highlighted in related section Must-reads. 🆕
+- **[A Practical Guide to Building AI Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Comprehensive guide covering tool design for many-to-many agent-tool relationships and layered guardrail patterns. Also highlighted in related section Must-reads. 🆕
 
 - **[Gemini API Function Calling](https://ai.google.dev/gemini-api/docs/function-calling)** — Google — *docs* — Official schema and tool-calling interface for Gemini agents, including parallel function calls and compositional tool use.
 
@@ -176,6 +186,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[How Middleware Lets You Customize Your Agent Harness](https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness)** — LangChain (Sydney Runkle) — *blog, Mar 2026* — Hooks around model and tool calls as the primary customization surface. 🆕
 
+- **[How to Build a Custom Agent Harness](https://www.langchain.com/blog/how-to-build-a-custom-agent-harness)** — LangChain (Sydney Runkle) — *blog, Jun 2026* — The harness as a minimal core loop plus composable middleware (memory, retries, policy enforcement, human oversight, cost control). The best agents come from harnesses matched to their task, not universal ones. 🆕
+
 **Must-reads:** OpenAI (Codex loop) · Anthropic (long-running) · LangChain (improving deep agents)
 
 ---
@@ -186,7 +198,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)** — Anthropic — *blog, Dec 2024* — The canonical pattern guide: prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer. "Start simple." **(MUST)**
 
-- **[A Practical Guide to Building AI Agents](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Single-agent vs. multi-agent orchestration (manager vs. decentralized handoffs). Also highlighted in related section Must-reads. 🆕
+- **[A Practical Guide to Building AI Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Single-agent vs. multi-agent orchestration (manager vs. decentralized handoffs). Also highlighted in related section Must-reads. 🆕
 
 - **[Plan-and-Execute Agents](https://blog.langchain.com/plan-and-execute-agents/)** — LangChain — *blog* — Canonical write-up separating planning from execution: planner LLM generates step list; executor agent handles implementation.
 
@@ -258,7 +270,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Claude Code Permission Model](https://docs.anthropic.com/en/docs/claude-code/security)** — Anthropic — *docs* — Default read-only stance until explicit approval. Every file edit reversible through automatic snapshots.
 
-- **[A Practical Guide to Building AI Agents — Guardrails](https://openai.com/index/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Layered guardrail patterns: input validation, output filtering, tool-risk ratings, human-intervention triggers. Also highlighted in related section Must-reads. 🆕
+- **[A Practical Guide to Building AI Agents — Guardrails](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)** — OpenAI — *blog, Apr 2026* — Layered guardrail patterns: input validation, output filtering, tool-risk ratings, human-intervention triggers. Also highlighted in related section Must-reads. 🆕
 
 - **[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** — OWASP GenAI Security Project — *guide, Dec 2025* — Agent-specific threat model for systems that plan, act, use tools, and hold permissions across complex workflows. 🆕
 
@@ -331,8 +343,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)** — OpenAI — *blog, Feb 2026* — The million-line experiment. Progressive disclosure, repository as system of record, garbage collection agents. Also listed in Must-Read Starter Set. 🆕
 - **[Unrolling the Codex Agent Loop](https://openai.com/index/unrolling-the-codex-agent-loop/)** — OpenAI — *blog, Jan 2026* — Step-by-step dissection of the Read → Plan → Execute → Validate → Commit loop. 🆕
-- **[Unlocking the Codex Harness: How We Built the App Server](https://openai.com/index/unlocking-codex-harness/)** — OpenAI — *blog, Feb 2026* — Implementation details of the layered architecture enforcement. 🆕
-- **[Custom Instructions with AGENTS.md](https://developers.openai.com/docs/codex/agents-md)** — OpenAI — *docs* — How AGENTS.md works in Codex: project-level + directory-level instructions with inheritance.
+- **[Unlocking the Codex Harness: How We Built the App Server](https://openai.com/index/unlocking-the-codex-harness/)** — OpenAI — *blog, Feb 2026* — Implementation details of the layered architecture enforcement. 🆕
+- **[Custom Instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)** — OpenAI — *docs* — How AGENTS.md works in Codex: project-level + directory-level instructions with inheritance. (OpenAI's Codex docs now live on learn.chatgpt.com.)
 - **[Run Long-Horizon Tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex/)** — OpenAI — *blog* — Plan.md, Implement.md as harness-level planning artifacts. 🆕
 
 ### Cursor
@@ -363,6 +375,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Introducing Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)** — Anthropic — *blog, May 2026* — JavaScript orchestration scripts fanning out to parallel subagents with adversarial verification. 🆕
 
+- **[Claude Code Agent Teams](https://code.claude.com/docs/en/agent-teams)** — Anthropic — *docs, 2026* — Research preview shipped with Opus 4.6: a team-lead session splits work across parallel Claude Code teammates that share a task list and communicate peer-to-peer. Orchestration moving from subagent fan-out to peer teams. Also relevant to §10 (Claude Code teardown). 🆕
+
 - **[How Squad Runs Coordinated AI Agents Inside Your Repository](https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/)** — GitHub — *blog, Mar 2026* — Repository-native orchestration with shared memory files, specialist agents, and independent review loops. 🆕
 
 - **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)** — Anthropic — *blog, Jun 2025* — Production research-agent architecture: lead researcher, parallel subagents, memory, citation agent, and eval practices for open-ended research. 🆕
@@ -383,7 +397,7 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 ### Agent SDKs & Frameworks
 
-- **[Claude Agent SDK](https://docs.anthropic.com/en/docs/agents/agent-sdk)** — Anthropic — *docs/SDK* — Built-in permission model, hooks system, multi-session support.
+- **[Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk/overview)** — Anthropic — *docs/SDK* — Built-in permission model, hooks system, multi-session support. The same tools, agent loop, and context management that power Claude Code, programmable in Python and TypeScript.
 - **[OpenAI Agents SDK](https://github.com/openai/openai-agents-python)** — OpenAI — *tool/repo* — Agents, tools, handoffs, guardrails, tracing.
 - **[LangGraph](https://github.com/langchain-ai/langgraph)** — LangChain — *tool/repo* — State machines for agent workflows; persistence, streaming, human-in-the-loop.
 - **[CrewAI](https://github.com/crewAIInc/crewAI)** — CrewAI — *tool/repo* — Multi-agent orchestration with role-based agents and Flows (event-driven pipelines). 🆕
@@ -396,6 +410,8 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 ### Harness Tools & Utilities
 
+- **[deepagents](https://github.com/langchain-ai/deepagents)** — LangChain — *tool/repo* — The batteries-included MIT agent harness: planning, virtual filesystem, subagent delegation, context management. The artifact behind the deep-agents blog series. 🆕
+- **[Deep Agents v0.6 — Harness Profiles](https://www.langchain.com/blog/deep-agents-0-6)** — LangChain (Sydney Runkle) — *blog, May 2026* — Harness configuration as a named, versionable, per-model unit — base prompt, tool descriptions, middleware — with built-in profiles per model. Evidence that harness tuning is becoming a first-class product surface. 🆕
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *tool/repo* — Framework for running agent evals + creating RL environments. Powers Terminal-Bench 2.0. 🆕
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *tool/repo* — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *tool/repo* — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
@@ -435,6 +451,10 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 *Research papers treating the harness layer as an explicit object of study.*
 
+- **[Agent Systems with Harness Engineering](https://openreview.net/forum?id=nM5tDHrQsx)** — RUC AI Box — *paper, 2026* — The systematic taxonomy and research roadmap: harness evolution, harness design (workflow, memory, skills, orchestration), model adaptation, benchmarks by task domain, and open problems. Ships a companion awesome list. 🆕 ⚠️(OpenReview bot-checks automated access)
+
+- **[Code as Agent Harness](https://arxiv.org/abs/2605.18747)** — Ning et al. — *paper, May 2026* — Survey of the "code as harness" thesis: code execution as the unifying harness layer, spanning coding assistants, GUI/OS automation, and tool use. 🆕
+
 - **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://www.preprints.org/manuscript/202603.1756)** — Anonymous authors — *preprint, Apr 2026* — CAR decomposition; HarnessCard reporting artifact; audits 63 works. 🆕
 
 - **[Natural-Language Agent Harnesses](https://arxiv.org/abs/2603.25723)** — Pan et al. — *paper, Mar 2026* — Harness design patterns as natural-language representations executed under a shared runtime. 🆕
@@ -451,7 +471,31 @@ This list focuses on the **harness**, not the model. Every entry is annotated wi
 
 - **[Measuring AI Ability to Complete Long Tasks](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)** — METR — *paper/blog, 2025* — Scaffolds change the measured horizon; success-vs-human-time as a primitive.
 
-**Must-reads:** Harness Engineering for Language Agents · Natural-Language Agent Harnesses · AI Agents That Matter
+### Self-Improving & Auto-Evolving Harnesses
+
+*2026's research wave: harnesses that rewrite themselves. The frontier question is shifting from "what harness?" to "who engineers the harness — and can the agent do it itself?"*
+
+- **[Self-Harness: Harnesses That Improve Themselves](https://arxiv.org/abs/2606.09498)** — Zhang et al. — *paper, Jun 2026* — The paradigm named: the agent improves its own operating harness via Weakness Mining → Harness Proposal → Proposal Validation (edits accepted only after regression testing). Improved both held-in and held-out pass rates across all 9 model–benchmark combos (Terminal-Bench-2.0, SWE-bench Verified, AppWorld), with relative gains up to 132%. 🆕
+
+- **[Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams](https://arxiv.org/abs/2606.01770)** — Liu et al. — *paper, Jun 2026* — Takes auto-harness out of the offline-benchmark lab: open-ended task streams make a single, densely-updated harness brittle. Decomposes the gap to oracle into evolution loss + adaptation loss, answered by a stateful multi-agent evolver, a harness tree routed at solve time, and human steering hooks. 🆕
+
+- **[HarnessBank: Semantic Gene-Bank Search with Gated Verification for Agent-Harness Self-Evolution](https://arxiv.org/abs/2607.13683)** — Luo et al. — *paper, Jul 2026* — Keeps high-performing harnesses in a semantic gene bank, then recombines and screens them (cheap gating before full evaluation). +5.1–15.4% across 7 benchmarks; cross-model results show evolution is model-specific, not a universal optimum. 🆕
+
+- **[SIA: Self Improving AI with Harness & Weight Updates](https://arxiv.org/abs/2605.27276)** — Hebbar et al. — *paper, May 2026* — Closes the loop one step further: a Feedback-Agent that updates both the harness and the model's weights. 🆕
+
+**Must-reads:** Harness Engineering for Language Agents · Self-Harness · AI Agents That Matter
+
+---
+
+## Related Lists
+
+*This list's niche: **bilingual (EN/中文) and practitioner-oriented** — every entry says why it belongs, not just what it is.*
+
+- **[awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering)** — ai-boost — *list* — The largest harness list (3.5k+ stars, actively updated). Broad tool and framework coverage; English-only.
+
+- **[awesome-agent-harness](https://github.com/RUCAIBox/awesome-agent-harness)** — RUC AI Box — *list* — Taxonomy-driven reading list accompanying the "Agent Systems with Harness Engineering" paper. Research-paper-first; English-only.
+
+- **This list** — the bilingual one: English and 中文 annotations written for practitioners evaluating harness decisions (what to read first, what it changes, what to watch out for), with per-section must-reads and a quality audit trail in [docs/](docs/).
 
 ---
 
