@@ -1,23 +1,46 @@
-# Awesome Agent Harness [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Agent Harness
 
-[![GitHub stars](https://img.shields.io/github/stars/to-real/awesome-agent-harness?style=flat-square&color=blue)](https://github.com/to-real/awesome-agent-harness/stargazers)
-[![Last refreshed](https://img.shields.io/badge/refreshed-2026--08-blue?style=flat-square)](docs/quality-audit-2026-06-25.md)
-[![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square)](LICENSE)
-[![Bilingual EN/中文](https://img.shields.io/badge/EN-%E4%B8%AD%E6%96%87-yellow?style=flat-square)](README_zh.md)
+<p align="center">
+  <img src="docs/social-preview.png" width="720" alt="Awesome Agent Harness — Agent = Model + Harness">
+</p>
 
-> A curated, bilingual (EN/中文) library of the best resources for building reliable AI agent harnesses — architecture patterns, context engineering, tool design, skills, memory, orchestration, and evaluation.
+<p align="center">
+  <em>The bilingual (EN / 中文) curated library on agent harness engineering —<br>context engineering, tool design, skills, memory, orchestration, evals, and coding-agent teardowns.</em>
+</p>
 
-**[中文版 →](README_zh.md)**
+<p align="center">
+  <a href="https://awesome.re"><img alt="Awesome" src="https://awesome.re/badge.svg"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/to-real/awesome-agent-harness?style=flat-square&color=blue"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/to-real/awesome-agent-harness?style=flat-square&color=blue"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/commits"><img alt="Last commit" src="https://img.shields.io/github/last-commit/to-real/awesome-agent-harness?style=flat-square&color=brightgreen"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/actions/workflows/link-check.yml"><img alt="Link check" src="https://img.shields.io/github/actions/workflow/status/to-real/awesome-agent-harness/link-check.yml?style=flat-square&label=link-check"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/blob/master/CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/blob/master/LICENSE"><img alt="CC0" src="https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square"></a>
+  <a href="README_zh.md"><img alt="EN / 中文" src="https://img.shields.io/badge/EN-%E4%B8%AD%E6%96%87-yellow?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <strong>175 annotated entries</strong> · 14 sections · bilingual EN/中文 · links re-verified <strong>2026-08-16</strong> · <a href="docs/quality-audit-2026-06-25.md">quality audit</a>
+</p>
 
 ---
+
+**中文版 → [README_zh.md](README_zh.md)**
 
 The model is not the hard part anymore. Building the system around it is.
 
 In February 2026, Mitchell Hashimoto gave a name to what practitioners had been building informally for years: **harness engineering** — the discipline of designing the full environment that wraps an AI agent and determines whether it succeeds or fails. Within weeks, OpenAI and Anthropic published engineering reports expanding on the idea. The term stuck because it names a real gap: prompt engineering optimizes a single turn; context engineering manages what the model sees; harness engineering governs the entire execution environment across every session.
 
-This list focuses on the **harness**, not the model. Every entry is annotated with *what it is and why it belongs*. Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
+This list focuses on the **harness**, not the model. Most lists in this space are link dumps — the same twenty bookmarks with no judgment and no maintenance. This one is curated like an artifact:
 
-**Last refreshed 2026-08-16** — all links re-verified; new since June: the self-improving-harness research wave, harness profiles, Claude Code agent teams, and the first harness-engineering surveys. See [audit notes](docs/quality-audit-2026-06-25.md).
+- **Every entry argues for itself.** What it is *and why it belongs*, with quantified claims where they exist (benchmark deltas, failure modes, team sizes).
+- **Every link is verified.** The full URL set is re-checked on each refresh; the method and every fix are logged in the [audit trail](docs/quality-audit-2026-06-25.md), and a scheduled [CI job](.github/workflows/link-check.yml) keeps watch between refreshes.
+- **Bilingual by design.** The 中文 version is maintained in parallel with adapted annotations for practitioners — not machine translation.
+- **Made for readers, not scrapers.** Per-section **Must-reads**, a 10-entry starter set, and cross-references instead of duplicate noise.
+
+Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = essential for the section. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
+
+**Last refreshed 2026-08-16** — new since June: the self-improving-harness research wave, harness profiles, Claude Code agent teams, and the first harness-engineering surveys.
 
 ---
 
@@ -507,6 +530,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. TL;DR:
 - URLs must be verified and accessible.
 - Use the standard entry format: linked title, author/org, type/date, and annotation.
 - Mark `🆕` for 2025–2026 content, `⚠️` for caveats.
+
+---
+
+## Maintainer
+
+Maintained by [@to-real](https://github.com/to-real).
+
+Found a dead link, a missing classic, or a section that's gone stale? Open an issue or PR — the [contribution guidelines](CONTRIBUTING.md) keep the quality bar, and link health is checked automatically on every PR.
 
 ---
 

@@ -1,23 +1,46 @@
-# Awesome Agent Harness [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Agent Harness
 
-[![GitHub stars](https://img.shields.io/github/stars/to-real/awesome-agent-harness?style=flat-square&color=blue)](https://github.com/to-real/awesome-agent-harness/stargazers)
-[![Last refreshed](https://img.shields.io/badge/refreshed-2026--08-blue?style=flat-square)](docs/quality-audit-2026-06-25.md)
-[![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square)](LICENSE)
-[![Bilingual EN/中文](https://img.shields.io/badge/EN-%E4%B8%AD%E6%96%87-yellow?style=flat-square)](README.md)
+<p align="center">
+  <img src="docs/social-preview.png" width="720" alt="Awesome Agent Harness — Agent = Model + Harness">
+</p>
 
-> 精选双语（EN/中文）资源库：构建可靠 AI Agent Harness 的最佳资源——架构模式、上下文工程、工具设计、技能、记忆、编排与评估。
+<p align="center">
+  <em>双语（EN / 中文）维护的 Agent Harness Engineering 精选资源库——<br>上下文工程、工具设计、技能、记忆、编排、评估，与主流编程 Agent 拆解。</em>
+</p>
 
-**[English Version →](README.md)**
+<p align="center">
+  <a href="https://awesome.re"><img alt="Awesome" src="https://awesome.re/badge.svg"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/to-real/awesome-agent-harness?style=flat-square&color=blue"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/to-real/awesome-agent-harness?style=flat-square&color=blue"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/commits"><img alt="Last commit" src="https://img.shields.io/github/last-commit/to-real/awesome-agent-harness?style=flat-square&color=brightgreen"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/actions/workflows/link-check.yml"><img alt="Link check" src="https://img.shields.io/github/actions/workflow/status/to-real/awesome-agent-harness/link-check.yml?style=flat-square&label=link-check"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/blob/master/CONTRIBUTING.md"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square"></a>
+  <a href="https://github.com/to-real/awesome-agent-harness/blob/master/LICENSE"><img alt="CC0" src="https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square"></a>
+  <a href="README.md"><img alt="EN / 中文" src="https://img.shields.io/badge/EN-%E4%B8%AD%E6%96%87-yellow?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <strong>175 条带注释资源</strong> · 14 个板块 · 中英双语 · 链接复检于 <strong>2026-08-16</strong> · <a href="docs/quality-audit-2026-06-25.md">质量审计记录</a>
+</p>
 
 ---
+
+**English Version → [README.md](README.md)**
 
 模型已不再是难点，围绕模型构建的系统才是。
 
 2026 年 2 月，Mitchell Hashimoto 为从业者们一直在做的事情给出了名字：**Harness Engineering（驾具工程）**——设计包裹 AI Agent 的完整环境，决定其成败的工程学科。几周内，OpenAI 和 Anthropic 发布工程报告加以扩展。这个术语之所以成立，是因为它命名了一个真实的缺口：Prompt Engineering 优化单轮交互；Context Engineering 管理模型看到的内容；Harness Engineering 治理跨越每个会话的整个执行环境。
 
-本列表聚焦 **Harness**，而非模型。每个条目都附有*是什么*和*为什么收录*的注释。标记：🆕 = 2025–2026 年发布/更新 · ⚠️ = 注意事项。欢迎贡献——见 [CONTRIBUTING](CONTRIBUTING.md)。
+本列表聚焦 **Harness**，而非模型。这个领域的大多数列表只是链接堆砌——同样的二十个书签，没有判断，也没有维护。本列表按"作品级"标准策展：
 
-**最近刷新 2026-08-16** —— 全部链接重新验证；本次新增：自进化 Harness 研究浪潮、Harness Profiles、Claude Code Agent Teams，以及最早两篇 harness-engineering 综述。见[审计记录](docs/quality-audit-2026-06-25.md)。
+- **每个条目都在为自己辩护**：是什么*以及为什么值得收录*，有量化结论的地方直接给数字（基准分差、失败模式、团队规模）。
+- **每条链接都经过验证**：每次刷新全量复检；方法与每一次修复都记录在[审计日志](docs/quality-audit-2026-06-25.md)里，刷新间隙由定时 [CI 任务](.github/workflows/link-check.yml)值守。
+- **双语同步维护**：中文版与英文版并行更新，注释为中文读者改写，不是机翻。
+- **为人读而设计**：每节有**必读**、开头有 10 条入门集、交叉引用代替重复堆砌。
+
+标记：🆕 = 2025–2026 年发布/更新 · ⚠️ = 注意事项 · **(必读)** = 本节核心。欢迎贡献——见 [CONTRIBUTING](CONTRIBUTING.md)。
+
+**最近刷新 2026-08-16** —— 本次新增：自进化 Harness 研究浪潮、Harness Profiles、Claude Code Agent Teams，以及最早两篇 harness-engineering 综述。
 
 ---
 
@@ -472,6 +495,14 @@
 - URL 必须经过验证且可访问。
 - 使用标准条目格式：带链接标题、作者/组织、类型/日期和注释。
 - 标记 `🆕` 表示 2025–2026 年内容，`⚠️` 表示注意事项。
+
+---
+
+## 维护者
+
+由 [@to-real](https://github.com/to-real) 维护。
+
+发现死链、漏掉的经典，或某个板块过时了？欢迎提 issue 或 PR——[贡献指南](CONTRIBUTING.md)守住了质量底线，每个 PR 都会自动跑链接巡检。
 
 ---
 
