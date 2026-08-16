@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; }
+  body {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    position: relative;
+  }
+  /* subtle grid texture */
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(88,166,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(88,166,255,0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .glow {
+    position: absolute; width: 900px; height: 900px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(88,166,255,0.14) 0%, transparent 60%);
+    top: -350px; right: -250px;
+  }
+  .glow2 {
+    position: absolute; width: 700px; height: 700px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(63,185,80,0.10) 0%, transparent 60%);
+    bottom: -380px; left: -200px;
+  }
+  .wrap { position: relative; padding: 72px 84px; height: 100%; display: flex; flex-direction: column; }
+  .kicker {
+    font-size: 22px; letter-spacing: 8px; color: #f0883e; font-weight: 600;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  h1 { font-size: 92px; font-weight: 800; letter-spacing: -1px; line-height: 1.05; }
+  h1 .accent { color: #58a6ff; }
+  .formula {
+    margin-top: 34px; font-size: 40px; font-weight: 600; color: #8b949e;
+    font-family: Consolas, "SF Mono", monospace;
+  }
+  .formula b { color: #3fb950; font-weight: 700; }
+  .sub {
+    margin-top: 30px; font-size: 26px; color: #c9d1d9; font-weight: 400;
+  }
+  .sub .zh { color: #e6edf3; }
+  .tags { margin-top: 40px; display: flex; gap: 14px; }
+  .tag {
+    font-size: 20px; padding: 8px 20px; border-radius: 999px;
+    border: 1px solid #30363d; color: #8b949e; background: #161b22;
+  }
+  .footer {
+    margin-top: auto; display: flex; justify-content: space-between; align-items: center;
+    font-size: 21px; color: #8b949e;
+  }
+  .lang {
+    display: flex; gap: 10px; align-items: center;
+  }
+  .pill {
+    padding: 5px 16px; border-radius: 6px; font-weight: 700; font-size: 19px;
+  }
+  .pill.en { background: #1f6feb33; color: #58a6ff; border: 1px solid #1f6feb66; }
+  .pill.zh { background: #3fb95022; color: #3fb950; border: 1px solid #3fb95055; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+  <div class="wrap">
+    <div class="kicker">Awesome · Curated</div>
+    <h1>Agent <span class="accent">Harness</span></h1>
+    <div class="formula">Agent&nbsp;=&nbsp;Model&nbsp;+&nbsp;<b>Harness</b></div>
+    <div class="sub">The engineering discipline around the model &nbsp;·&nbsp; <span class="zh">围绕模型的工程学科</span></div>
+    <div class="tags">
+      <span class="tag">Context</span>
+      <span class="tag">Tools &amp; MCP</span>
+      <span class="tag">Skills</span>
+      <span class="tag">Evals</span>
+      <span class="tag">Teardowns</span>
+      <span class="tag">Papers</span>
+    </div>
+    <div class="footer">
+      <div class="lang"><span class="pill en">EN</span><span class="pill zh">中文</span></div>
+      <div>to-real / awesome-agent-harness</div>
+    </div>
+  </div>
+</body>
+</html>
