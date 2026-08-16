@@ -170,6 +170,8 @@
 
 - **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals)** — LangChain (Vivek Trivedy) — *博客, 2026.04* — “Evals 是 Agent 的训练数据”：人工整理、trace 挖掘、优化/留出集、基线、诊断-实验-验证循环和人工复查。🆕
 
+- **[Agent QA](https://github.com/vostride/agent-qa)** — Vostride — *工具/代码库, 2026* — 用自然语言运行 Web/移动端验证循环，通过持久测试记忆、选择器自愈和失败证据支持 CLI 与 MCP 工作流。⚠️ 当前采用 FSL-1.1-ALv2，是 source-available 而非 OSI 开源。🆕
+
 - **[How Middleware Lets You Customize Your Agent Harness](https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness)** — LangChain (Sydney Runkle) — *博客, 2026.03* — 围绕模型调用和工具调用的 hooks，是 Harness 定制的主要表面。🆕
 
 **必读：** OpenAI（Codex 循环） · Anthropic（长时运行） · LangChain（改进 Deep Agents）
