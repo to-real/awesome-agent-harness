@@ -1,0 +1,44 @@
+name: Link Check
+
+# Production policy:
+# - FAIL on 404/410 (confirmed dead links)
+# - WARN (but pass) on 403/429/000 — these are usually bot walls (OpenReview,
+#   preprints.org, YouTube), not dead resources; verify by hand before editing
+# - Badge/CDN images are out of scope; only resource URLs in the READMEs count
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # monthly, 06:00 UTC
+  pull_request:
+    paths:
+      - "README.md"
+      - "README_zh.md"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract resource URLs
+        run: |
+          grep -ohE '\]\(https?://[^)]+\)' README.md README_zh.md \
+            | sed -E 's/^\]\(//; s/\)$//' \
+            | grep -vE '(img\.shields\.io|awesome\.re|licensebuttons\.net|api\.star-history\.com)' \
+            | sort -u > urls.txt
+          echo "Unique resource URLs: $(wc -l < urls.txt)"
+
+      - name: Check URLs
+        run: |
+          dead=0
+          while read -r url; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 25 \
+              -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36" "$url" || echo 000)
+            case "$code" in
+              200|405) ;;
+              404|410) echo "::error::DEAD ($code): $url"; dead=1 ;;
+              *) echo "::warning::CHECK BY HAND ($code): $url" ;;
+            esac
+          done < urls.txt
+          exit $dead

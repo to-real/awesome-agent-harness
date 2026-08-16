@@ -12,15 +12,20 @@ Modeled after [benchflow-ai/awesome-evals](https://github.com/benchflow-ai/aweso
 
 ```
 awesome-agent-harness/
-├── README.md          # English version (primary, 14 sections + Related Lists)
-├── README_zh.md       # Chinese version (adapted not translated)
+├── README.md          # English version (banner + badge row + curation statement; 14 sections + Related Lists)
+├── README_zh.md       # Chinese version (mirrored structure, adapted annotations)
 ├── CONTRIBUTING.md    # Contribution guidelines
 ├── LICENSE            # CC0 1.0
 ├── .gitignore
+├── .github/
+│   ├── workflows/link-check.yml      # monthly + PR link check (fails on 404/410; warns on 403/000 bot walls)
+│   └── PULL_REQUEST_TEMPLATE.md      # bilingual + format checklist for contributors
 ├── AGENTS.md          # This file
 └── docs/
     ├── content-gap-map.md
-    └── quality-audit-2026-06-25.md   # audit log; appended 2026-08-16 refresh
+    ├── quality-audit-2026-06-25.md   # audit log; appended 2026-08-16 refresh
+    ├── social-preview.html           # source of the banner/social image
+    └── social-preview.png            # 1280x640; also used as README banner
 ```
 
 ## Current State
