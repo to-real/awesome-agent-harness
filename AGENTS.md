@@ -30,7 +30,18 @@ awesome-agent-harness/
 
 ## Current State
 
-### 2026-08-16 Refresh (latest)
+### Audience (set 2026-08-16)
+
+**AI PMs and agent product engineers.** Select and annotate entries through their lens: decisions and patterns first (adopt? cost? failure modes?), academic breadth is RUCAIBox's niche, daily long-tail repo farming is ai-boost's. Ours: bilingual + argued entries + verified links.
+
+### 2026-08-16 Refresh — Batch 2 (audience-positioned expansion)
+
+- +28 entries from competitive gap analysis: Codex skills/hooks/SDK, MCP July 2026 RC + tool annotations, Don't Build Multi-Agents + architecture-choosing (§11), new §12 "Reference Harnesses & Open-Source Coding Agents" subsection (OpenHands, aider, SWE-agent, OpenHarness, Open SWE, deepagents), §8 trust/authorization cluster, §9 harness-tuning cluster, Claude loop engineering + self-healing (§4), Agent Builder memory (§7), autonomous context compression (§2).
+- Related Lists expanded to 5 (+awesome-evals, +Awesome-Context-Engineering, +best-of-Agent-Harnesses).
+- Intro + repo description now name the audience explicitly. Entry count ~200 EN / ~190 ZH.
+- All new URLs verified 200; canonical redirect targets used (cognition.com, learn.chatgpt.com, www.langchain.com). Details in the audit log.
+
+### 2026-08-16 Refresh — Batch 1 (latest before batch 2)
 
 - Full link re-check: 130 unique resource URLs; 4 true dead links fixed (OpenAI docs moved to learn.chatgpt.com, Agent SDK docs to code.claude.com, two openai.com slug changes). See the appended section in `docs/quality-audit-2026-06-25.md`.
 - 13 new sources added, centered on the post-June self-improving-harness research wave (Self-Harness, Adaptive Auto-Harness, HarnessBank, SIA), the first harness-engineering surveys (RUC AI Box, Code as Agent Harness), LangChain deepagents + harness profiles, Claude Code Agent Teams, and Lance Martin's Manus teardown.

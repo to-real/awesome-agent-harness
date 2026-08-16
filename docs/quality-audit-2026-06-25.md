@@ -212,3 +212,31 @@ All new URLs verified 200 at time of addition.
 - New top-level section: Related Lists (differentiates this bilingual, annotated list from the two English-only lists).
 - §14 gained a "Self-Improving & Auto-Evolving Harnesses" subsection covering the June–July 2026 research wave; §14 must-reads updated accordingly.
 - §11 gained Claude Code Agent Teams with a §10 cross-reference note.
+
+---
+
+# 2026-08-16 Refresh — Batch 2 (audience-positioned expansion)
+
+Trigger: competitive gap analysis vs ai-boost/awesome-harness-engineering (435 links) and RUCAIBox/awesome-agent-harness (607 links). Audience reaffirmed: **AI PMs and agent product engineers** — entries selected and annotated for decisions and patterns, not academic coverage.
+
+## Changes
+
+- +28 entries across §2–§12 and Related Lists; entry count now ~200 (EN) / ~190 (ZH, some entries merged per zh convention).
+- Biggest additions:
+  - Codex skills/hooks/SDK (§6, §10) — Skills become a cross-vendor standard (same SKILL.md open standard, agentskills.io).
+  - MCP July 2026 release candidate + tool annotations (§3) — protocol direction: stateless, Extensions first-class, 12-month deprecation policy.
+  - Don't Build Multi-Agents (Cognition, Walden Yan) + Choosing the Right Multi-Agent Architecture (§11) — the canonical counterpoint to fan-out.
+  - New §12 subsection "Reference Harnesses & Open-Source Coding Agents": OpenHands, aider, SWE-agent, OpenHarness, Open SWE, deepagents (+ v0.6 profiles entry moved alongside).
+  - §8 trust/authorization cluster: Two Types of Agent Authorization (on-behalf-of vs fixed credentials), IETF agent auth draft, UK AISI inspect_ai, NVIDIA sandboxing guidance.
+  - §9 harness-tuning cluster: Nemotron 3 Ultra playbook (0.80→0.86, ~10× cost advantage), Human Judgment in the Agent Improvement Loop. §9 must-reads updated.
+- Related Lists expanded 2 → 5 (+awesome-evals, +Awesome-Context-Engineering, +best-of-Agent-Harnesses).
+- Intro/curation statement in both languages now names the audience explicitly.
+- Repo description updated to name the audience.
+
+## Link Verification
+
+All 28 new URLs verified 200 (curl, browser UA, follow redirects) on 2026-08-16. Canonical final URLs used where redirects exist (cognition.ai → cognition.com; developers.openai.com/codex/skills → learn.chatgpt.com/docs/build-skills; blog.langchain.com → www.langchain.com).
+
+## URL Redirects Normalized
+
+Pre-existing entries still pointing at redirecting hosts were left as-is if they resolve 200; new entries use canonical targets.
