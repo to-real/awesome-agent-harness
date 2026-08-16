@@ -2,7 +2,7 @@
 
 Date: 2026-06-25
 
-Last refreshed: 2026-06-26
+Last refreshed: 2026-08-16
 
 Scope: README.md and README_zh.md. This audit checks link health, EN/ZH content parity, entry format consistency, section structure, and obvious duplicate pressure. It does not apply content fixes.
 
@@ -159,3 +159,56 @@ Recommendation: keep these intentional duplicates. Re-run link checks after any 
 
 1. Keep future source additions quality-first and preserve exact EN/ZH URL parity.
 2. Re-run link checks only after future source movement or URL edits.
+
+---
+
+# 2026-08-16 Refresh
+
+Scope: full link re-check of both READMEs, four dead-link fixes, thirteen new sources, one new README section (Related Lists), one new subsection (§14 Self-Improving & Auto-Evolving Harnesses).
+
+## Link Re-Check
+
+Method: extracted unique non-local, non-badge URLs from README.md (curl, HEAD→GET with -L, browser UA), flagged everything that was neither 200 nor 405.
+
+- Checked: 130 unique resource URLs.
+- OK: 124.
+- True 404 (fixed this pass): 4 — see below.
+- Bot-walled 403 to automated checks (human-accessible, kept): 2 — `openreview.net` (bot-check interstitial) and `preprints.org` manuscript page.
+- The 2026-06-26 "request-limited" OpenAI URLs have since become real 404s (docs/URL relocations), confirming they were relocations in progress, not bot walls.
+
+### Dead Links Fixed
+
+- `https://developers.openai.com/docs/codex/agents-md` → `https://learn.chatgpt.com/docs/agent-configuration/agents-md` (OpenAI developer docs moved to learn.chatgpt.com)
+- `https://docs.anthropic.com/en/docs/agents/agent-sdk` → `https://code.claude.com/docs/en/agent-sdk/overview` (Agent SDK docs moved to code.claude.com)
+- `https://openai.com/index/a-practical-guide-to-building-ai-agents/` → `https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/` (3 occurrences per README)
+- `https://openai.com/index/unlocking-codex-harness/` → `https://openai.com/index/unlocking-the-codex-harness/` (slug changed)
+
+## New Sources Added (13)
+
+All new URLs verified 200 at time of addition.
+
+1. Context Engineering in Manus — Lance Martin (§2, both languages)
+2. How to Build a Custom Agent Harness — LangChain (§4)
+3. Claude Code Agent Teams — Anthropic docs (§11)
+4. deepagents repo — LangChain (§12)
+5. Deep Agents v0.6: Harness Profiles — LangChain (§12)
+6. Agent Systems with Harness Engineering — RUC AI Box (§14) ⚠️ OpenReview bot-checks automated access
+7. Code as Agent Harness — Ning et al. survey (§14)
+8. Self-Harness — Zhang et al. (§14 new subsection)
+9. Adaptive Auto-Harness — Liu et al. (§14 new subsection)
+10. HarnessBank — Luo et al. (§14 new subsection)
+11. SIA: Harness & Weight Updates — Hebbar et al. (§14 new subsection)
+12. awesome-harness-engineering — ai-boost (new Related Lists section)
+13. awesome-agent-harness — RUCAIBox (new Related Lists section)
+
+## EN/ZH Parity
+
+- URL sets remain aligned except one deliberate exception: README_zh links the official Manus 中文版 in the §2 Manus annotation (`manus.im/zh-cn/blog/...`). This is an intentional bilingual adaptation, not drift.
+- Both READMEs gained the same sections, subsections, and must-read updates; §14 must-reads updated in both.
+
+## Structural Changes
+
+- Header: added stars / refreshed / license / language badges; added "Last refreshed" line to both intros.
+- New top-level section: Related Lists (differentiates this bilingual, annotated list from the two English-only lists).
+- §14 gained a "Self-Improving & Auto-Evolving Harnesses" subsection covering the June–July 2026 research wave; §14 must-reads updated accordingly.
+- §11 gained Claude Code Agent Teams with a §10 cross-reference note.

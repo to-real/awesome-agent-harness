@@ -12,17 +12,28 @@ Modeled after [benchflow-ai/awesome-evals](https://github.com/benchflow-ai/aweso
 
 ```
 awesome-agent-harness/
-├── README.md          # English version (primary, 426 lines, 14 sections)
-├── README_zh.md       # Chinese version (313 lines, adapted not translated)
+├── README.md          # English version (primary, 14 sections + Related Lists)
+├── README_zh.md       # Chinese version (adapted not translated)
 ├── CONTRIBUTING.md    # Contribution guidelines
 ├── LICENSE            # CC0 1.0
 ├── .gitignore
-└── AGENTS.md          # This file
+├── AGENTS.md          # This file
+└── docs/
+    ├── content-gap-map.md
+    └── quality-audit-2026-06-25.md   # audit log; appended 2026-08-16 refresh
 ```
 
-## Current State (as of initial creation)
+## Current State
 
-### What's Done
+### 2026-08-16 Refresh (latest)
+
+- Full link re-check: 130 unique resource URLs; 4 true dead links fixed (OpenAI docs moved to learn.chatgpt.com, Agent SDK docs to code.claude.com, two openai.com slug changes). See the appended section in `docs/quality-audit-2026-06-25.md`.
+- 13 new sources added, centered on the post-June self-improving-harness research wave (Self-Harness, Adaptive Auto-Harness, HarnessBank, SIA), the first harness-engineering surveys (RUC AI Box, Code as Agent Harness), LangChain deepagents + harness profiles, Claude Code Agent Teams, and Lance Martin's Manus teardown.
+- New structure: header badges + "Last refreshed" line; §14 subsection "Self-Improving & Auto-Evolving Harnesses"; top-level "Related Lists" section that positions this list against `ai-boost/awesome-harness-engineering` (3.5k+ stars, EN) and `RUCAIBox/awesome-agent-harness` (paper taxonomy, EN). Differentiator: bilingual + annotated.
+- EN/ZH parity maintained; one documented exception (Manus 中文版 link in README_zh §2).
+- Backlog items partially addressed: cross-references (§11→§10 note), Chinese-audience adaptation (Manus zh link), observability/safety sections unchanged.
+
+### What's Done (baseline, 2026-06)
 - Full 14-section structure with 100+ annotated entries across both language versions
 - 10-entry Must-Read Starter Set
 - Sections: Definitions & Boundaries, Context Engineering, Tool Design & MCP, Agent Loop & Verification, Architecture Patterns, Skills & Progressive Disclosure, Memory & State, Permissions/Safety/Sandboxing, Harness↔Eval Interaction, Coding Agent Harness Teardowns (Claude Code / Codex / Cursor subsections), Multi-Agent Orchestration, Frameworks & Tools, Talks/Podcasts, Academic Papers
