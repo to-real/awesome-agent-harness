@@ -213,6 +213,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 - **[Better Harness: A Recipe for Harness Hill-Climbing with Evals](https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals)** — LangChain (Vivek Trivedy) — *blog, Apr 2026* — "Evals are training data for agents." Six-step recipe: hand-curation, trace-mining, optimization/holdout splits, baselines, diagnose-experiment-validate loops, human review. 🆕
 
+- **[Agent QA](https://github.com/vostride/agent-qa)** — Vostride — *tool/repo, 2026* — Runs natural-language web/mobile verification loops with persistent test memory, selector self-healing, and retained failure evidence exposed through CLI and MCP. ⚠️ Source-available under FSL-1.1-ALv2, not OSI-open-source. 🆕
+
 - **[How Middleware Lets You Customize Your Agent Harness](https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness)** — LangChain (Sydney Runkle) — *blog, Mar 2026* — Hooks around model and tool calls as the primary customization surface. 🆕
 
 - **[How to Build a Custom Agent Harness](https://www.langchain.com/blog/how-to-build-a-custom-agent-harness)** — LangChain (Sydney Runkle) — *blog, Jun 2026* — The harness as a minimal core loop plus composable middleware (memory, retries, policy enforcement, human oversight, cost control). The best agents come from harnesses matched to their task, not universal ones. 🆕
