@@ -293,6 +293,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 - **[Effective Context Engineering for AI Agents — Memory Strategies](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *blog, Sep 2025* — Memory tools that enable persistent storage and retrieval across conversations. Also listed in Must-Read Starter Set.
 
+- **[Tree Ring Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory)** — TerminallyLazy — *tool/repo, 2026* — Local-first memory lifecycle layer for agent harnesses; makes recall, forgetting, audit trails, and consolidation explicit instead of leaving retained state as ad hoc transcripts. 🆕
+
 - **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — Chang et al. — *paper, 2026* — Memory collaboration across multiple agents via trajectory distillation. 🆕
 
 - **[Filesystem as Agent Memory](https://openai.com/index/harness-engineering/)** — OpenAI — *blog, Feb 2026* — "From the agent's point of view, anything it cannot access in-context effectively does not exist." The repo as externalized memory. Also listed in Must-Read Starter Set.

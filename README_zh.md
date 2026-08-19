@@ -289,6 +289,8 @@
 
 - **[Effective Context Engineering for AI Agents — Memory Strategies](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — Anthropic — *博客, 2025.09* — 通过记忆工具实现跨会话存储和检索。也见「必读入门集」。
 
+- **[Tree Ring Memory](https://github.com/TerminallyLazy/Tree-Ring-Memory)** — TerminallyLazy — *工具/代码库, 2026* — 面向 Agent Harness 的本地优先记忆生命周期层，把召回、遗忘、审计轨迹和整合显式化，而不是把长期状态留在临时 transcript 里。🆕
+
 - **[MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation](https://arxiv.org/abs/2603.23234)** — Chang 等 — *论文, 2026* — 通过轨迹蒸馏实现多 Agent 之间的记忆协作。🆕
 
 - **[Filesystem as Agent Memory](https://openai.com/index/harness-engineering/)** — OpenAI — *博客, 2026.02* — "从 Agent 的角度看，任何不在上下文中的东西实际上都不存在。" 也见「必读入门集」。
