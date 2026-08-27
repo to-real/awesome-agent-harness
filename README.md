@@ -489,7 +489,7 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *tool/repo* — Framework for running agent evals + creating RL environments. Powers Terminal-Bench 2.0. 🆕
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *tool/repo* — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
-- **[Remote Agent Server](https://github.com/ma-pony/remote-agent-server)** — ma-pony — *tool/repo, 2026* — Self-hosted ACP runtime for operating Codex and Claude Code through a Web UI or asynchronous HTTP API. It adds snapshot-isolated workspaces, resumable sessions, per-agent Skills/MCP configuration, and bounded concurrency. 🆕
+- **[Remote Agent Server](https://github.com/ma-pony/remote-agent-server)** — ma-pony — *tool/repo, 2026* — Self-hosted ACP agent execution gateway for external systems that runs Codex and Claude Code through an asynchronous Task API, with snapshot-isolated workspaces, resumable sessions, per-Agent Skills/MCP, durable events, SSE, signed Webhooks, and bounded concurrency. 🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *tool/repo* — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
 - **[Better Harness](https://github.com/QoderAI/better-harness)** — Qoder — *tool/repo* — Turns project and session evidence into loop-level insights, prioritized improvements, and verifiable next steps — inside the coding agent you already use. Harness observability aimed at the improvement loop itself. 🆕
 
