@@ -458,6 +458,7 @@
 ### Harness 工具与实用程序
 - **[Harbor](https://github.com/harbor-framework/harbor)** — Harbor Framework — *工具/代码库* — 运行 agent eval、创建 RL 环境的框架，支撑 Terminal-Bench 2.0。🆕
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *工具/代码库* — 面向 Claude Code 和 Codex 的 Harness：隔离 worktree、多 Agent 协作和持久记忆。🆕
+- **[Remote Agent Server](https://github.com/ma-pony/remote-agent-server)** — ma-pony — *工具/代码库, 2026* — 自托管 ACP 运行服务，通过 Web 管理台或异步 HTTP API 运行 Codex 和 Claude Code。提供快照隔离工作区、可续接会话、按 Agent 配置的 Skills/MCP，以及并发控制。🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *工具/代码库* — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
 - **[Better Harness](https://github.com/QoderAI/better-harness)** — Qoder — *工具/代码库* — 把项目和会话证据变成循环级洞察、优先级改进项和可验证的下一步——就装在你已有的编程 Agent 里。瞄准"改进循环本身"的 Harness 可观测性。🆕
 
