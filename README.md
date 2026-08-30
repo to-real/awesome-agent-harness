@@ -479,6 +479,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 - **[OpenHarness](https://github.com/HKUDS/OpenHarness)** — HKUDS — *tool/repo* — Open agent harness with a built-in personal agent, from the LightRAG team. 🆕
 
+- **[SandBase Harness](https://github.com/sandbaseai/sandbase-harness)** — SandBase AI — *tool/repo* — Local-first, self-hosted TypeScript runtime with persistent sessions, sandboxed tool execution, MCP, memory, credentials, approvals, audit trails, replay, and a built-in Console. Supports local, Docker, Kubernetes, and self-hosted worker backends. 🆕
+
 - **[Open SWE](https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents)** — LangChain — *blog/repo, 2026* — The MIT framework for internal coding agents — the Stripe/Ramp/Coinbase pattern, open-sourced: Slack/Linear/GitHub integration, isolated cloud sandboxes, curated toolsets, deterministic middleware hooks, and PR-opening safety nets. The blueprint for org-internal agents. 🆕
 
 - **[deepagents](https://github.com/langchain-ai/deepagents)** — LangChain — *tool/repo* — The batteries-included MIT agent harness: planning, virtual filesystem, subagent delegation, context management. The artifact behind the deep-agents blog series. 🆕
