@@ -451,6 +451,8 @@
 - **[aider](https://github.com/Aider-AI/aider)** — Paul Gauthier — *工具/代码库* — 终端里的 AI 结对编程。它的 repo-map 和编辑格式工作是整个领域的地基——§9 的 Hashline 实验证明了仅编辑格式的价值。🆕
 - **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** — Princeton NLP — *工具/代码库* — 学术界的原点："agent-computer interface" 设计开创了编程 Agent Harness 研究线，配套 SWE-bench。🆕
 - **[OpenHarness](https://github.com/HKUDS/OpenHarness)** — HKUDS — *工具/代码库* — 内置个人 Agent 的开源 Harness，出自 LightRAG 团队。🆕
+
+- **[SandBase Harness](https://github.com/sandbaseai/sandbase-harness)** — SandBase AI — *工具/代码库* — Local-first、自托管的 TypeScript 运行时，提供持久化会话、沙箱工具执行、MCP、记忆、凭证、审批、审计、回放和内置 Console；支持本地、Docker、Kubernetes 与自托管 Worker 后端。🆕
 - **[Open SWE](https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents)** — LangChain — *博客/代码库, 2026* — 内部编程 Agent 的 MIT 框架——把 Stripe/Ramp/Coinbase 的内部模式开源：Slack/Linear/GitHub 集成、隔离云沙箱、精选工具集、确定性中间件钩子、兜底开 PR 的安全网。组织内部 Agent 的蓝本。🆕
 - **[deepagents](https://github.com/langchain-ai/deepagents)** — LangChain — *工具/代码库* — "电池全含"的 MIT 开源 Agent Harness：规划、虚拟文件系统、子 Agent 委派、上下文管理。deep-agents 系列文章背后的那个工件。🆕
 - **[Deep Agents v0.6 — Harness Profiles](https://www.langchain.com/blog/deep-agents-0-6)** — LangChain (Sydney Runkle) — *博客, 2026.05* — 把 Harness 配置变成可命名、可版本化、按模型区分的单元（基础 prompt、工具描述、中间件），并为各模型内置官方 profile。Harness 调优正在成为一等产品面。🆕
