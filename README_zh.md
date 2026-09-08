@@ -518,6 +518,8 @@
 
 **必读：** Harness Engineering for Language Agents · Self-Harness · AI Agents That Matter
 
+- **[Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report](https://arxiv.org/abs/2608.15763)** — TaoLive AIGC LLM Team — *paper, 2026-08* — 训练紧凑模型适应 Skills、工具、提示词和 Hooks 的变化，再固定权重评估开发者审核后的 Harness 更新，场景为直播电商数字人。🆕
+
 ---
 
 ## 相关列表
