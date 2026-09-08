@@ -561,6 +561,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 **Must-reads:** Harness Engineering for Language Agents · Self-Harness · AI Agents That Matter
 
+- **[Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report](https://arxiv.org/abs/2608.15763)** — TaoLive AIGC LLM Team — *paper, 2026-08* — Trains a compact agent to use changing Skills, tools, prompts, and Hooks, then evaluates developer-reviewed harness edits with frozen weights in live commerce. 🆕
+
 ---
 
 ## Related Lists
