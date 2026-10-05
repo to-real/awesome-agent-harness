@@ -461,6 +461,8 @@
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *工具/代码库* — Claude Code 插件，用多 Agent proposer、LangSmith eval 和 git worktree 隔离自动演化 Harness。🆕
 - **[Better Harness](https://github.com/QoderAI/better-harness)** — Qoder — *工具/代码库* — 把项目和会话证据变成循环级洞察、优先级改进项和可验证的下一步——就装在你已有的编程 Agent 里。瞄准"改进循环本身"的 Harness 可观测性。🆕
 
+- **[Cage](https://github.com/vitalik1921/cage)** — Vitaliy Shebela — *工具/仓库，2026* — 以确定性方式关联 TypeScript 规格、实现与不变量测试，并将过期或不完整的评审工作返回给 Claude Code 或 Codex。
+
 ### 可观测性
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *博客, 2025.06* — 把 Agent 可观测性拆成提示、工具、记忆、检索、成本和语义约定层面的追踪问题。🆕
 - **[Tracing](https://openai.github.io/openai-agents-python/tracing/)** — OpenAI Agents SDK — *文档* — 内置 trace/span 模型，覆盖 Agent 运行、LLM 生成、工具调用、handoff、护栏和自定义事件。
