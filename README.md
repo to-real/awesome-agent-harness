@@ -492,6 +492,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *tool/repo* — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
 - **[Better Harness](https://github.com/QoderAI/better-harness)** — Qoder — *tool/repo* — Turns project and session evidence into loop-level insights, prioritized improvements, and verifiable next steps — inside the coding agent you already use. Harness observability aimed at the improvement loop itself. 🆕
 
+- **[Cage](https://github.com/vitalik1921/cage)** — Vitaliy Shebela — *tool/repo, 2026* — Deterministically links TypeScript specs to implementations and invariant tests, then returns stale or incomplete review work to Claude Code or Codex.
+
 ### Observability
 
 - **[AI Agent Observability: Evolving Standards and Best Practices](https://opentelemetry.io/blog/2025/ai-agent-observability/)** — OpenTelemetry — *blog, Jun 2025* — Frames observability as traces across prompts, tools, memory, retrieval, cost, and emerging semantic conventions. 🆕
