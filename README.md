@@ -471,6 +471,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 *Read the code, not just the posts. These are the harnesses you can actually open.*
 
+- **[ALEPH](https://github.com/josuecuguy1307/Aleph)** — josuecuguy1307 — *tool/repo, 2026* — Desktop workspace harness that separates model/CLI reasoning from its own tool execution, project workspaces, and artifacts; useful source code for studying a general-purpose agent product beyond coding. ⚠️ Early macOS Apple Silicon release; packaged compatibility remains to be validated. 🆕
+
 - **[OpenHands](https://github.com/OpenHands/OpenHands)** — OpenHands — *tool/repo* — The largest open-source coding-agent platform: sandboxed runtime, shell + browser tools, event-driven agent loop. The reference for what a complete open agent product looks like. 🆕
 
 - **[aider](https://github.com/Aider-AI/aider)** — Paul Gauthier — *tool/repo* — AI pair programming in the terminal. Its repo-map and edit-format work is foundational for the whole field — see the Hashline experiment (§9) for what edit formats alone are worth. 🆕
