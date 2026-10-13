@@ -447,6 +447,7 @@
 
 *不只读文章，也读代码。这些是可以真正打开来看的 Harness。*
 
+- **[ALEPH](https://github.com/josuecuguy1307/Aleph)** — josuecuguy1307 — *工具/代码库, 2026* — 桌面工作空间 Harness，将模型或 CLI 的推理与自身的工具执行、项目工作空间和产物管理分开，便于从源码研究编程之外的通用 Agent 产品如何组织。⚠️ 目前是面向 macOS Apple Silicon 的早期版本，打包后的兼容性仍需验证。🆕
 - **[OpenHands](https://github.com/OpenHands/OpenHands)** — OpenHands — *工具/代码库* — 最大的开源编程 Agent 平台：沙箱运行时、shell + 浏览器工具、事件驱动的 agent loop。"一个完整开源 Agent 产品长什么样"的参考答案。🆕
 - **[aider](https://github.com/Aider-AI/aider)** — Paul Gauthier — *工具/代码库* — 终端里的 AI 结对编程。它的 repo-map 和编辑格式工作是整个领域的地基——§9 的 Hashline 实验证明了仅编辑格式的价值。🆕
 - **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** — Princeton NLP — *工具/代码库* — 学术界的原点："agent-computer interface" 设计开创了编程 Agent Harness 研究线，配套 SWE-bench。🆕
