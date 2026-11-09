@@ -469,6 +469,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 ### Reference Harnesses & Open-Source Coding Agents
 
+- **[Orbi](https://github.com/orbi-build/orbi)** — orbi-build — *tool/repo, 2026* — Self-hostable issue-to-release harness with isolated worktrees and a separate acceptance-review session before merge and tagged release; an inspectable example of enforcing delivery gates around a coding agent. [Website](https://orbi.build/). 🆕
+
 *Read the code, not just the posts. These are the harnesses you can actually open.*
 
 - **[OpenHands](https://github.com/OpenHands/OpenHands)** — OpenHands — *tool/repo* — The largest open-source coding-agent platform: sandboxed runtime, shell + browser tools, event-driven agent loop. The reference for what a complete open agent product looks like. 🆕

@@ -445,6 +445,8 @@
 
 ### 参考 Harness 与开源编程 Agent
 
+- **[Orbi](https://github.com/orbi-build/orbi)** — orbi-build — *tool/repo, 2026* — 可自托管的 Issue 到发版执行器：在隔离 worktree 实现，由独立评审会话核对验收项后才合并并打 tag，适合研究编码 agent 的交付门禁。[官网](https://orbi.build/)。 🆕
+
 *不只读文章，也读代码。这些是可以真正打开来看的 Harness。*
 
 - **[OpenHands](https://github.com/OpenHands/OpenHands)** — OpenHands — *工具/代码库* — 最大的开源编程 Agent 平台：沙箱运行时、shell + 浏览器工具、事件驱动的 agent loop。"一个完整开源 Agent 产品长什么样"的参考答案。🆕
