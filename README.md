@@ -491,6 +491,7 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 - **[Citadel](https://github.com/SethGammon/Citadel)** — Seth Gammon — *tool/repo* — Harness for Claude Code and Codex with isolated worktrees, multi-agent coordination, and persisted memory. 🆕
 - **[Harness Evolver](https://github.com/raphaelchristi/harness-evolver)** — Raphael Christi — *tool/repo* — Claude Code plugin that autonomously evolves harnesses using multi-agent proposers, LangSmith-backed evaluation, and git worktree isolation. Based on Meta-Harness. 🆕
 - **[Better Harness](https://github.com/QoderAI/better-harness)** — Qoder — *tool/repo* — Turns project and session evidence into loop-level insights, prioritized improvements, and verifiable next steps — inside the coding agent you already use. Harness observability aimed at the improvement loop itself. 🆕
+- **[EvalShift](https://github.com/evalshift/evalshift-cli)** — EvalShift — *tool/repo* — The inverse of a harness study: keeps the harness and recorded agent runs fixed, replays them on the current and a candidate model, and reports per-case tool-call and output regressions with paired statistics, so a model swap is judged on your own traffic. 🆕
 
 ### Observability
 
