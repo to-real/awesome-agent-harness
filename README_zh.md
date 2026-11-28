@@ -275,6 +275,8 @@
 
 - **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills)** — Firecrawl — *博客* — 面向实践者解释 SKILL.md 为什么成为 Harness 原语。
 
+- **[100x Engineer Skill](https://github.com/DeadInternetStudios/100x-engineer-skill)** — DeadInternetStudios — *工具/仓库, 2026* — Skills 作为 Harness 的实例:13 个 SKILL.md 技能,适用于 Codex、Claude Code 和 Cursor,要求 Agent 先规划,并以测试和形式化检查而非自我报告作为完成门槛。🆕
+
 **必读：** Anthropic（Agent Skills） · OpenAI（渐进披露）
 
 ---

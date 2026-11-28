@@ -279,6 +279,8 @@ Markers: 🆕 = released/updated 2025–2026 · ⚠️ = caveat · **(MUST)** = 
 
 - **[Agent Skills Explained: How SKILL.md Files Work and Why They're Everywhere](https://www.firecrawl.dev/blog/agent-skills)** — Firecrawl — *blog* — Practitioner-oriented explainer of SKILL.md as a harness primitive.
 
+- **[100x Engineer Skill](https://github.com/DeadInternetStudios/100x-engineer-skill)** — DeadInternetStudios — *tool/repo, 2026* — A working example of skills as harness: 13 SKILL.md skills for Codex, Claude Code and Cursor that make the agent plan first and gate completion on tests and formal checks instead of self-report. 🆕
+
 **Must-reads:** Anthropic (agent skills) · OpenAI (progressive disclosure)
 
 ---
